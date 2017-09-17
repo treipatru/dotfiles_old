@@ -45,3 +45,17 @@ export EDITOR=/usr/local/bin/vim
 ## import files, assuming they're always there
 . ~/.aliases
 . ~/.aliases.local
+
+# Set color terminal
+export TERM=xterm-256color
+
+# Terminal theme
+source ~/base16-tomorrow.dark.sh
+
+# Get current git branch
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Prompt
+export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\n\$\[\033[0m\] "
