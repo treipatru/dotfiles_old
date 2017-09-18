@@ -54,8 +54,11 @@ source ~/base16-tomorrow.dark.sh
 
 # Get current git branch
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ on \1/'
 }
 
 # Prompt
-export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\n\$\[\033[0m\] "
+export PS1="\n\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]: \w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\n\$\[\033[0m\] "
+
+# Load z file jumper
+source ~/scripts/z.sh
