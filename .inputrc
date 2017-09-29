@@ -1,1 +1,14 @@
+# Ask before showing more than X items
+set completion-query-items 50
+
+# Ignore case in autocomplete
 set completion-ignore-case on
+
+# Disable bell
+set bell-style visible
+
+# Show all instead of beeping first
+set show-all-if-ambiguous off
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
