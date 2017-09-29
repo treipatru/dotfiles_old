@@ -50,7 +50,7 @@ export EDITOR=/usr/local/bin/vim
 export TERM=xterm-256color
 
 # Terminal theme
-source ~/base16-tomorrow.dark.sh
+source ~/base16-monokai.sh
 
 # Get current git branch
 parse_git_branch() {
