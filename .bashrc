@@ -52,12 +52,7 @@ export TERM=xterm-256color
 # Terminal theme
 source ~/base16-monokai.sh
 
-# Get current git branch
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ on \1/'
-}
-
-# bash git prompt
+# Git prompt
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM="verbose"
