@@ -1,3 +1,6 @@
 [user]
-    name = name
-    email = email
+  name = Andrei Mocanca
+  email = andrei.mocanca@mon-avocat.fr
+[alias]
+  recap = log --all --oneline --no-merges --author=<USER EMAIL>
+  today = log --since=00:00:00 --all --no-merges --oneline --author=<USER EMAIL>

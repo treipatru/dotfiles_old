@@ -1,23 +1,24 @@
 [include]
-    path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [core]
-    autocrlf = input
-    editor = vim
+  autocrlf = input
+  editor = vim
 [push]
-    default = simple
+  default = simple
 [pull]
-    rebase = true
+  rebase = true
 [alias]
-    s = status
-    c = checkout
-    stats = shortlog -sn --all --no-merges
-    wd = diff --word-diff
-    recap = log --all --oneline --no-merges --author=<andrei.mocanca@mon-avocat.fr>
-    today = log --since=00:00:00 --all --no-merges --oneline --author=<andrei.mocanca@mon-avocat.fr>
-    graph = log --graph --all --decorate --stat --date=iso
-    local = log @{u}..
-    localdiff = diff --word-diff @{u}..
+  a = add
+  cl = clean
+  co = checkout
+  graph = log --graph --all --decorate --stat --date=iso
+  local = log @{u}..
+  localdiff = diff --word-diff @{u}..
+  r = reset
+  s = status
+  stats = shortlog -sn --all --no-merges
+  wd = diff --word-diff
 [log]
-    date = relative
+  date = relative
 [format]
-    pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+  pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
