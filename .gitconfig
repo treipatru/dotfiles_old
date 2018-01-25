@@ -8,7 +8,7 @@
 [pull]
   rebase = true
 [alias]
-  a = !git add -- "$@" && printf '\n' && git status -s && printf '\n'
+  a = !git add -- "$@" && printf '\n' && git s && printf '\n'
   cl = clean
   co = checkout
   cm = commit -m
@@ -16,8 +16,8 @@
   local = log @{u}..
   localdiff = diff --word-diff @{u}..
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  re = reset
-  s = status -s
+  re = "!f(){ clear && printf '\n' && git reset && printf '\n'; };f" 
+  s = "!f(){ clear && printf '\n' && git status -s && printf '\n'; };f"
   st = !git fetch && git s
   stats = shortlog -sn --all --no-merges
   wd = diff --word-diff
