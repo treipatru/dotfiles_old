@@ -1,5 +1,5 @@
 [include]
-  path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
 [core]
   autocrlf = input
   editor = vim
@@ -8,17 +8,24 @@
 [pull]
   rebase = true
 [alias]
-  a = add
+  a = !git add -- "$@" && printf '\n' && git status -s && printf '\n'
   cl = clean
   co = checkout
+  cm = commit -m
   graph = log --graph --all --decorate --stat --date=iso
   local = log @{u}..
   localdiff = diff --word-diff @{u}..
-  r = reset
-  s = status
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  re = reset
+  s = status -s
+  st = !git fetch && git s
   stats = shortlog -sn --all --no-merges
   wd = diff --word-diff
 [log]
   date = relative
 [format]
   pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
