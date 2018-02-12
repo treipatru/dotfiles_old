@@ -5,6 +5,8 @@ alias l='ls -CF'
 
 # Git
 alias g='git'
+alias g-root='cd "$(git rev-parse --show-cdup)"'
+
 
 # Generate ssh keys
 alias sshGen='ssh-keygen -t rsa -b 4096 -C'
