@@ -8,30 +8,20 @@ case $- in
 esac
 
 
-
-
-
-#-------------------------------------------------------------------------------
-# USER OPTIONS
-#-------------------------------------------------------------------------------
-
+# User settings ----------------------------------------------------------------
 # Use themes?
 USE_COLOR=true
 # See available files in .bash-colors/
 THEME='base16-material-darker'
 # Show git status in prompt?
 USE_GIT=true
+# Load external git status script?
+USE_EXT_SCRIPT=true
+# Use z jumper?
+USE_Z=true
 
-#-------------------------------------------------------------------------------
 
-
-
-
-
-#-------------------------------------------------------------------------------
-# BASH OPTIONS
-#-------------------------------------------------------------------------------
-
+# Bash options -----------------------------------------------------------------
 # Don't put duplicate lines in the history.
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
@@ -46,52 +36,31 @@ if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion
 fi
 
-#-------------------------------------------------------------------------------
 
-
-
-
-
-#-------------------------------------------------------------------------------
-# BASH EXTRAS
-#-------------------------------------------------------------------------------
-
+# Bash extras ------------------------------------------------------------------
 # Set vim as default editor
 export EDITOR=/usr/local/bin/vim
-
 # Import generic aliases
 if [ -e ~/.aliases ]; then
     . ~/.aliases
 fi
-
 # Import local aliases
 if [ -e ~/.aliases.local ]; then
     . ~/.aliases.local
 fi
-
 # Load z file jumper
-if [ -e ~/scripts/z.sh ]; then
+if [ -e ~/scripts/z.sh ] && [ "$USE_Z" = true ]; then
     source ~/scripts/z.sh
 fi
 
-#-------------------------------------------------------------------------------
 
-
-
-
-
-#-------------------------------------------------------------------------------
-# VISUAL TWEAKS
-#-------------------------------------------------------------------------------
-
+# Visual tweaks ----------------------------------------------------------------
 # Set color terminal
 export TERM=xterm-256color
-
 # Set terminal
 if [ "$USE_COLOR" = true ] ; then
     source ~/.bash-colors/${THEME}.sh
 fi
-
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -100,25 +69,20 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-#-------------------------------------------------------------------------------
 
-
-
-
-
-#-------------------------------------------------------------------------------
-# GIT STATUS
-#-------------------------------------------------------------------------------
-
+# Git status -------------------------------------------------------------------
 if [ "$USE_GIT" = true ] ; then
+
+    if [ "$USE_EXT_SCRIPT" = true ] ; then
+        source ~/scripts/.git-prompt.sh
+    fi
+
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWUNTRACKEDFILES=true
     GIT_PS1_SHOWUPSTREAM="verbose"
@@ -137,18 +101,8 @@ if [ "$USE_GIT" = true ] ; then
     git_status_command="\$(__git_ps1 '%s'| sed \"${git_status_substitutes[@]}\")"
 fi
 
-#-------------------------------------------------------------------------------
 
-
-
-
-
-#-------------------------------------------------------------------------------
-# PROMPT
-#-------------------------------------------------------------------------------
-
+# Export prompt ----------------------------------------------------------------
 export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]: \w$git_status_command\[\033[0;33m\]]\[\033[1;37m\]\n\$\[\033[0m\] "
 
 unset git_status_substitutes git_status_command git_current_branch_name
-
-#-------------------------------------------------------------------------------
