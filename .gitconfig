@@ -11,6 +11,7 @@
   default = current
 [alias]
   a = add
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
   cl = clean
   co = checkout
   cm = commit -m
@@ -23,6 +24,7 @@
   s = status
   st = !git fetch && git status
   stats = shortlog -sn --all --no-merges
+  publish = "!git push -u origin $(git branch-name)"
   wd = diff --word-diff
 [log]
   date = relative
