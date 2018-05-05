@@ -53,7 +53,6 @@ shopt -s extglob
 cd $HOME
 
 # Make sure we're fresh
-rm -rf ~/.git
 rm -rf ~/dotfiles
 format_output "Cleaned ~/dotfiles ✔"
 
@@ -95,9 +94,6 @@ for f in *(.)[^.]*; do
     copy_item
   fi
 done;
-
-# Remove dotfiles .git from home
-rm -rf ~/.git
 
 # All setup
 format_output "All done ✔"
