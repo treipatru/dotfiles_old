@@ -89,11 +89,16 @@ for f in *(.)[^.]*; do
 
   # If nothing
   else
-    # just copy if it doesn't exist
-    format_output "Creating \x1B[34m$CURRENTFILE\e[0m ✔\n"
-    copy_item
+    # Skip git meta
+    if [ "$CURRENTFILE" = ".git" ]; then
+      echo
+    else
+      # Copy if item doesn't exist
+      format_output "Creating \x1B[34m$CURRENTFILE\e[0m ✔\n"
+      copy_item
+    fi
   fi
 done;
 
 # All setup
-format_output "All done ✔"
+format_output "All done ✔\n"
