@@ -6,6 +6,7 @@
 OVERWRITEALL=false
 CURRENTFILE=""
 SKIPCURRENT=false
+IGNORELIST='git|conf'
 
 function format_output {
   printf "◈ $1 \n"
@@ -21,7 +22,7 @@ function link_item {
 
 function check_ignored {
   FILEEXT="${CURRENTFILE##*.}"
-  if [ "$FILEEXT" = "git" ] ; then
+  if [[ "$FILEEXT" =~ ^($IGNORELIST)$ ]] ; then
     SKIPCURRENT=true
   else
     SKIPCURRENT=false
@@ -78,32 +79,30 @@ for f in *(.)[^.]*; do
   CURRENTFILE="$f"
   check_ignored
 
-  # If directory
-  if [ -d ~/"$CURRENTFILE" ]; then
-    if [ "$SKIPCURRENT" = true ]; then
-      echo
-    fi
-    # Copy folder and contents
-    format_output "Copying folder \x1B[34m$CURRENTFILE\e[0m"
-    cp -ir "$CURRENTFILE" ~/
-    printf "\n"
+  # Do nothing if on ignore list
+  if [ "$SKIPCURRENT" = true ]; then
+    format_output "\x1B[34m$CURRENTFILE\e[0m is ignored\n"
 
-  # If file
-  elif [ -f ~/"$CURRENTFILE" ]; then
-    # Always prefer existing .local files
-    if [ ${CURRENTFILE: -6} = ".local" ]; then
-      format_output "Not replacing local version of \x1B[34m$CURRENTFILE\e[0m\n"
-    else
-      get_input
-    fi
-
-  # If nothing
+  # Else process entry
   else
-    # Skip git meta
-    if [ "$SKIPCURRENT" = true ]; then
-      echo
+    # If entry exists as directory
+    if [ -d ~/"$CURRENTFILE" ]; then
+      # Copy folder and contents
+      format_output "Copying folder \x1B[34m$CURRENTFILE\e[0m"
+      cp -ir "$CURRENTFILE" ~/
+      printf "\n"
+
+    # If entry exists as file
+    elif [ -f ~/"$CURRENTFILE" ]; then
+      # Always prefer existing .local files
+      if [ ${CURRENTFILE: -6} = ".local" ]; then
+        format_output "Not replacing local version of \x1B[34m$CURRENTFILE\e[0m\n"
+      else
+        get_input
+      fi
+
+    # If entry does not exist in local files
     else
-      # Copy if item doesn't exist
       format_output "Creating \x1B[34m$CURRENTFILE\e[0m ✔\n"
       copy_item
     fi
