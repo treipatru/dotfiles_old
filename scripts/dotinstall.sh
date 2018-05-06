@@ -6,9 +6,10 @@
 OVERWRITEALL=false
 CURRENTFILE=""
 SKIPCURRENT=false
-IGNORELIST='git|conf'
+IGNORELIST='git|md'
 
 function format_output {
+  sleep .3
   printf "◈ $1 \n"
 }
 
