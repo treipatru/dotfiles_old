@@ -40,7 +40,7 @@ function get_input {
     rm -rf ~/"$CURRENTFILE"
     link_item
   else
-    format_output "Overwrite local \x1B[34m$CURRENTFILE\e[0m ? [Y/N/All]"
+    format_output "Overwrite local \e[94m$CURRENTFILE\e[0m ? [Y/N/All]"
     printf "◇ "
     read ANSWER
     if [ "${ANSWER,,}" = "y" ]; then
@@ -88,14 +88,14 @@ for f in *(.)[^.]*; do
 
   # Do nothing if on ignore list
   if [ "$SKIPCURRENT" = true ]; then
-    format_output "\x1B[34m$CURRENTFILE\e[0m is ignored\n"
+    format_output "\e[94m$CURRENTFILE\e[0m is ignored\n"
 
   # Else process entry
   else
     # If entry exists as directory
     if [ -d ~/"$CURRENTFILE" ]; then
       # Copy folder and contents
-      format_output "Copying folder \x1B[34m$CURRENTFILE\e[0m"
+      format_output "Copying folder \e[94m$CURRENTFILE\e[0m"
       cp -ir "$CURRENTFILE" ~/
       printf "\n"
 
@@ -103,14 +103,14 @@ for f in *(.)[^.]*; do
     elif [ -f ~/"$CURRENTFILE" ]; then
       # Always prefer existing .local files
       if [ ${CURRENTFILE: -6} = ".local" ]; then
-        format_output "Not replacing local version of \x1B[34m$CURRENTFILE\e[0m\n"
+        format_output "Not replacing local version of \e[94m$CURRENTFILE\e[0m\n"
       else
         get_input
       fi
 
     # If entry does not exist in local files
     else
-      format_output "Creating \x1B[34m$CURRENTFILE\e[0m ✔\n"
+      format_output "Creating \e[94m$CURRENTFILE\e[0m ✔\n"
       # Copy folders
       if [ -d "$CURRENTFILE" ]; then
         copy_item
