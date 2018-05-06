@@ -111,7 +111,13 @@ for f in *(.)[^.]*; do
     # If entry does not exist in local files
     else
       format_output "Creating \x1B[34m$CURRENTFILE\e[0m ✔\n"
-      copy_item
+      # Copy folders
+      if [ -d "$CURRENTFILE" ]; then
+        copy_item
+      # Link files
+      elif [ -f "$CURRENTFILE" ]; then
+        link_item
+      fi
     fi
   fi
 done;
