@@ -5,6 +5,7 @@
 # Utilities  -------------------------------------------------------------------
 OVERWRITEALL=false
 CURRENTFILE=""
+SKIPCURRENT=false
 
 function format_output {
   printf "◈ $1 \n"
@@ -16,6 +17,15 @@ function copy_item {
 
 function link_item {
   ln -s ~/dotfiles/"$CURRENTFILE" ~/"$CURRENTFILE"
+}
+
+function check_ignored {
+  FILEEXT="${CURRENTFILE##*.}"
+  if [ "$FILEEXT" = "git" ] ; then
+    SKIPCURRENT=true
+  else
+    SKIPCURRENT=false
+  fi
 }
 
 function get_input {
@@ -66,11 +76,11 @@ git remote set-url origin git@github.com:treipatru/dotfiles.git
 # Loop through files & folders
 for f in *(.)[^.]*; do
   CURRENTFILE="$f"
+  check_ignored
 
   # If directory
   if [ -d ~/"$CURRENTFILE" ]; then
-    # Skip git meta
-    if [ "$CURRENTFILE" = ".git" ]; then
+    if [ "$SKIPCURRENT" = true ]; then
       echo
     fi
     # Copy folder and contents
@@ -90,7 +100,7 @@ for f in *(.)[^.]*; do
   # If nothing
   else
     # Skip git meta
-    if [ "$CURRENTFILE" = ".git" ]; then
+    if [ "$SKIPCURRENT" = true ]; then
       echo
     else
       # Copy if item doesn't exist
