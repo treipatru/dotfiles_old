@@ -3,22 +3,26 @@
 # andrei@planet34.org
 
 # Utilities  -------------------------------------------------------------------
+REPOHTTPS="https://github.com/treipatru/dotfiles.git"
+REPOSSH="git@github.com:treipatru/dotfiles.git"
+SWITCHTOSSH=true
+DOTFOLDER="dotfiles"
 OVERWRITEALL=false
 CURRENTFILE=""
 SKIPCURRENT=false
 IGNORELIST='git|md'
 
 function format_output {
-  sleep .3
   printf "◈ $1 \n"
+  sleep .3
 }
 
 function copy_item {
-  cp -r ~/dotfiles/"$CURRENTFILE" ~/"$CURRENTFILE"
+  cp -r ~/"$DOTFOLDER"/"$CURRENTFILE" ~/"$CURRENTFILE"
 }
 
 function link_item {
-  ln -s ~/dotfiles/"$CURRENTFILE" ~/"$CURRENTFILE"
+  ln -s ~/"$DOTFOLDER"/"$CURRENTFILE" ~/"$CURRENTFILE"
 }
 
 function check_ignored {
@@ -65,15 +69,17 @@ shopt -s extglob
 cd $HOME
 
 # Make sure we're fresh
-rm -rf ~/dotfiles
-format_output "Cleaned ~/dotfiles ✔"
+rm -rf ~/"$DOTFOLDER"
+format_output "Cleaned ~/"$DOTFOLDER" ✔"
 
 # Clone repository using https so we don't require password
-git clone -q https://github.com/treipatru/dotfiles.git && cd dotfiles
+git clone -q "$REPOHTTPS" && cd "$DOTFOLDER"
 format_output "Cloned repo ✔\n"
 
 # Switch origin to use ssh instead of https later
-git remote set-url origin git@github.com:treipatru/dotfiles.git
+if [ "$SWITCHTOSSH" = true ]; then
+  git remote set-url origin "$REPOSSH"
+fi
 
 # Loop through files & folders
 for f in *(.)[^.]*; do
