@@ -88,7 +88,7 @@ for f in *(.)[^.]*; do
 
   # Do nothing if on ignore list
   if [ "$SKIPCURRENT" = true ]; then
-    format_output "\e[94m$CURRENTFILE\e[0m is ignored\n"
+    format_output "Ignoring \e[94m$CURRENTFILE\e[0m \n"
 
   # Else process entry
   else
@@ -103,7 +103,7 @@ for f in *(.)[^.]*; do
     elif [ -f ~/"$CURRENTFILE" ]; then
       # Always prefer existing .local files
       if [ ${CURRENTFILE: -6} = ".local" ]; then
-        format_output "Not replacing local version of \e[94m$CURRENTFILE\e[0m\n"
+        format_output "Keeping local version of \e[94m$CURRENTFILE\e[0m\n"
       else
         get_input
       fi
@@ -122,5 +122,5 @@ for f in *(.)[^.]*; do
   fi
 done;
 
-# All setup
+# Finished
 format_output "All done ✔\n"
