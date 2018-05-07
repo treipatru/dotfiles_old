@@ -10,7 +10,7 @@ DOTFOLDER="dotfiles"
 OVERWRITEALL=false
 CURRENTFILE=""
 SKIPCURRENT=false
-IGNORELIST='git|md'
+IGNORELIST="git|md"
 
 function format_output {
   printf "◈ $1 \n"
