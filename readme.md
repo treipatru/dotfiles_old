@@ -8,7 +8,7 @@
 
 ## Script
 
-The [the install script](https://github.com/treipatru/dotfiles/blob/master/scripts/dotinstall.sh) is parametric so you can plug it into your own dotfiles repo. Feel free to use it and improve it.
+My specific settings may not be of interest but the [install script](https://github.com/treipatru/dotfiles/blob/master/scripts/dotinstall.sh) is parametric so you can plug it into your own dotfiles repo. Feel free to use it and improve it.
 
 ### Variables
 
@@ -17,11 +17,10 @@ REPOHTTPS="https://github.com/treipatru/dotfiles.git" # HTTPS link to your repo
 REPOSSH="git@github.com:treipatru/dotfiles.git"       # SSH link to your repo
 SWITCHTOSSH=true                                      # Set upstream as SSH after repo is downloaded
 DOTFOLDER="dotfiles"                                  # Name of your dotfiles folder
-IGNORELIST='git|md'                                   # Files & folders to ignore
+IGNORELIST="git|md"                                   # Files & folders to ignore
 ```
 
-
-### How it works
+### What it does
 
 1. Removes DOTFOLDER from home folder for clean install
 2. Clones repo via REPOHTTPS to avoid credentials request then switches the origin to REPOSSH
@@ -31,9 +30,11 @@ Some rules for processing:
 
 * Entries in IGNORELIST are ignored completely.
 * Entries which already exist locally ask for overwrite confirmation.
-* `.local` files are never overwritten if they exist.
-* Files in repo root are soft linked to home root so that changes can be easily made and pushed.
-* Folders are copied, not linked. This is to avoid local content being rewritten and especially deleted (e.g. keys in `.ssh/`).
+* `.local` files are never overwritten if they exist (e.g. .gitconfig.local).
+* Files in repo root are soft linked to home root.
+* Folders are copied, not linked.
+
+The idea is to use links for config files to making the repo easily updatable. For folders it is preferable to copy as we don't want to delete already existing (sensitive) content such as `.ssh/config` or others.
 
 ### What it looks like
 
