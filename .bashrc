@@ -103,6 +103,6 @@ fi
 
 
 # Export prompt ----------------------------------------------------------------
-export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]: \w$git_status_command\[\033[0;33m\]]\[\033[1;37m\]\n\$\[\033[0m\] "
+export PS1="\[\033[0;33m\]\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\] \w$git_status_command\[\033[0;33m\]\[\033[1;37m\]\n⚡\[\033[0m\] "
 
 unset git_status_substitutes git_status_command git_current_branch_name
