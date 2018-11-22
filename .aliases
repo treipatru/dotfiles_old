@@ -10,3 +10,6 @@ alias g-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}"
 
 # Generate SSH keys
 alias sshGen='ssh-keygen -t rsa -b 4096 -C'
+
+# Tool to convert console output to html
+alias ansi2html='~/dotfiles/scripts/./ansi2html.sh --palette=tango'
