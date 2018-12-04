@@ -49,8 +49,8 @@ if [ -e ~/.aliases.local ]; then
     . ~/.aliases.local
 fi
 # Load z file jumper
-if [ -e ~/scripts/z.sh ] && [ "$USE_Z" = true ]; then
-    source ~/scripts/z.sh
+if [ -e ~/dotscripts/scripts/z.sh ] && [ "$USE_Z" = true ]; then
+    source ~/dotscripts/z.sh
 fi
 
 
@@ -80,7 +80,7 @@ shopt -s checkwinsize
 if [ "$USE_GIT" = true ] ; then
 
     if [ "$USE_EXT_SCRIPT" = true ] ; then
-        source ~/scripts/.git-prompt.sh
+        source ~/dotscripts/git-prompt.sh
     fi
 
     GIT_PS1_SHOWDIRTYSTATE=true
