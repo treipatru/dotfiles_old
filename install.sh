@@ -44,6 +44,6 @@ do
   read ANS3
 done
 if [ "$ANS3" = "y" ]; then
-  cp -lvrf ln/. ~/
+  cp -lrf ln/. ~/
   printf "\n ☲  Created symbolic links to 'ln' ✔ \n"
 fi
