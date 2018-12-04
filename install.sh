@@ -15,9 +15,10 @@ do
   read ANS1
 done
 if [ "$ANS1" = "y" ]; then
-  rm -rf ~/dotfiles
+  cd ~
+  rm -rf dotfiles && rm -rf dotscripts
   printf "\n ☲  Deleted local 'dotfiles' ✔\n"
-  git clone -q "https://github.com/treipatru/dotfiles.git" ~/dotfiles/
+  git clone -q "https://github.com/treipatru/dotfiles.git"
   cd ~/dotfiles && git remote set-url origin "git@github.com:treipatru/dotfiles.git"
   printf "\n ☲  Fetched repo ✔\n"
 else
@@ -43,6 +44,6 @@ do
   read ANS3
 done
 if [ "$ANS3" = "y" ]; then
-  cp -lvr ln/. ~/
-  printf "\n ☲  Created symbolic links to 'cp' ✔ \n"
+  cp -lvrf ln/. ~/
+  printf "\n ☲  Created symbolic links to 'ln' ✔ \n"
 fi
