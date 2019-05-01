@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.8.4 beta" ConfigVersion="10">
+<doublecmd DCVersion="0.8.2 beta" ConfigVersion="10">
   <Configuration Save="True" SortOrder="0">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
@@ -32,19 +32,19 @@
       <Filter>
         <Name>New</Name>
         <FileMasks>&gt;&lt;1Day</FileMasks>
-        <Color>14079616</Color>
+        <Color>10461016</Color>
         <Attributes/>
       </Filter>
     </FileFilters>
     <UseCursorBorder>False</UseCursorBorder>
     <CursorBorderColor>16777215</CursorBorderColor>
     <UseFrameCursor>False</UseFrameCursor>
-    <Foreground>-2147483640</Foreground>
-    <Background>-2147483643</Background>
-    <Background2>-2147483643</Background2>
-    <Cursor>8546642</Cursor>
-    <CursorText>-2147483634</CursorText>
-    <Mark>8882175</Mark>
+    <Foreground>9814476</Foreground>
+    <Background>3026478</Background>
+    <Background2>2829099</Background2>
+    <Cursor>6710886</Cursor>
+    <CursorText>3985911</CursorText>
+    <Mark>14322656</Mark>
     <InactiveCursor>-2147483645</InactiveCursor>
     <InactiveMark>128</InactiveMark>
     <UseInvertedSelection>False</UseInvertedSelection>
@@ -281,13 +281,13 @@
   </Toolbars>
   <MainWindow>
     <Position>
-      <Maximized>False</Maximized>
+      <Maximized>True</Maximized>
       <Splitter>50</Splitter>
-      <Left>13</Left>
-      <Top>13</Top>
-      <Width>2534</Width>
-      <Height>1380</Height>
-      <PixelsPerInch>128</PixelsPerInch>
+      <Left>0</Left>
+      <Top>60</Top>
+      <Width>3328</Width>
+      <Height>1746</Height>
+      <PixelsPerInch>192</PixelsPerInch>
     </Position>
   </MainWindow>
   <Language>
@@ -301,9 +301,9 @@
     <RunInTerminalCloseParams>-e sh -c {command}</RunInTerminalCloseParams>
     <JustRunTerminal>xterm</JustRunTerminal>
     <JustRunTermParams/>
-    <OnlyOneAppInstance>False</OnlyOneAppInstance>
+    <OnlyOneAppInstance>True</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
-    <FileSizeFormat>0</FileSizeFormat>
+    <FileSizeFormat>3</FileSizeFormat>
     <FileSizeDigits>1</FileSizeDigits>
     <MinimizeToTray>False</MinimizeToTray>
     <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
@@ -316,9 +316,9 @@
       <WheelScrollLines>3</WheelScrollLines>
     </Mouse>
     <AutoFillColumns>False</AutoFillColumns>
-    <AutoSizeColumn>1</AutoSizeColumn>
+    <AutoSizeColumn>0</AutoSizeColumn>
     <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
-    <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
+    <BriefViewFileExtAligned>True</BriefViewFileExtAligned>
     <DateTimeFormat>dd/mm/yy hh:nn:ss</DateTimeFormat>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
@@ -353,8 +353,8 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>Sans</Name>
-      <Size>11</Size>
+      <Name>Open Sans</Name>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
@@ -434,7 +434,7 @@
     <DriveBar1>True</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
-    <DrivesListButton Enabled="True">
+    <DrivesListButton Enabled="False">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
       <ShowFreeSpace>True</ShowFreeSpace>
@@ -447,14 +447,14 @@
     <CmdLine>False</CmdLine>
     <LogWindow>False</LogWindow>
     <TermWindow>False</TermWindow>
-    <KeyButtons>True</KeyButtons>
+    <KeyButtons>False</KeyButtons>
     <InterfaceFlat>True</InterfaceFlat>
-    <DriveFreeSpace>True</DriveFreeSpace>
+    <DriveFreeSpace>False</DriveFreeSpace>
     <DriveIndicator>False</DriveIndicator>
     <ProgressInMenuBar>False</ProgressInMenuBar>
     <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
     <HorizontalFilePanels>False</HorizontalFilePanels>
-    <ShortFormatDriveInfo>True</ShortFormatDriveInfo>
+    <ShortFormatDriveInfo>False</ShortFormatDriveInfo>
   </Layout>
   <FilesViews>
     <Sorting>
@@ -469,7 +469,7 @@
       <TitleStyle>1</TitleStyle>
     </ColumnsView>
     <BriefView>
-      <FileExtAligned>False</FileExtAligned>
+      <FileExtAligned>True</FileExtAligned>
       <Columns>
         <FixedWidth>100</FixedWidth>
         <FixedCount>2</FixedCount>
@@ -503,7 +503,7 @@
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
     <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
-    <ShowDialogOnDragDrop>False</ShowDialogOnDragDrop>
+    <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
     <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
     <DragAndDropTextUnicodeDesireLevel>2</DragAndDropTextUnicodeDesireLevel>
@@ -514,7 +514,7 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
+    <ProgressKind>2</ProgressKind>
     <Confirmations>15</Confirmations>
     <Options>
       <Symlink>0</Symlink>
@@ -533,213 +533,10 @@
     </Options>
   </FileOperations>
   <Tabs>
-    <Options>54033</Options>
+    <Options>49937</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
-    <OpenedTabs>
-      <Left>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/treipatru/dotfiles/links/</Path>
-                  <Path Filename="copy">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/copy/</Path>
-                  <Path Filename=".bash-colors">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/.bash-colors/</Path>
-                  <Path Filename="links">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/links/</Path>
-                  <Path Filename=".ssh">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/.ssh/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="scripts">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/scripts/</Path>
-                  <Path Filename="scripts">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/scripts/</Path>
-                  <Path Filename="scripts">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/scripts/</Path>
-                  <Path Filename="scripts">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/scripts/</Path>
-                  <Path Filename="scripts">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/scripts/</Path>
-                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="ln">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/ln/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotscripts">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/dotscripts/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-          <Options>2</Options>
-          <LockPath>/home/treipatru/</LockPath>
-          <Title>treipatru</Title>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/usr/lib/doublecmd/</Path>
-                  <Path Filename="treipatru">/home/</Path>
-                  <Path Filename=".fonts">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.fonts/</Path>
-                  <Path Filename="Downloads">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/Downloads/</Path>
-                  <Path Filename=".fonts">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.fonts/</Path>
-                  <Path Filename="Downloads">/home/treipatru/</Path>
-                  <Path Filename="">/home/treipatru/Downloads/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-          <Options>2</Options>
-          <LockPath>/home/treipatru/Downloads/</LockPath>
-          <Title>Downloads</Title>
-        </Tab>
-      </Left>
-      <Right>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename=".gnome2">/home/treipatru/</Path>
-                  <Path Filename="cheese">/home/treipatru/.gnome2/</Path>
-                  <Path Filename="media">/home/treipatru/.gnome2/cheese/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/cheese/media/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/cheese/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/</Path>
-                  <Path Filename=".gnome2">/home/treipatru/</Path>
-                  <Path Filename="cheese">/home/treipatru/.gnome2/</Path>
-                  <Path Filename="media">/home/treipatru/.gnome2/cheese/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/cheese/media/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/cheese/</Path>
-                  <Path Filename="..">/home/treipatru/.gnome2/</Path>
-                  <Path Filename=".i3">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.i3/</Path>
-                  <Path Filename=".gnupg">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.gnupg/</Path>
-                  <Path Filename=".gnupg">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.gnupg/</Path>
-                  <Path Filename=".i3">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.i3/</Path>
-                  <Path Filename=".i3">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.i3/</Path>
-                  <Path Filename=".icons">/home/treipatru/</Path>
-                  <Path Filename="default">/home/treipatru/.icons/</Path>
-                  <Path Filename="..">/home/treipatru/.icons/default/</Path>
-                  <Path Filename="..">/home/treipatru/.icons/</Path>
-                  <Path Filename=".local">/home/treipatru/</Path>
-                  <Path Filename="share">/home/treipatru/.local/</Path>
-                  <Path Filename="..">/home/treipatru/.local/share/</Path>
-                  <Path Filename="..">/home/treipatru/.local/</Path>
-                  <Path Filename=".mono">/home/treipatru/</Path>
-                  <Path Filename="registry">/home/treipatru/.mono/</Path>
-                  <Path Filename="..">/home/treipatru/.mono/registry/</Path>
-                  <Path Filename="..">/home/treipatru/.mono/</Path>
-                  <Path Filename=".pki">/home/treipatru/</Path>
-                  <Path Filename="nssdb">/home/treipatru/.pki/</Path>
-                  <Path Filename="..">/home/treipatru/.pki/nssdb/</Path>
-                  <Path Filename="..">/home/treipatru/.pki/</Path>
-                  <Path Filename=".fonts">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.fonts/</Path>
-                  <Path Filename=".fonts">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.fonts/</Path>
-                  <Path Filename=".fzf">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/.fzf/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                  <Path Filename="dotfiles">/home/treipatru/</Path>
-                  <Path Filename="..">/home/treipatru/dotfiles/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-          <Options>2</Options>
-          <LockPath>/home/treipatru/</LockPath>
-          <Title>treipatru</Title>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>12</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="">/usr/lib/doublecmd/</Path>
-                  <Path Filename="..">/home/treipatru/Downloads/paper-icon-theme-git/</Path>
-                  <Path Filename="..">/home/treipatru/Downloads/</Path>
-                  <Path Filename="Downloads">/home/treipatru/</Path>
-                  <Path Filename="">/home/treipatru/Downloads/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-          <Options>2</Options>
-          <LockPath>/home/treipatru/Downloads/</LockPath>
-          <Title>Downloads</Title>
-        </Tab>
-      </Right>
-    </OpenedTabs>
   </Tabs>
   <Log Enabled="False" LogFileWithDateInName="False">
     <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
@@ -766,7 +563,7 @@
     <GridHorzLine>False</GridHorzLine>
     <ShowWarningMessages>True</ShowWarningMessages>
     <SpaceMovesDown>False</SpaceMovesDown>
-    <DirBrackets>True</DirBrackets>
+    <DirBrackets>False</DirBrackets>
     <InplaceRename>False</InplaceRename>
     <DblClickToParent>False</DblClickToParent>
     <HotDirAddTargetOrNot>False</HotDirAddTargetOrNot>
@@ -793,13 +590,13 @@
     <Theme>dctheme</Theme>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>32</Size>
-    <DiskSize>16</DiskSize>
+    <Size>48</Size>
+    <DiskSize>32</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>128</PixelsPerInch>
+    <PixelsPerInch>130</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -978,30 +775,30 @@
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
       <CustomView>False</CustomView>
-      <PixelsPerInch>128</PixelsPerInch>
+      <PixelsPerInch>130</PixelsPerInch>
       <CursorBorder Enabled="False">
-        <Color>0</Color>
+        <Color>16777215</Color>
       </CursorBorder>
       <Columns>
         <Column>
           <Title>Name</Title>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>479</Width>
+          <Width>645</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Open Sans</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
+          <TextColor>9814476</TextColor>
+          <Background>3026478</Background>
+          <Background2>2829099</Background2>
+          <MarkColor>14322656</MarkColor>
+          <CursorColor>6710886</CursorColor>
+          <CursorText>3985911</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>14322656</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1009,22 +806,22 @@
         <Column>
           <Title>Ext</Title>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>62</Width>
+          <Width>63</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Open Sans</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
+          <TextColor>9814476</TextColor>
+          <Background>3026478</Background>
+          <Background2>2829099</Background2>
+          <MarkColor>14322656</MarkColor>
+          <CursorColor>6710886</CursorColor>
+          <CursorText>3985911</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>14322656</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1032,22 +829,22 @@
         <Column>
           <Title>Size</Title>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>90</Width>
+          <Width>118</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Open Sans</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
+          <TextColor>9814476</TextColor>
+          <Background>3026478</Background>
+          <Background2>2829099</Background2>
+          <MarkColor>14322656</MarkColor>
+          <CursorColor>6710886</CursorColor>
+          <CursorText>3985911</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>14322656</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1055,22 +852,22 @@
         <Column>
           <Title>Date</Title>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>213</Width>
+          <Width>200</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Open Sans</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
+          <TextColor>9814476</TextColor>
+          <Background>3026478</Background>
+          <Background2>2829099</Background2>
+          <MarkColor>14322656</MarkColor>
+          <CursorColor>6710886</CursorColor>
+          <CursorText>3985911</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>14322656</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1078,22 +875,22 @@
         <Column>
           <Title>Attr</Title>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>67</Width>
+          <Width>95</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Open Sans</Name>
+            <Size>12</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
+          <TextColor>9814476</TextColor>
+          <Background>3026478</Background>
+          <Background2>2829099</Background2>
+          <MarkColor>14322656</MarkColor>
+          <CursorColor>6710886</CursorColor>
+          <CursorText>3985911</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>14322656</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1101,4 +898,8 @@
       </Columns>
     </ColumnsSet>
   </ColumnsSets>
+  <MultiRenamePresets>
+    <LastPreset/>
+    <Presets/>
+  </MultiRenamePresets>
 </doublecmd>
