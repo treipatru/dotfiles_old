@@ -100,6 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# NodeJS
+export NODEJS_HOME=/opt/node-v10.15.3-linux-x64/bin
+export PATH=$NODEJS_HOME:$PATH
 source ~/.purepower
 
 # Local config
