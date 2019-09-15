@@ -13,3 +13,6 @@ alias sshGen='ssh-keygen -t rsa -b 4096 -C'
 
 # Tool to convert console output to html
 alias ansi2html='~/dotfiles/scripts/./ansi2html.sh --palette=tango'
+
+# Simple Python 2.7 http server
+alias serve='python -m SimpleHTTPServer 8080'
