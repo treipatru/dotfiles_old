@@ -14,7 +14,7 @@
       <Filter>
         <Name>Pascal binaries</Name>
         <FileMasks>*.ppu;*.o;*.dcu</FileMasks>
-        <Color>16711680</Color>
+        <Color>8388608</Color>
         <Attributes/>
       </Filter>
       <Filter>
@@ -537,6 +537,431 @@
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Eurocrimes">/home/treipatru/Repos/</Path>
+                  <Path Filename="screens">/home/treipatru/Repos/Eurocrimes/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/Eurocrimes/screens/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/Eurocrimes/</Path>
+                  <Path Filename="NPC-Identity-Generator">/home/treipatru/Repos/</Path>
+                  <Path Filename="screens">/home/treipatru/Repos/NPC-Identity-Generator/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/NPC-Identity-Generator/screens/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/NPC-Identity-Generator/</Path>
+                  <Path Filename="PhotoMetron">/home/treipatru/Repos/</Path>
+                  <Path Filename="screens">/home/treipatru/Repos/PhotoMetron/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/PhotoMetron/screens/</Path>
+                  <Path Filename="screens">/home/treipatru/Repos/PhotoMetron/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename="Desktop">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Desktop/</Path>
+                  <Path Filename="Calibre Library">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Calibre Library/</Path>
+                  <Path Filename=".config">/home/treipatru/</Path>
+                  <Path Filename="doublecmd">/home/treipatru/.config/</Path>
+                  <Path Filename="wfx.ini">/home/treipatru/.config/doublecmd/</Path>
+                  <Path Filename="dotscripts">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/dotscripts/</Path>
+                  <Path Filename=".mono">/home/treipatru/</Path>
+                  <Path Filename="registry">/home/treipatru/.mono/</Path>
+                  <Path Filename="..">/home/treipatru/.mono/registry/</Path>
+                  <Path Filename="..">/home/treipatru/.mono/</Path>
+                  <Path Filename="opt">/home/treipatru/</Path>
+                  <Path Filename="laverna">/home/treipatru/opt/</Path>
+                  <Path Filename="..">/home/treipatru/opt/laverna/</Path>
+                  <Path Filename="Postman">/home/treipatru/opt/</Path>
+                  <Path Filename="..">/home/treipatru/opt/Postman/</Path>
+                  <Path Filename="..">/home/treipatru/opt/</Path>
+                  <Path Filename="Public">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Public/</Path>
+                  <Path Filename="Templates">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Templates/</Path>
+                  <Path Filename=".thumbnails">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/.thumbnails/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename="Dropbox">/home/treipatru/</Path>
+                  <Path Filename="00.var">/home/treipatru/Dropbox/</Path>
+                  <Path Filename="..">/home/treipatru/Dropbox/00.var/</Path>
+                  <Path Filename="00.var">/home/treipatru/Dropbox/</Path>
+                  <Path Filename="Desktop">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Desktop/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/</LockPath>
+          <Title>treipatru</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/usr/lib/doublecmd/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename=".fonts">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/.fonts/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename=".fonts">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/.fonts/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="Telegram Desktop">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/Telegram Desktop/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Documents">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Documents/</Path>
+                  <Path Filename=".cache">/home/treipatru/</Path>
+                  <Path Filename="The Power of Habit by Charles Duhigg">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/The Power of Habit by Charles Duhigg/</Path>
+                  <Path Filename="Photos">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/Photos/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename=".gnupg">/home/treipatru/</Path>
+                  <Path Filename="private-keys-v1.d">/home/treipatru/.gnupg/</Path>
+                  <Path Filename="..">/home/treipatru/.gnupg/private-keys-v1.d/</Path>
+                  <Path Filename="..">/home/treipatru/.gnupg/</Path>
+                  <Path Filename="">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="Scrooged.1988.BRRip.XviD.AC3-playXD">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/Scrooged.1988.BRRip.XviD.AC3-playXD/</Path>
+                  <Path Filename="The Fly (1986) [1080p]">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/The Fly (1986) [1080p]/</Path>
+                  <Path Filename="Telegram Desktop">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/Telegram Desktop/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Repos">/home/treipatru/</Path>
+                  <Path Filename="pl34">/home/treipatru/Repos/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/pl34/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/</Path>
+                  <Path Filename="">/home/treipatru/Downloads/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/Downloads/</LockPath>
+          <Title>Downloads</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="wesave-conseil-customization-package">/home/treipatru/Repos/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="wesave-conseil-customization-package">/home/treipatru/Repos/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="wesave-conseil-customization-package">/home/treipatru/Repos/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="logo">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/logo/</Path>
+                  <Path Filename="logo">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="wesave-conseil-customization-package">/home/treipatru/Repos/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="svg">/home/treipatru/Repos/wesave-conseil-customization-package/src/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/src/svg/landing/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/src/svg/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/src/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="app-icon">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/app-icon/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/landing/</Path>
+                  <Path Filename="logo">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-customization-package/</Path>
+                  <Path Filename="">/home/treipatru/Repos/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/Repos/</LockPath>
+          <Title>Repos</Title>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>2</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="img">/home/treipatru/Downloads/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/img/</Path>
+                  <Path Filename="Telegram Desktop">/home/treipatru/Downloads/</Path>
+                  <Path Filename="dotfiles">/home/treipatru/</Path>
+                  <Path Filename="cp">/home/treipatru/dotfiles/</Path>
+                  <Path Filename=".fonts">/home/treipatru/dotfiles/cp/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/cp/.fonts/</Path>
+                  <Path Filename=".ssh">/home/treipatru/dotfiles/cp/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/cp/.ssh/</Path>
+                  <Path Filename=".ssh">/home/treipatru/dotfiles/cp/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/cp/.ssh/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/cp/</Path>
+                  <Path Filename="ln">/home/treipatru/dotfiles/</Path>
+                  <Path Filename="dotscripts">/home/treipatru/dotfiles/ln/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/ln/dotscripts/</Path>
+                  <Path Filename="dotscripts">/home/treipatru/dotfiles/ln/</Path>
+                  <Path Filename="i3">/home/treipatru/dotfiles/ln/dotscripts/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/ln/dotscripts/i3/</Path>
+                  <Path Filename="..">/home/treipatru/dotfiles/ln/dotscripts/</Path>
+                  <Path Filename="dotscripts">/home/treipatru/dotfiles/ln/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename=".ssh">/home/treipatru/</Path>
+                  <Path Filename="id_rsa.pub">/home/treipatru/.ssh/</Path>
+                  <Path Filename="..">/home/treipatru/</Path>
+                  <Path Filename="treipatru">/home/</Path>
+                  <Path Filename="Repos">/home/treipatru/</Path>
+                  <Path Filename="wesave-conseil-landing">/home/treipatru/Repos/</Path>
+                  <Path Filename="public">/home/treipatru/Repos/wesave-conseil-landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/public/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/wesave-conseil-landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/wesave-conseil-landing/</Path>
+                  <Path Filename="assets">/home/treipatru/Repos/wesave-conseil-landing/src/</Path>
+                  <Path Filename="images">/home/treipatru/Repos/wesave-conseil-landing/src/assets/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/assets/images/</Path>
+                  <Path Filename="fonts">/home/treipatru/Repos/wesave-conseil-landing/src/assets/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/assets/fonts/</Path>
+                  <Path Filename="fonts">/home/treipatru/Repos/wesave-conseil-landing/src/assets/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/assets/fonts/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/assets/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/wesave-conseil-landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/wesave-conseil-landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/wesave-conseil-landing/src/</Path>
+                  <Path Filename="">/home/treipatru/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/</LockPath>
+          <Title>treipatru</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Downloads">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Repos">/home/treipatru/</Path>
+                  <Path Filename="welearn-front">/home/treipatru/Repos/</Path>
+                  <Path Filename="static">/home/treipatru/Repos/welearn-front/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="features">/home/treipatru/Repos/welearn-front/static/landing/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing/features/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing-liins/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing-liins/</Path>
+                  <Path Filename="logo">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/wesave/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/wesave/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="share">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="share">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/wesave/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="app-icon">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/app-icon/</Path>
+                  <Path Filename="app-icon">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/app-icon/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/welearn-front/</Path>
+                  <Path Filename="svg">/home/treipatru/Repos/welearn-front/src/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="svg">/home/treipatru/Repos/welearn-front/src/</Path>
+                  <Path Filename="">/home/treipatru/Downloads/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/Downloads/</LockPath>
+          <Title>Downloads</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing-liins/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/landing-liins/</Path>
+                  <Path Filename="logo">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/wesave/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/wesave/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/logo/</Path>
+                  <Path Filename="share">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="share">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="wesave">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/wesave/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/share/</Path>
+                  <Path Filename="app-icon">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/app-icon/</Path>
+                  <Path Filename="app-icon">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/app-icon/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/static/</Path>
+                  <Path Filename="src">/home/treipatru/Repos/welearn-front/</Path>
+                  <Path Filename="svg">/home/treipatru/Repos/welearn-front/src/</Path>
+                  <Path Filename="landing">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="landing-liins">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/landing-liins/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/welearn-front/src/svg/</Path>
+                  <Path Filename="svg">/home/treipatru/Repos/welearn-front/src/</Path>
+                  <Path Filename="..">/home/treipatru/Downloads/</Path>
+                  <Path Filename="Repos">/home/treipatru/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/</Path>
+                  <Path Filename="Repos">/home/treipatru/</Path>
+                  <Path Filename="pl34">/home/treipatru/Repos/</Path>
+                  <Path Filename="dist">/home/treipatru/Repos/pl34/</Path>
+                  <Path Filename="css">/home/treipatru/Repos/pl34/dist/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/pl34/dist/css/</Path>
+                  <Path Filename="css">/home/treipatru/Repos/pl34/dist/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/pl34/dist/css/</Path>
+                  <Path Filename="css">/home/treipatru/Repos/pl34/dist/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/pl34/dist/css/</Path>
+                  <Path Filename="css">/home/treipatru/Repos/pl34/dist/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/pl34/dist/css/</Path>
+                  <Path Filename="..">/home/treipatru/Repos/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>2</Options>
+          <LockPath>/home/treipatru/Repos/</LockPath>
+          <Title>Repos</Title>
+        </Tab>
+      </Right>
+    </OpenedTabs>
   </Tabs>
   <Log Enabled="False" LogFileWithDateInName="False">
     <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
