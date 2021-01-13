@@ -14,18 +14,22 @@
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   cl = clean
   co = checkout
-  cm = commit -m
+  cm = commit
   am = commit --amend --no-edit:
   graph = log --graph --all --decorate --stat --date=iso
   local = log @{u}..
   localdiff = diff --word-diff @{u}..
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  re = "!f(){ clear && printf '\n' && git reset && printf '\n'; };f" 
+  prune-untracked = remote prune origin
+  re = "!f(){ clear && printf '\n' && git reset && printf '\n'; };f"
   s = status
   st = !git fetch && git status
   stats = shortlog -sn --all --no-merges
+  tags = log --no-walk --tags --decorate=full
   publish = "!git push -u origin $(git branch-name)"
   wd = diff --word-diff
+[diff "sopsdiffer"]
+  textconv = sops -d
 [log]
   date = relative
 [format]
@@ -34,3 +38,24 @@
   added = green
   changed = yellow
   untracked = red
+[user]
+  email = andrei.mocanca@keeneye.tech
+  name = Andrei Mocanca
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[color]
+  ui = true
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = 11
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
