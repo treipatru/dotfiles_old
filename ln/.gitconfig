@@ -22,7 +22,7 @@
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   prune-untracked = remote prune origin
   re = "!f(){ clear && printf '\n' && git reset && printf '\n'; };f"
-  s = status
+  s = status -s
   st = !git fetch && git status
   stats = shortlog -sn --all --no-merges
   tags = log --no-walk --tags --decorate=full
