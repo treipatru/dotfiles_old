@@ -2,13 +2,16 @@
 # wm independent hotkeys
 #
 
+# Print screen
+Print
+  flameshot gui
+
 # terminal emulator
 super + Return
 	alacritty
-
-# program launcher
+# terminal
 super + d
- 	rofi -show drun
+    rofi -show combi
 
 # make sxhkd reload its configuration files:
 super + Escape
