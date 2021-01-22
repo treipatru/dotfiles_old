@@ -18,18 +18,27 @@ ConsoleLog () { printf "\n░▎${1}\n"; }
 # Abort install
 ConsoleExit () { ConsoleLog "$@"; ConsoleLog "End script"; exit 0; }
 
-# Link contents of a folder to another folder
-LinkNodes () {
+# Create symlinks recursively from a folder to another folder
+# Ignores .config folders to avoid rewriting ~/.config
+MakeSymlinks () {
     local srcFolder=$1
     local dstFolder=$2
 
     find $srcFolder -mindepth 1 -maxdepth 1|while read nodeSrc; do
-        nodeName=$(sed "s@.*/@@" <<< $nodeSrc)
-        if [ "$nodeName" != ".config" ]; then
-            rm -rf ${dstFolder}/${nodeName}
-            ln -s $nodeSrc ${dstFolder}/${nodeName}
-        fi
-    done
+    nodeName=$(sed "s@.*/@@" <<< $nodeSrc)
+    if [ "$nodeName" != ".config" ]; then
+        rm -rf ${dstFolder}/${nodeName}
+        ln -s $nodeSrc ${dstFolder}/${nodeName}
+    fi
+done
+}
+
+# Symlink dotfiles to root
+LinkNodes () {
+    MakeSymlinks ~/repos/dotfiles/files/ ~/
+    MakeSymlinks ~/repos/dotfiles/files/.config ~/.config
+    # All done
+    ConsoleExit "Dotfiles linked."
 }
 
 
@@ -39,7 +48,18 @@ LinkNodes () {
 if ! hash git 2>/dev/null; then ConsoleExit "Install Git to continue"; fi
 
 # Repository already present
-[[ -d ~/repos/dotfiles ]] && ConsoleExit "Local dotfiles repository already exists."
+if [[ -d ~/repos/dotfiles ]]
+then
+    ConsoleLog "Local dotfiles repository already exists. Skipping download."
+    while true; do
+        read -p "Re-link files? This will DELETE unversioned files, if existing. [y/n]" yn
+        case $yn in
+            [Yy]* ) LinkNodes;break;;
+            [Nn]* ) ConsoleLog "Script finished.";exit;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
+fi
 
 
 
@@ -58,12 +78,12 @@ touch ~/{.zsh.local,.aliases.local}
 
 # Create example config SSH
 [[ ! -f ~/.ssh/config ]] && echo \
-"host example.com
-	HostName example.com
-	Port 22
-	IdentityFile ~/.ssh/id_rsa
-	User login"\
->> ~/.ssh/config
+    "host example.com
+    HostName example.com
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    User login"\
+        >> ~/.ssh/config
 
 # Install confirmation
 while true; do
@@ -76,10 +96,4 @@ while true; do
 done
 
 # Link .config files and folders to ~/.config
-LinkNodes ~/repos/dotfiles/files/.config ~/.config
-
-# Link home root files and folders to ~/
-LinkNodes ~/repos/dotfiles/files/ ~/
-
-# All done
-ConsoleExit "All done"
+LinkNodes 
