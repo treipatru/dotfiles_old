@@ -10,29 +10,28 @@
 # 
 
 
-######## Defs
-GitSourceUrl=https://github.com/treipatru/dotfiles.git
-GitDestinationPath=~/repos/dotfiles
-GitDestinationRoot=${GitDestinationPath%/*}
-SourceRootConfig=tst
 
+######## Defs
 # Logging
-ConsoleLog () { printf "\n ░░▎${1}\n"; }
+ConsoleLog () { printf "\n░▎${1}\n"; }
 
 # Abort install
-ConsoleExit () { ConsoleLog "$@"; ConsoleLog "Aborting install"; exit 0; }
+ConsoleExit () { ConsoleLog "$@"; ConsoleLog "End script"; exit 0; }
 
-# Recursively link all files from one location to another
-RecursiveLink () {
-    local source=$1/**.*
+# Link contents of a folder to another folder
+LinkNodes () {
+    local srcFolder=$1
+    local dstFolder=$2
 
-    for node in $source
-    do
-        echo $node
-        # if [[ -d $node ]]; then RecursiveLink $node; fi
-        # if [[ -f $node ]]; then echo $node; fi
+    find $srcFolder -mindepth 1 -maxdepth 1|while read nodeSrc; do
+        nodeName=$(sed "s@.*/@@" <<< $nodeSrc)
+        if [ "$nodeName" != ".config" ]; then
+            rm -rf ${dstFolder}/${nodeName}
+            ln -s $nodeSrc ${dstFolder}/${nodeName}
+        fi
     done
 }
+
 
 
 ######## Check
@@ -40,39 +39,44 @@ RecursiveLink () {
 if ! hash git 2>/dev/null; then ConsoleExit "Install Git to continue"; fi
 
 # Repository already present
-# [[ -d $GitDestinationPath ]] && ConsoleExit "${GitDestinationPath} already exists."
+[[ -d ~/repos/dotfiles ]] && ConsoleExit "Local dotfiles repository already exists."
+
 
 
 ######## Run
 # Make any missing dirs
-# mkdir -p {~/.config,~/scripts,~/.ssh,$GitDestinationRoot}
+mkdir -p {~/.config,~/scripts,~/.ssh,~/repos}
 
 # Clone repo
-# git -C $GitDestinationRoot clone $GitSourceUrl 
+git -C ~/repos/ clone https://github.com/treipatru/dotfiles.git
 
-# Touch additional config files
-# touch ~/{.zsh.local,.aliases.local}
+# Touch additional non-versioned config files
+touch ~/{.zsh.local,.aliases.local}
 
 # Create example config SSH
-# [[ ! -f ~/.ssh/config ]] && echo \
-# "host example.com
-# 	HostName example.com
-# 	Port 22
-# 	IdentityFile ~/.ssh/id_rsa
-# 	User login"\
-# >> ~/.ssh/config
+[[ ! -f ~/.ssh/config ]] && echo \
+"host example.com
+	HostName example.com
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+	User login"\
+>> ~/.ssh/config
 
-# Link config files to ~
-pth=${GitDestinationPath}/${SourceRootConfig}/
-find $pth -mindepth 1 -type d| while read lnSource; do
-    lnDest=~/${lnSource#"$pth"}
-    echo "link dest: " $lnDest
-    # ln -sf $lnSource $lnDest
-    # [[ -f $lnDest ]] && ln -sf $lnDest
+# Install confirmation
+while true; do
+    read -p "Link new files? This will DELETE your current files, if existing. [y/n]" yn
+    case $yn in
+        [Yy]* ) ConsoleLog "Continuing";break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
 done
 
-# find $pth -type f| while read lnSource; do
-#     lnDest=~/${lnSource#"$pth"}
-#     echo "link dest: " $lnDest
-#     ln -sf $lnSource $lnDest
-# done
+# Link .config files and folders to ~/.config
+LinkNodes ~/repos/dotfiles/files/.config ~/.config
+
+# Link home root files and folders to ~/
+LinkNodes ~/repos/dotfiles/files/ ~/
+
+# All done
+ConsoleExit "All done"
