@@ -49,6 +49,9 @@ mkdir -p {~/.config,~/scripts,~/.ssh,~/repos}
 
 # Clone repo
 git -C ~/repos/ clone https://github.com/treipatru/dotfiles.git
+cd ~/repos/dotfiles \
+    && git remote set-url origin "git@github.com:treipatru/dotfiles.git" \
+    && cd -
 
 # Touch additional non-versioned config files
 touch ~/{.zsh.local,.aliases.local}
