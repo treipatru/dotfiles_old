@@ -2,9 +2,20 @@
 
 > Setup own configuration files for Unix-like environments.
 
-## Note to self
+## Install
+```
+bash <(wget -O - http://planet34.org/dotinstall)
+```
 
-`bash <(wget -O - http://planet34.org/dotinstall)`
+## Deps
 
-## v4
-More questions, less code.
+[ ] `bat`
+[ ] `fzf`
+[ ] `git`
+[ ] `node`, `npm`
+[ ] `nvim`
+[ ] `ripgrep`
+[ ] `zsh`
+
+## v5
+> "Look deep into vim, and then you will understand everything better" – Albert Einstein
