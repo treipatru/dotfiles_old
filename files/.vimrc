@@ -23,9 +23,12 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
 Plug 'https://github.com/rhysd/conflict-marker.vim' "Git conflict markers 
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
+Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
 Plug 'https://github.com/tpope/vim-fugitive' "Git management
 Plug 'https://github.com/voldikss/vim-floaterm' "Floating terminal support
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
+Plug 'vim-airline/vim-airline' "Airline
+Plug 'vim-airline/vim-airline-themes' "Airline themes
 "Text objects
 Plug 'https://github.com/inside/vim-textobj-jsxattr' "jsx text obj
 Plug 'https://github.com/kana/vim-textobj-function' "function text obj
