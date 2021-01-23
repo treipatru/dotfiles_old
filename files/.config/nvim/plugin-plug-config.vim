@@ -12,18 +12,17 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 "General plugins
 Plug 'dracula/vim', { 'as': 'dracula' } "Dracula theme
+Plug 'https://github.com/AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'https://github.com/Yggdroot/indentLine' "Show vertical indentation lines
 Plug 'https://github.com/airblade/vim-gitgutter.git' "Git gutter
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
 Plug 'https://github.com/mcchrish/nnn.vim' "NNN integration
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
-Plug 'https://github.com/rhysd/conflict-marker.vim' "Git conflict markers 
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
 Plug 'https://github.com/tpope/vim-fugitive' "Git management
-" Plug 'https://github.com/voldikss/vim-floaterm' "Floating terminal support
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
 Plug 'vim-airline/vim-airline' "Airline
