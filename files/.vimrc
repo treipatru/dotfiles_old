@@ -76,7 +76,7 @@ nmap <leader>m <Plug>(zoom-toggle)
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
 " Open NNN 
-nnoremap <silent> <leader>n :Nnnpicker<CR>
+nnoremap <silent> <leader>n :Nnnpicker %<CR>
 
 " FZF File picker
 nnoremap <silent> <leader>p :GitFiles<CR>
