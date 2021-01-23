@@ -86,3 +86,6 @@ nnoremap <silent> <leader>f :Rg!<CR>
 
 " FZF File History
 nnoremap <silent> <leader>h :History<CR>
+
+"Close buffer
+nnoremap <leader>d :bdelete<CR>
