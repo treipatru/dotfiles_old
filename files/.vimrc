@@ -38,10 +38,6 @@ Plug 'https://github.com/rhysd/vim-textobj-anyblock' "any block text obj like ([
 Plug 'thinca/vim-textobj-function-javascript' "js function text obj
 call plug#end()
 
-"COC CONFIG
-"..................................................................................................
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 "INDENTATION
 "..................................................................................................
 set autoindent "New lines inherit indentation of previous line
@@ -108,15 +104,49 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
 nnoremap <leader>c <C-w>c
 nnoremap <leader>w <C-w>w
 nnoremap <leader>o <C-w>o
+
+" Toggle zoom plugin
 nmap <leader>m <Plug>(zoom-toggle)
 
-map <leader>n :FloatermNew nnn<CR>
+"Ctrl+l clears search term
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
+" Open floating nnn
+nnoremap <leader>n :FloatermNew nnn<CR>
 
+"AIRLINE
+"..................................................................................................
+"Config
+let g:airline#extensions#tabline#enabled = 1 "Show buffers/tabs line
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+"Map buffers to Alt+#
+nmap <m-1> <Plug>AirlineSelectTab1
+nmap <m-2> <Plug>AirlineSelectTab2
+nmap <m-3> <Plug>AirlineSelectTab3
+nmap <m-4> <Plug>AirlineSelectTab4
+nmap <m-5> <Plug>AirlineSelectTab5
+nmap <m-6> <Plug>AirlineSelectTab6
+nmap <m-7> <Plug>AirlineSelectTab7
+nmap <m-8> <Plug>AirlineSelectTab8
+nmap <m-9> <Plug>AirlineSelectTab9
+nmap <m-0> <Plug>AirlineSelectTab0
+
+
+"COC CONFIG
+"..................................................................................................
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+"Auto install these coc extensions
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -126,7 +156,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
