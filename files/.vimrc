@@ -76,6 +76,8 @@ nmap <leader>m <Plug>(zoom-toggle)
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
 " Open NNN 
+let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
+let g:nnn#command = 'nnn -doe'
 nnoremap <silent> <leader>n :Nnnpicker %<CR>
 
 " FZF File picker
