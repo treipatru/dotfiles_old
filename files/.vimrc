@@ -44,6 +44,7 @@ set background=dark "Use colors for dark background
 let g:one_allow_italics = 1 "Italics for comments if possible
 set cursorline "Highlight current line
 set mouse=a "Enable mouse for scrolling and resizing
+set noshowmode "Disable mode since it's handled by airline
 set number "Show line numbers
 set relativenumber "Shoe relative line numbers
 set ruler "Always show cursor positon
