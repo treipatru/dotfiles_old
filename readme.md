@@ -20,4 +20,4 @@ bash <(wget -O - http://planet34.org/dotinstall)
 
 ## v5
 
->> "Look deep into vim, and then you will understand everything better" – Albert Einstein
+_"Look deep into vim, and then you will understand everything better"_ Albert Einstein
