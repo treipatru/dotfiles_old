@@ -18,4 +18,4 @@ bash <(wget -O - http://planet34.org/dotinstall)
 [ ] `zsh`
 
 ## v5
-> "Look deep into vim, and then you will understand everything better" – Albert Einstein
+>> "Look deep into vim, and then you will understand everything better" – Albert Einstein
