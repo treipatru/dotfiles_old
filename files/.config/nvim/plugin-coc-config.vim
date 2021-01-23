@@ -1,10 +1,11 @@
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 "Auto install these coc extensions
 let g:coc_global_extensions = [
+  \ 'coc-highlight',
   \ 'coc-tsserver',
   \ 'coc-eslint'
   \ ]
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " TextEdit might fail if hidden is not set.
 set hidden
