@@ -2,9 +2,9 @@
 "..................................................................................................
 set autoindent "New lines inherit indentation of previous line
 set expandtab "Convert tab to spaces
+set shiftwidth=4 "Shifting with > inserts 4 spaces
 set smarttab "Insert tabstop number of spaces when tab is pressed
 set tabstop=4 "Tabs are now 4 spaces
-set shiftwidth=4 "Shifting with > inserts 4 spaces
 
 "NETRW
 "..................................................................................................
@@ -23,9 +23,8 @@ set smartcase "Automatically switch search to case-sensitive when query contains
 "OTHER OPTIONS
 "..................................................................................................
 set autoread "Automatically re-read files if unmodified inside Vim 
-set updatetime=100 "Refresh rate
 set timeoutlen=1000 "Leader timeout
-let g:ctrlp_custom_ignore = 'node_modules\|coverage\|dist\|git'
+set updatetime=100 "Refresh rate
 
 "VISUAL OPTIONS
 "..................................................................................................
@@ -41,8 +40,8 @@ if (has("termguicolors"))
 endif
 
 colorscheme dracula
-set background=dark " Use colors for dark background
-let g:one_allow_italics = 1 " I love italic for comments
+set background=dark "Use colors for dark background
+let g:one_allow_italics = 1 "Italics for comments if possible
 set cursorline "Highlight current line
 set mouse=a "Enable mouse for scrolling and resizing
 set number "Show line numbers
@@ -59,10 +58,10 @@ syntax enable "Enable syntax highlighting
 let mapleader=","
 
 "Tab navigation
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>c <C-w>c
@@ -73,66 +72,16 @@ nnoremap <leader>o <C-w>o
 nmap <leader>m <Plug>(zoom-toggle)
 
 "Ctrl+l clears search term
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
-" Open floating nnn
-nnoremap <leader>n :FloatermNew nnn<CR>
+" Open NNN 
+nnoremap <silent> <leader>n :Nnnpicker<CR>
 
-"AIRLINE
-"..................................................................................................
-"Config
-let g:airline#extensions#tabline#enabled = 1 "Show buffers/tabs line
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
+" FZF File picker
+nnoremap <silent> <leader>p :GitFiles<CR>
 
-"Map buffers to Alt+#
-nmap <m-1> <Plug>AirlineSelectTab1
-nmap <m-2> <Plug>AirlineSelectTab2
-nmap <m-3> <Plug>AirlineSelectTab3
-nmap <m-4> <Plug>AirlineSelectTab4
-nmap <m-5> <Plug>AirlineSelectTab5
-nmap <m-6> <Plug>AirlineSelectTab6
-nmap <m-7> <Plug>AirlineSelectTab7
-nmap <m-8> <Plug>AirlineSelectTab8
-nmap <m-9> <Plug>AirlineSelectTab9
-nmap <m-0> <Plug>AirlineSelectTab0
-
-
-"COC CONFIG
-"..................................................................................................
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-"Auto install these coc extensions
-let g:coc_global_extensions = [
-  \ 'coc-tsserver'
-  \ ]
-
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=1
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+" FZF Ripgrep finder
+nnoremap <silent> <leader>f :Rg!<CR>
 
 " FZF File History
-nnoremap <silent> <C-h> :History<CR>
+nnoremap <silent> <leader>h :History<CR>

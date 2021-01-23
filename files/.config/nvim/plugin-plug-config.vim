@@ -23,7 +23,7 @@ Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when 
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
 Plug 'https://github.com/tpope/vim-fugitive' "Git management
-Plug 'https://github.com/voldikss/vim-floaterm' "Floating terminal support
+" Plug 'https://github.com/voldikss/vim-floaterm' "Floating terminal support
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
 Plug 'vim-airline/vim-airline' "Airline

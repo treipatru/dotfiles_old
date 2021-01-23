@@ -119,6 +119,8 @@ export GOPATH=$HOME/Go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export SOPS_GPG_EXEC=/usr/bin/gpg2
+export PATH="$PATH:$HOME/.skim/bin"
+export SKIM_DEFAULT_COMMAND="find . -path ./node_modules -prune -o -path ./dist -prune -o -path ./coverage -prune -o -path ./.git -prune -o -print"
 
 export BAT_CONFIG_PATH=$HOME/.config/bat/config
 
