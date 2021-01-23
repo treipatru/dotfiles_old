@@ -105,6 +105,9 @@ export KEYTIMEOUT=1
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   startx
