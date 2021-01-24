@@ -40,7 +40,7 @@ if (has("termguicolors"))
 endif
 
 colorscheme dracula
-let g:dracula_colorterm = 0
+let g:dracula_colorterm = 1 "Set transparent background
 set background=dark "Use colors for dark background
 let g:one_allow_italics = 1 "Italics for comments if possible
 set cursorline "Highlight current line

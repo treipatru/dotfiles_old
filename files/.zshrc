@@ -27,7 +27,6 @@ ZSH_THEME=""
 # HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0162'
 
 # Pure Prompt
 autoload -U promptinit; promptinit
