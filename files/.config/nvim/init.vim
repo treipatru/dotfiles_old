@@ -8,3 +8,4 @@ source ~/.config/nvim/plugin-coc-config.vim
 source ~/.config/nvim/plugin-airline-config.vim
 source ~/.config/nvim/plugin-rooter-config.vim
 source ~/.config/nvim/plugin-fzf-config.vim
+source ~/.config/nvim/plugin-ack-config.vim
