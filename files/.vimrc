@@ -40,6 +40,7 @@ if (has("termguicolors"))
 endif
 
 colorscheme dracula
+let g:dracula_colorterm = 0
 set background=dark "Use colors for dark background
 let g:one_allow_italics = 1 "Italics for comments if possible
 set cursorline "Highlight current line
@@ -79,15 +80,6 @@ nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
 let g:nnn#command = 'nnn -doe'
 nnoremap <silent> <leader>n :Nnnpicker %<CR>
-
-" FZF File picker
-nnoremap <silent> <leader>p :GitFiles<CR>
-
-" FZF Ripgrep finder
-nnoremap <silent> <leader>f :Rg!<CR>
-
-" FZF File History
-nnoremap <silent> <leader>h :History<CR>
 
 "Close buffer
 nnoremap <leader>d :bdelete<CR>
