@@ -2,8 +2,8 @@
 # alt+c change directory
 # ctrl+r search command history
 # ** expansion
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source ~/.config/zsh/completion.zsh
+source ~/.config/zsh/key-bindings.zsh
 
 # Dracula theme
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
