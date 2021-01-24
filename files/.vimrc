@@ -18,11 +18,11 @@ let g:netrw_winsize=20 "Width of netrw split
 set hlsearch "Enable search highlighting
 set ignorecase "Ignore case when searching
 set incsearch "Incremental search that shows partial matches
-set smartcase "Automatically switch search to case-sensitive when query contains an uppercase letter 
+set smartcase "Automatically switch search to case-sensitive when query contains an uppercase letter
 
 "OTHER OPTIONS
 "..................................................................................................
-set autoread "Automatically re-read files if unmodified inside Vim 
+set autoread "Automatically re-read files if unmodified inside Vim
 set timeoutlen=1000 "Leader timeout
 set updatetime=100 "Refresh rate
 
@@ -49,8 +49,8 @@ set noshowmode "Disable mode since it's handled by airline
 set number "Show line numbers
 set relativenumber "Shoe relative line numbers
 set ruler "Always show cursor positon
-set scrolloff=2 "The number of lines to keep above and below the cursor
-set sidescrolloff=5 "The number of columns to keep to the left and right of the cursor
+set scrolloff=10 "The number of lines to keep above and below the cursor
+set sidescrolloff=8 "The number of columns to keep to the left and right of the cursor
 set nowrap "Enable line wrapping
 syntax enable "Enable syntax highlighting
 

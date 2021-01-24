@@ -1,7 +1,7 @@
 source $HOME/.config/zsh/exports
 source $HOME/.config/zsh/aliases
 
-# HISTORY 
+# HISTORY
 #..................................................................................................
 # Remove superfluous blanks from each command line being added to the history
 # list
@@ -41,7 +41,7 @@ source $ZSH/oh-my-zsh.sh
 # Set vi mode
 bindkey -v
 
-# NNN change directory on quit 
+# NNN change directory on quit
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
     source /usr/share/nnn/quitcd/quitcd.bash_zsh
 fi
@@ -49,7 +49,7 @@ fi
 # FZF
 source $HOME/.config/zsh/fzf
 
-# X 
+# X
 #..................................................................................................
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   startx
