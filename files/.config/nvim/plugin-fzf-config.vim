@@ -1,14 +1,9 @@
-" File picker
-nnoremap <silent> <leader>p :Files<CR>
+let g:fzf_buffers_jump = 1
 
+"Use RG instead of FZF because it's faster but let's pretend it's FZF.
 let $FZF_DEFAULT_COMMAND = 'rg --files --ignore-case --hidden -g "!{.git,coverage,dist,node_modules,vendor}/*"'
 command! -bang -nargs=? -complete=dir Files
      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-" File History
-nnoremap <silent> <leader>h :History<CR>
-
-let g:fzf_buffers_jump = 1
 
 " Ripgrep finder
 function! RipgrepFzf(query, fullscreen)
@@ -21,6 +16,9 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
+" Key map 
+nnoremap <silent> <leader>p :Files<CR>
+nnoremap <silent> <leader>h :History<CR>
 nnoremap <silent> <leader>f :RG!<CR>
 
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+" let $FZF_DEFAULT_OPTS="--ansi --preview-window 'down:60%' --margin=0,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
