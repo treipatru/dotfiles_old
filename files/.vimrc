@@ -76,10 +76,10 @@ nmap <leader>m <Plug>(zoom-toggle)
 "Ctrl+l clears search term
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
-" Open NNN 
+" Open NNN
 let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
-let g:nnn#command = 'nnn -doe'
-nnoremap <silent> <leader>n :Nnnpicker %<CR>
+let g:nnn#command = 'nnn -oe'
+nnoremap <silent> <leader>n :Nnnpicker<CR>
 
 "Close buffer
 nnoremap <leader>d :bdelete<CR>

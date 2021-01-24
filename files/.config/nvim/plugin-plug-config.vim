@@ -26,6 +26,7 @@ Plug 'https://github.com/tpope/vim-fugitive' "Git management
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
+Plug 'mileszs/ack.vim' "Ack ack, ack ack!
 Plug 'vim-airline/vim-airline' "Airline
 Plug 'vim-airline/vim-airline-themes' "Airline themes
 "Text objects
