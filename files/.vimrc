@@ -59,7 +59,8 @@ syntax enable "Enable syntax highlighting
 
 "KEY BINDINGS
 "..................................................................................................
-let mapleader=","
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 "Tab navigation
 nnoremap <C-h> <C-w>h
@@ -88,3 +89,10 @@ nnoremap <leader>d :bdelete<CR>
 
 "Switch plugin bind
 let g:switch_mapping = "<leader>-"
+
+nnoremap <leader>g :G<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gs :G switch 
+nnoremap <leader>gu :Gpush<CR>
+nnoremap <leader>gp :Gpull<CR>
