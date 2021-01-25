@@ -19,6 +19,8 @@ Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project 
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
 Plug 'https://github.com/mcchrish/nnn.vim' "NNN integration
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
+Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
+Plug 'https://github.com/AndrewRadev/switch.vim' "Switch values
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts

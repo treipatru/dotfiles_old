@@ -83,3 +83,6 @@ nnoremap <silent> <leader>n :Nnnpicker<CR>
 
 "Close buffer
 nnoremap <leader>d :bdelete<CR>
+
+"Switch plugin bind
+let g:switch_mapping = "<leader>-"
