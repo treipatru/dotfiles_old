@@ -39,21 +39,23 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
+:autocmd InsertEnter,InsertLeave * set list! "Toggle display whitespace when switching Insert mode
 colorscheme dracula
 let g:dracula_colorterm = 0 "Set transparent background
-set background=dark "Use colors for dark background
 let g:one_allow_italics = 1 "Italics for comments if possible
+set background=dark "Use colors for dark background
 set cursorline "Highlight current line
+set lcs=tab:»_,trail:·,eol:$ "Display tabs, trailing whitespace and eol as...
+set list "Show whitespace
 set mouse=a "Enable mouse for scrolling and resizing
 set noshowmode "Disable mode since it's handled by airline
+set nowrap "Enable line wrapping
 set number "Show line numbers
 set relativenumber "Shoe relative line numbers
 set ruler "Always show cursor positon
 set scrolloff=10 "The number of lines to keep above and below the cursor
 set sidescrolloff=8 "The number of columns to keep to the left and right of the cursor
-set nowrap "Enable line wrapping
 syntax enable "Enable syntax highlighting
-
 
 "KEY BINDINGS
 "..................................................................................................
