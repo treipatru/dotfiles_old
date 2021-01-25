@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' } "Dracula theme
 Plug 'https://github.com/AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'https://github.com/Yggdroot/indentLine' "Show vertical indentation lines
+Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'https://github.com/airblade/vim-gitgutter.git' "Git gutter
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
