@@ -22,6 +22,8 @@ set smartcase "Automatically switch search to case-sensitive when query contains
 
 "OTHER OPTIONS
 "..................................................................................................
+let g:nnn#command = 'nnn -oe'
+let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
 set autoread "Automatically re-read files if unmodified inside Vim
 set timeoutlen=1000 "Leader timeout
 set updatetime=100 "Refresh rate
@@ -79,21 +81,24 @@ nmap <leader>m <Plug>(zoom-toggle)
 "Ctrl+l clears search term
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
-" Open NNN
-let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
-let g:nnn#command = 'nnn -oe'
-nnoremap <silent> <leader>n :Nnnpicker<CR>
+"Buffers
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>bw :w<CR>
 
-"Close buffer
-nnoremap <leader>d :bdelete<CR>
-
-"Switch plugin bind
-let g:switch_mapping = "<leader>-"
-
-"Fugitive binds
+"Git/Fugitive binds
 nnoremap <leader>g :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gs :G switch 
+nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gu :Gpush<CR>
 nnoremap <leader>gw :Gwrite<CR>
+
+"Files management
+nnoremap <silent> <leader>f :Nnnpicker<CR>
+nnoremap <silent> <leader>fg :RG!<CR>
+nnoremap <silent> <leader>fh :History<CR>
+nnoremap <silent> <leader>fj :Files<CR>

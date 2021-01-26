@@ -16,10 +16,3 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-" Key map
-nnoremap <silent> <leader>p :Files<CR>
-nnoremap <silent> <leader>h :History<CR>
-nnoremap <silent> <leader>f :RG!<CR>
-
-" let $FZF_DEFAULT_OPTS="--ansi --preview-window 'down:60%' --margin=0,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
