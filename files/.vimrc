@@ -95,6 +95,9 @@ nnoremap <leader>bw :w<CR>
 nnoremap <leader>g :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpull<CR>
+nnoremap <leader>gd :Gvdiffsplit!<CR>
+nnoremap <leader>gdh :diffget //2<CR>
+nnoremap <leader>gdl :diffget //3<CR>
 nnoremap <leader>gs :G switch 
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gu :Gpush<CR>
