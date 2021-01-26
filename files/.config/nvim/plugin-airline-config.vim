@@ -39,7 +39,7 @@ let g:airline_mode_map = {
     \ }
 
 
-let g:airline_section_z = "%p%% \u2261 %l/%L:%c"
+let g:airline_section_z = "\u2261 %l/%L:%c"
 
 " Airline Tabline
 let g:airline#extensions#tabline#enabled = 1

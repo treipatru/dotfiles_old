@@ -1,51 +1,40 @@
 source $HOME/.config/zsh/exports
 source $HOME/.config/zsh/aliases
 
-# HISTORY
-#..................................................................................................
-# Remove superfluous blanks from each command line being added to the history
-# list
-setopt histreduceblanks
-# Remove command lines from the history list when the first character on the
-# line is a space, or when one of the expanded aliases contains a leading space
-setopt histignorespace
+# History
+setopt EXTENDED_HISTORY
+setopt HIST_BEEP
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
 
-# Do not enter command lines into the history list if they are duplicates of the
-# previous event.
-setopt histignorealldups
-
-# Don't kill background jobs when I logout
+# Don't kill background jobs on close session
 setopt nohup
 
 # See: http://zsh.sourceforge.net/Intro/intro_2.html
 setopt extendedglob
-
-# OHMYZSH OPTIONS
-#..................................................................................................
-ZSH_THEME=""
-# CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
-HIST_STAMPS="yyyy-mm-dd"
-
-# Pure Prompt
-autoload -U promptinit; promptinit
-prompt pure
-
-# Plugins
-plugins=(git z zsh-autosuggestions colored-man-pages)
-
-#
-source $ZSH/oh-my-zsh.sh
-
-# Set vi mode
-bindkey -v
 
 # NNN change directory on quit
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
     source /usr/share/nnn/quitcd/quitcd.bash_zsh
 fi
 
+# Cfg third party things
+#..................................................................................................
+# ZSH
+ZSH_THEME=""
+HIST_STAMPS="yyyy-mm-dd"
+plugins=(git z zsh-autosuggestions colored-man-pages)
+# Pure Prompt
+autoload -U promptinit; promptinit
+prompt pure
+# Load OMZSH
+source $ZSH/oh-my-zsh.sh
+# Set vi mode
+bindkey -v
 # FZF
 source $HOME/.config/zsh/fzf
 

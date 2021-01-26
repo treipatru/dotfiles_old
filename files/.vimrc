@@ -82,8 +82,11 @@ nmap <leader>m <Plug>(zoom-toggle)
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
 "Buffers
+" Delete all buffers except the current one
+command! BufOnly silent! execute "%bd|e#|bd#"
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bo :BufOnly<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bw :w<CR>
@@ -96,6 +99,14 @@ nnoremap <leader>gs :G switch
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gu :Gpush<CR>
 nnoremap <leader>gw :Gwrite<CR>
+
+"GitGitter binds
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+"CoC binds
+nmap ]e <Plug>(coc-diagnostic-next)
+nmap [e <Plug>(coc-diagnostic-prev)
 
 "Files management
 nnoremap <silent> <leader>f :Nnnpicker<CR>
