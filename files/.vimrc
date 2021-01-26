@@ -108,8 +108,8 @@ nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 
 "CoC binds
-nmap ]e <Plug>(coc-diagnostic-next)
-nmap [e <Plug>(coc-diagnostic-prev)
+nmap ]g <Plug>(coc-diagnostic-next)
+nmap [g <Plug>(coc-diagnostic-prev)
 
 "Files management
 nnoremap <silent> <leader>f :Nnnpicker<CR>
