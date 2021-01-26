@@ -90,9 +90,10 @@ nnoremap <leader>d :bdelete<CR>
 "Switch plugin bind
 let g:switch_mapping = "<leader>-"
 
+"Fugitive binds
 nnoremap <leader>g :G<CR>
-nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gs :G switch 
 nnoremap <leader>gu :Gpush<CR>
-nnoremap <leader>gp :Gpull<CR>
+nnoremap <leader>gw :Gwrite<CR>
