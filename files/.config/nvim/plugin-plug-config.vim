@@ -32,7 +32,6 @@ Plug 'mileszs/ack.vim' "Ack ack, ack ack!
 Plug 'vim-airline/vim-airline' "Airline
 Plug 'vim-airline/vim-airline-themes' "Airline themes
 "Text objects
-Plug 'https://github.com/inside/vim-textobj-jsxattr' "jsx text obj
 Plug 'https://github.com/kana/vim-textobj-function' "function text obj
 Plug 'https://github.com/kana/vim-textobj-indent' "same indend block text obj like
 Plug 'https://github.com/kana/vim-textobj-user' "Support for user defined text objects
