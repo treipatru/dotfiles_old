@@ -22,8 +22,9 @@ set smartcase "Automatically switch search to case-sensitive when query contains
 
 "OTHER OPTIONS
 "..................................................................................................
+let g:fern_git_status#disable_ignored = 1
 set autoread "Automatically re-read files if unmodified inside Vim
-set timeoutlen=1000 "Leader timeout
+set timeoutlen=750 "Leader timeout
 set updatetime=100 "Refresh rate
 
 "VISUAL OPTIONS
