@@ -4,7 +4,6 @@
 source $HOME/.config/nvim/base.vim
 
 let g:one_allow_italics = 1 "Italics for comments if possible
-set background=dark "Use colors for dark background
 set lcs=tab:»_,trail:·,eol:$ "Display tabs, trailing whitespace and eol as...
 set list "Show whitespace
 set noshowmode "Disable mode since it's handled by airline
@@ -53,6 +52,7 @@ source $HOME/.config/nvim/cfg-plug.vim
 
 colorscheme dracula
 let g:dracula_colorterm = 0 "Set transparent background
+set background=dark "Use colors for dark background
 
 source $HOME/.config/nvim/cfg-ack.vim
 source $HOME/.config/nvim/cfg-airline.vim
