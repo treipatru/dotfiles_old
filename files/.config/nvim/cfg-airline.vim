@@ -48,7 +48,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
-" Map witch to buffer to Alt+#
+" Map buffers to Alt+#
 nmap <m-1> <Plug>AirlineSelectTab1
 nmap <m-2> <Plug>AirlineSelectTab2
 nmap <m-3> <Plug>AirlineSelectTab3

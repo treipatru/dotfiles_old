@@ -55,3 +55,11 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" Jump diagnostics
+nmap ]g <Plug>(coc-diagnostic-next)
+nmap [g <Plug>(coc-diagnostic-prev)
+
+" Rename symbol
+nmap <leader>rn <Plug>(coc-rename)
+
