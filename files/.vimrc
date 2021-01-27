@@ -91,8 +91,8 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bw :w<CR>
 
 "Git/Fugitive binds
-nnoremap <leader>g :G<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>g :vertical G<CR>
+nnoremap <leader>gc :vertical Gcommit<CR>
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gd :Gvdiffsplit!<CR>
 nnoremap <leader>gdh :diffget //2<CR>
@@ -109,9 +109,19 @@ nmap [h <Plug>(GitGutterPrevHunk)
 "CoC binds
 nmap ]g <Plug>(coc-diagnostic-next)
 nmap [g <Plug>(coc-diagnostic-prev)
+nmap <leader>rn <Plug>(coc-rename)
 
 "Files management
 nnoremap <silent> <leader>f :Fern . -drawer -width=40 -toggle -reveal=%<CR>
-nnoremap <silent> <leader>fg :RG!<CR>
+nnoremap <silent> <leader>fg :Rg<CR>
 nnoremap <silent> <leader>fh :History<CR>
 nnoremap <silent> <leader>fj :Files<CR>
+
+"Enable matchit macro (ex. use % to jump between html tags)
+runtime macros/matchit.vim
+
+"Code folding
+set foldmethod=syntax "syntax highlighting items specify folds
+set foldcolumn=1 "defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened
