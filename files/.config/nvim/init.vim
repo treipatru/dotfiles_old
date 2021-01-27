@@ -1,18 +1,5 @@
-" Base setup
-"..................................................................................................
 " Common basic settings with Vim
 source $HOME/.config/nvim/base.vim
-
-let g:one_allow_italics = 1 "Italics for comments if possible
-set lcs=tab:»_,trail:·,eol:$ "Display tabs, trailing whitespace and eol as...
-set list "Show whitespace
-set noshowmode "Disable mode since it's handled by airline
-
-" Code folding
-set foldmethod=syntax "Syntax highlighting items specify folds
-set foldcolumn=1 "Defines 1 col at window left, to indicate folding
-let javaScript_fold=1 "Activate folding by JS syntax
-set foldlevelstart=99 "Start file with all folds opened
 
 " Keymaps
 "..................................................................................................
@@ -50,22 +37,35 @@ nnoremap <silent> ]q :cnext<CR>
 "..................................................................................................
 source $HOME/.config/nvim/cfg-plug.vim
 
-colorscheme dracula
-let g:dracula_colorterm = 0 "Set transparent background
-set background=dark "Use colors for dark background
-
 source $HOME/.config/nvim/cfg-ack.vim
 source $HOME/.config/nvim/cfg-airline.vim
 source $HOME/.config/nvim/cfg-coc.vim
-source $HOME/.config/nvim/cfg-fern.vim 
+source $HOME/.config/nvim/cfg-fern.vim
 source $HOME/.config/nvim/cfg-fugitive.vim
 source $HOME/.config/nvim/cfg-fzf.vim
 source $HOME/.config/nvim/cfg-gitgutter.vim
 source $HOME/.config/nvim/cfg-rooter.vim
 source $HOME/.config/nvim/cfg-zoom.vim
 
-" The rest
+" Macros and things
 "..................................................................................................
 runtime macros/matchit.vim "Enable matchit(ex. use % to jump between html tags)
 
 source $HOME/.config/nvim/./cfg-autocmd.vim
+
+" Visual settings
+"..................................................................................................
+colorscheme dracula
+let g:dracula_colorterm = 0 "Set transparent background
+set background=dark "Use colors for dark background
+highlight Comment cterm=italic gui=italic
+let g:one_allow_italics = 1 "Italics for comments if possible
+set lcs=tab:»_,trail:·,eol:$ "Display tabs, trailing whitespace and eol as...
+set list "Show whitespace
+set noshowmode "Disable mode since it's handled by airline
+
+" Code folding
+set foldmethod=syntax "Syntax highlighting items specify folds
+set foldcolumn=1 "Defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "Activate folding by JS syntax
+set foldlevelstart=99 "Start file with all folds opened
