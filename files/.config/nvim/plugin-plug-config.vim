@@ -18,7 +18,7 @@ Plug 'https://github.com/airblade/vim-gitgutter.git' "Git gutter
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
 Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
-Plug 'https://github.com/mcchrish/nnn.vim' "NNN integration
+Plug 'lambdalisue/fern.vim' "Tree view
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing

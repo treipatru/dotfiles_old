@@ -22,8 +22,6 @@ set smartcase "Automatically switch search to case-sensitive when query contains
 
 "OTHER OPTIONS
 "..................................................................................................
-let g:nnn#command = 'nnn -oe'
-let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
 set autoread "Automatically re-read files if unmodified inside Vim
 set timeoutlen=1000 "Leader timeout
 set updatetime=100 "Refresh rate
@@ -112,7 +110,7 @@ nmap ]g <Plug>(coc-diagnostic-next)
 nmap [g <Plug>(coc-diagnostic-prev)
 
 "Files management
-nnoremap <silent> <leader>f :Nnnpicker<CR>
+nnoremap <silent> <leader>f :Fern . -drawer -width=40 -toggle -reveal=%<CR>
 nnoremap <silent> <leader>fg :RG!<CR>
 nnoremap <silent> <leader>fh :History<CR>
 nnoremap <silent> <leader>fj :Files<CR>
