@@ -67,6 +67,6 @@ set noshowmode "Disable mode since it's handled by airline
 
 " Code folding
 set foldmethod=syntax "Syntax highlighting items specify folds
-set foldcolumn=1 "Defines 1 col at window left, to indicate folding
+set foldcolumn=0 "Toggle displaying folding level in separate gutter column
 let javaScript_fold=1 "Activate folding by JS syntax
-set foldlevelstart=99 "Start file with all folds opened
+set foldlevelstart=2 "Start file with all folds opened

@@ -26,6 +26,7 @@ Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
+Plug 'https://github.com/vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'https://github.com/tpope/vim-fugitive' "Git management
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
