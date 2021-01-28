@@ -20,6 +20,7 @@ Plug 'https://github.com/airblade/vim-gitgutter.git' "Git gutter
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
 Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
+Plug 'https://github.com/mhinz/vim-startify' "Startup page
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
@@ -30,6 +31,7 @@ Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
 Plug 'mileszs/ack.vim' "Ack ack, ack ack!
+Plug 'psliwka/vim-smoothie' "Smooth scrolling
 Plug 'vim-airline/vim-airline' "Airline
 Plug 'vim-airline/vim-airline-themes' "Airline themes
 
