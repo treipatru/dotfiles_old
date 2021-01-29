@@ -1,5 +1,4 @@
 source $HOME/.config/zsh/exports
-source $HOME/.config/zsh/aliases
 
 # History
 setopt EXTENDED_HISTORY
@@ -43,3 +42,11 @@ source $HOME/.config/zsh/fzf
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   startx
 fi
+
+# Other
+#..................................................................................................
+batdiff() {
+    git diff --name-only --diff-filter=d | xargs bat --diff
+}
+
+source $HOME/.config/zsh/aliases

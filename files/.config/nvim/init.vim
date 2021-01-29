@@ -61,7 +61,7 @@ let g:dracula_colorterm = 0 "Set transparent background
 set background=dark "Use colors for dark background
 highlight Comment cterm=italic gui=italic
 let g:one_allow_italics = 1 "Italics for comments if possible
-set lcs=tab:»_,trail:·,eol:$ "Display tabs, trailing whitespace and eol as...
+set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
 set list "Show whitespace
 set noshowmode "Disable mode since it's handled by airline
 

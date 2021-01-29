@@ -1,2 +1,5 @@
 alias v="nvim"
 alias cat="bat"
+
+alias g="git"
+alias gd="batdiff"
