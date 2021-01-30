@@ -41,7 +41,6 @@ source $HOME/.config/nvim/cfg-ack.vim
 source $HOME/.config/nvim/cfg-airline.vim
 source $HOME/.config/nvim/cfg-coc.vim
 source $HOME/.config/nvim/cfg-fern.vim
-source $HOME/.config/nvim/cfg-startify.vim
 source $HOME/.config/nvim/cfg-fugitive.vim
 source $HOME/.config/nvim/cfg-fzf.vim
 source $HOME/.config/nvim/cfg-gitgutter.vim

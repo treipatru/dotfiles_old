@@ -38,26 +38,5 @@ let g:airline_mode_map = {
     \ ''     : 'V',
     \ }
 
-
 let g:airline_section_z = "\u2261 %l/%L:%c"
-
-" Airline Tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-
-" Map buffers to Alt+#
-nmap <m-1> <Plug>AirlineSelectTab1
-nmap <m-2> <Plug>AirlineSelectTab2
-nmap <m-3> <Plug>AirlineSelectTab3
-nmap <m-4> <Plug>AirlineSelectTab4
-nmap <m-5> <Plug>AirlineSelectTab5
-nmap <m-6> <Plug>AirlineSelectTab6
-nmap <m-7> <Plug>AirlineSelectTab7
-nmap <m-8> <Plug>AirlineSelectTab8
-nmap <m-9> <Plug>AirlineSelectTab9
-nmap <m-0> <Plug>AirlineSelectTab0
-nmap <m--> <Plug>AirlineSelectPrevTab
-nmap <m-+> <Plug>AirlineSelectNextTab
+let g:airline_theme= "onedark"
