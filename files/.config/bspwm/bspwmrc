@@ -16,6 +16,3 @@ bspc config pointer_follows_focus true
 bspc config -m eDP-1 top_padding 0
 bspc config -m eDP-1 bottom_padding 42
 
-bspc rule -a KeepassXC state=floating
-
-# $HOME/.config/polybar/launch.sh
