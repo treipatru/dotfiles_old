@@ -40,3 +40,5 @@ let g:airline_mode_map = {
 
 let g:airline_section_z = "\u2261 %l/%L:%c"
 let g:airline_theme= "onedark"
+
+let g:airline_powerline_fonts = 1

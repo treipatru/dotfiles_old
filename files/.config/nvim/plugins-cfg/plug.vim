@@ -17,15 +17,16 @@ Plug 'https://github.com/AndrewRadev/splitjoin.vim' "Split/join multiline statem
 Plug 'https://github.com/Yggdroot/indentLine' "Show vertical indentation lines
 Plug 'https://github.com/airblade/vim-gitgutter.git' "Git gutter
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
+Plug 'https://github.com/blueyed/vim-diminactive' "Commenting shortcuts
 Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
 Plug 'https://github.com/joshdick/onedark.vim' "Split/join multiline statements
+Plug 'https://github.com/lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
 Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
-Plug 'https://github.com/blueyed/vim-diminactive' "Commenting shortcuts
 Plug 'https://github.com/tpope/vim-fugitive' "Git management
 Plug 'https://github.com/vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
@@ -38,6 +39,7 @@ Plug 'vim-airline/vim-airline-themes' "Airline themes
 "Fern
 Plug 'https://github.com/LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
 Plug 'https://github.com/lambdalisue/fern-git-status.vim' "Tree view
+Plug 'https://github.com/lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
 Plug 'lambdalisue/fern.vim' "Tree view
 
 "Text objects

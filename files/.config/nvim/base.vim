@@ -8,7 +8,7 @@ set autoindent "New lines inherit indentation of previous line
 set autoread "Automatically re-read files if unmodified inside Vim
 set cmdheight=2 "Command height
 set cursorline "Highlight current line
-set encoding=utf-8
+set encoding=UTF-8
 set expandtab "Convert tab to spaces
 set foldcolumn=0 "Toggle displaying folding level in separate gutter column
 set foldlevelstart=2 "Start file with all folds opened
