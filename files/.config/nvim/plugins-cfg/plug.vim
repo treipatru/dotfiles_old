@@ -15,7 +15,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
-Plug 'https://github.com/blueyed/vim-diminactive' "Commenting shortcuts
+Plug 'https://github.com/blueyed/vim-diminactive' "Show inactive splits
 Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
 Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
 Plug 'https://github.com/joshdick/onedark.vim' "Split/join multiline statements

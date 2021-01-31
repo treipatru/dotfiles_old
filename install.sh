@@ -1,13 +1,13 @@
 #!/bin/sh
-# 
-#   (          ) (       (         
-#   )\ )    ( /( )\ ) (  )\  (     
-#  (()/( (  )\()|()/( )\((_)))\(   
-#   ((_)))\(_))/ /(_)|(_)_ /((_)\  
-#   _| |((_) |_ (_) _|(_) (_))((_) 
-# / _` / _ \  _| |  _|| | / -_|_-< 
-# \__,_\___/\__| |_|  |_|_\___/__/ 
-# 
+#
+#   (          ) (       (
+#   )\ )    ( /( )\ ) (  )\  (
+#  (()/( (  )\()|()/( )\((_)))\(
+#   ((_)))\(_))/ /(_)|(_)_ /((_)\
+#   _| |((_) |_ (_) _|(_) (_))((_)
+# / _` / _ \  _| |  _|| | / -_|_-<
+# \__,_\___/\__| |_|  |_|_\___/__/
+#
 
 
 
@@ -69,7 +69,7 @@ mkdir -p {~/.config,~/scripts,~/.ssh,~/repos}
 
 # Clone repo
 git -C ~/repos/ clone https://github.com/treipatru/dotfiles.git
-cd ~/repos/dotfiles \
+c d ~/repos/dotfiles \
     && git remote set-url origin "git@github.com:treipatru/dotfiles.git" \
     && cd -
 
@@ -96,4 +96,4 @@ while true; do
 done
 
 # Link .config files and folders to ~/.config
-LinkNodes 
+LinkNodes
