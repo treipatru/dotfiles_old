@@ -30,7 +30,7 @@ set ruler "Always show cursor positon
 set scrolloff=10 "The number of lines to keep above and below the cursor
 set shiftwidth=4 "Shifting with > inserts 4 spaces
 set showtabline=2 "Always show tabline
-set sidescrolloff=8 "The number of columns to keep to the left and right of the cursor
+set sidescrolloff=20 "The number of columns to keep to the left and right of the cursor
 set smartcase "Automatically switch search to case-sensitive when query contains an uppercase letter
 set smarttab "Insert tabstop number of spaces when tab is pressed
 set splitbelow "Automatic h split to bottom
