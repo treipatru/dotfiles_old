@@ -11,7 +11,7 @@ set cursorline "Highlight current line
 set encoding=UTF-8
 set expandtab "Convert tab to spaces
 set foldcolumn=0 "Toggle displaying folding level in separate gutter column
-set foldlevelstart=2 "Start file with all folds opened
+set foldlevelstart=3 "Start file with all folds opened
 set foldmethod=syntax "Syntax highlighting items specify folds
 set hidden "CoC recommended
 set hlsearch "Enable search highlighting
@@ -25,7 +25,7 @@ set nowrap "Disable line wrapping
 set nowritebackup "CoC recommended
 set number "Show line numbers
 set pumheight=10 "Popup menu size
-set relativenumber "Shoe relative line numbers
+set relativenumber "Show relative line numbers
 set ruler "Always show cursor positon
 set scrolloff=10 "The number of lines to keep above and below the cursor
 set shiftwidth=4 "Shifting with > inserts 4 spaces
@@ -37,6 +37,6 @@ set splitbelow "Automatic h split to bottom
 set splitright "Automatic v split to right
 set tabstop=4 "Tabs are now 4 spaces
 set termguicolors
-set timeoutlen=750 "Leader timeout
-set updatetime=300 "Refresh rate
+set timeoutlen=650 "Leader timeout
+set updatetime=100 "Refresh rate
 syntax enable "Enable syntax highlighting

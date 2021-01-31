@@ -3,6 +3,7 @@ let g:airline_detect_modified=1
 let g:airline_inactive_collapse=1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline_stl_path_style = 'short'
+let g:airline#extensions#branch#enabled = 1
 
 let g:airline_filetype_overrides = {
     \ 'defx':  ['defx', '%{b:defx.paths[0]}'],

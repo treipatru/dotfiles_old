@@ -16,7 +16,3 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-nnoremap <silent> <leader>fg :Rg<CR>
-nnoremap <silent> <leader>fh :History<CR>
-nnoremap <silent> <leader>fj :Files<CR>
