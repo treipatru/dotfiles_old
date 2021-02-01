@@ -8,9 +8,13 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#format = 'TrimBranchName'
 function! TrimBranchName(name)
     let l:endPos = strchars(a:name)
-    let l:startPos = endPos - 10
-    let l:trimmedName = strpart(a:name, startPos, endPos)
-    return '…' . trimmedName
+
+    if (l:endPos < 10)
+        return a:name
+    else
+        let l:startPos = endPos - 10
+        let l:trimmedName = strpart(a:name, startPos, endPos)
+        return '…' . trimmedName
 endfunction
 
 let g:airline_filetype_overrides = {
@@ -47,7 +51,8 @@ let g:airline_mode_map = {
     \ ''     : 'V',
     \ }
 
-let g:airline_section_z = "\u2261 %l/%L:%c"
+let g:airline_section_c = '%t'
+let g:airline_section_z = "%l/%L:%c"
 let g:airline_theme= "onedark"
 
 let g:airline_powerline_fonts = 1
