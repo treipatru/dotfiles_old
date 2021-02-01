@@ -35,7 +35,7 @@ nnoremap <leader>bd :lclose<bar>b#<bar>bd #<CR>
 nnoremap <leader>bo :BufOnly<CR>
 
 nnoremap <leader>bn :bnext<CR>
-nnoremap <Tab> :bnext<CR>
+nnoremap <silent> <Tab> :bnext<CR>
 
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bw :w<CR>
