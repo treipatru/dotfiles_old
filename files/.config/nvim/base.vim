@@ -11,7 +11,7 @@ set cursorline "Highlight current line
 set encoding=UTF-8
 set expandtab "Convert tab to spaces
 set foldcolumn=0 "Toggle displaying folding level in separate gutter column
-set foldlevelstart=3 "Start file with all folds opened
+set foldlevelstart=99 "Start file with all folds opened
 set foldmethod=syntax "Syntax highlighting items specify folds
 set hidden "CoC recommended
 set hlsearch "Enable search highlighting
