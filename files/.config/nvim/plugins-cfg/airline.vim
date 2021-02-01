@@ -5,6 +5,14 @@ let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline_stl_path_style = 'short'
 let g:airline#extensions#branch#enabled = 1
 
+let g:airline#extensions#branch#format = 'TrimBranchName'
+function! TrimBranchName(name)
+    let l:endPos = strchars(a:name)
+    let l:startPos = endPos - 10
+    let l:trimmedName = strpart(a:name, startPos, endPos)
+    return '…' . trimmedName
+endfunction
+
 let g:airline_filetype_overrides = {
     \ 'defx':  ['defx', '%{b:defx.paths[0]}'],
     \ 'fugitive': ['fugitive', '%{airline#util#wrap(airline#extensions#branch#get_head(),80)}'],
