@@ -4,9 +4,6 @@ let g:mapleader = "\<Space>"
 " Ctrl+l clears search term
 nnoremap <silent> <leader>l :nohlsearch<CR><leader>l
 
-" Zoom - Maximize/Minimize current split
-nmap <leader>m <Plug>(zoom-toggle)
-
 " Coc - Rename symbol
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -15,6 +12,10 @@ vnoremap <C-y> "+y
 
 " Presentation mode via Goyo
 nnoremap <silent> <leader>p :Goyo<CR>
+
+" Remap scroll to smooth zoom
+noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
 
 " Splits
 " ---------------------------------------------------------

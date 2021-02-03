@@ -13,40 +13,41 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 "General plugins
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/AndrewRadev/splitjoin.vim' "Split/join multiline statements
-Plug 'https://github.com/airblade/vim-rooter' "On open file look up for project root
-Plug 'https://github.com/blueyed/vim-diminactive' "Show inactive splits
-Plug 'https://github.com/christoomey/vim-sort-motion' "Sort motions
-Plug 'https://github.com/dhruvasagar/vim-zoom' " Zoom pane in/out
-Plug 'https://github.com/joshdick/onedark.vim' "Split/join multiline statements
-Plug 'https://github.com/lambdalisue/nerdfont.vim' "Sweet icons
-Plug 'https://github.com/mhinz/vim-signify' "Git gutter
-Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
-Plug 'https://github.com/raimondi/delimitmate' "Auto close quotes, brackets
-Plug 'https://github.com/rickhowe/diffchar.vim' "Highlight chars not lines when diffing
-Plug 'https://github.com/sheerun/vim-polyglot' "All the languages syntax highlighting
-Plug 'https://github.com/tpope/vim-commentary' "Commenting shortcuts
-Plug 'https://github.com/tpope/vim-fugitive' "Git management
-Plug 'https://github.com/vim-scripts/restore_view.vim' "Auto restore folds and positions
+
+Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
+Plug 'airblade/vim-rooter' "On open file look up for project root
+Plug 'blueyed/vim-diminactive' "Highlight active splits
+Plug 'christoomey/vim-sort-motion' "Sort motions
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
+Plug 'joshdick/onedark.vim' "Theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
 Plug 'junegunn/goyo.vim' "Distractionf free writing
 Plug 'junegunn/limelight.vim' "Highlight current paragraph
+Plug 'lambdalisue/nerdfont.vim' "Sweet icons
+Plug 'mhinz/vim-signify' "Git gutter
 Plug 'mileszs/ack.vim' "Ack ack, ack ack!
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
+Plug 'raimondi/delimitmate' "Auto close quotes, brackets
+Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
+Plug 'tpope/vim-commentary' "Commenting shortcuts
+Plug 'tpope/vim-fugitive' "Git management
 Plug 'vim-airline/vim-airline' "Airline
 Plug 'vim-airline/vim-airline-themes' "Airline themes
+Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
+Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
 
 "Fern
-Plug 'https://github.com/LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
-Plug 'https://github.com/lambdalisue/fern-git-status.vim' "Tree view
-Plug 'https://github.com/lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
+Plug 'LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
+Plug 'lambdalisue/fern-git-status.vim' "Tree view
+Plug 'lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
 Plug 'lambdalisue/fern.vim' "Tree view
 
 "Text objects
-Plug 'https://github.com/kana/vim-textobj-function' "function text obj
-Plug 'https://github.com/kana/vim-textobj-indent' "same indend block text obj like
-Plug 'https://github.com/kana/vim-textobj-user' "Support for user defined text objects
-Plug 'https://github.com/rhysd/vim-textobj-anyblock' "any block text obj like ([{'>
+Plug 'kana/vim-textobj-function' "function text obj
+Plug 'kana/vim-textobj-indent' "same indend block text obj like
+Plug 'kana/vim-textobj-user' "Support for user defined text objects
+Plug 'rhysd/vim-textobj-anyblock' "any block text obj like ([{'>
 Plug 'thinca/vim-textobj-function-javascript' "js function text obj
+
 call plug#end()

@@ -6,16 +6,3 @@ runtime macros/matchit.vim
 
 "Toggle display whitespace when switching Insert mode
 :autocmd InsertEnter,InsertLeave * set list!
-
-" Start presentation mode whenever a .vpm file is loaded
-autocmd BufNewFile,BufRead *.vpm call SetVimPresentationMode()
-
-" Function to toggle presentation mode
-function SetVimPresentationMode()
-  nnoremap <buffer> <Right> :n<CR>
-  nnoremap <buffer> <Left> :N<CR>
-
-  if !exists('#goyo')
-    Goyo
-  endif
-endfunction

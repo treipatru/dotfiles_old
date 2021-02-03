@@ -6,7 +6,7 @@ let g:netrw_winsize=20 "Width of netrw split
 let javaScript_fold=1 "Activate folding by JS syntax
 set autoindent "New lines inherit indentation of previous line
 set autoread "Automatically re-read files if unmodified inside Vim
-set cmdheight=2 "Command height
+set cmdheight=1 "Command height
 set cursorline "Highlight current line
 set encoding=UTF-8
 set expandtab "Convert tab to spaces
