@@ -31,6 +31,8 @@ Plug 'https://github.com/vim-scripts/restore_view.vim' "Auto restore folds and p
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
+Plug 'junegunn/goyo.vim' "Distractionf free writing
+Plug 'junegunn/limelight.vim' "Highlight current paragraph
 Plug 'mileszs/ack.vim' "Ack ack, ack ack!
 Plug 'vim-airline/vim-airline' "Airline
 Plug 'vim-airline/vim-airline-themes' "Airline themes

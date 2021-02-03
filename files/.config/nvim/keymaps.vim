@@ -13,6 +13,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " Copy to system clipboard
 vnoremap <C-y> "+y
 
+" Presentation mode via Goyo
+nnoremap <silent> <leader>p :Goyo<CR>
+
 " Splits
 " ---------------------------------------------------------
 nnoremap <C-h> <C-w>h
@@ -32,13 +35,12 @@ nnoremap <leader>o <C-w>o
 " When deleting buffer render the previous one in the current split
 nnoremap <leader>bd :lclose<bar>b#<bar>bd #<CR>
 " Delete all buffers except current one
-nnoremap <leader>bo :BufOnly<CR>
+nnoremap <silent> <leader>bo :BufOnly<CR>
 
-nnoremap <leader>bn :bnext<CR>
+nnoremap <silent> <leader>bn :bnext<CR>
 nnoremap <silent> <Tab> :bnext<CR>
 
-nnoremap <leader>bp :bprevious<CR>
-nnoremap <leader>bw :w<CR>
+nnoremap <silent> <leader>bp :bprevious<CR>
 
 " Brackets jumping
 " ---------------------------------------------------------
@@ -78,21 +80,21 @@ nmap <silent> <leader>fr <Plug>(coc-references)
 " Git integration
 " ---------------------------------------------------------
 " Status
-nnoremap <leader>gs :vertical G<CR>
+nnoremap <silent> <leader>gs :vertical G<CR>
 " Open Diff
-nnoremap <leader>gd :Gvdiffsplit!<CR>
+nnoremap <silent> <leader>gd :Gvdiffsplit!<CR>
 " Apply diff Left pane
-nnoremap <leader>gdh :diffget //2<CR>
+nnoremap <silent> <leader>gdh :diffget //2<CR>
 " Apply diff Right pane
-nnoremap <leader>gdl :diffget //3<CR>
+nnoremap <silent> <leader>gdl :diffget //3<CR>
 " Reload contents of buffer from repository
 nnoremap <leader>gr :Gread<CR>
 " Save and stage file
 nnoremap <leader>gw :Gwrite<CR>
 " Show log of current file
-nnoremap <leader>gl :0Gclog<CR>
+nnoremap <silent> <leader>gl :0Gclog<CR>
 " Commit staged files
-nnoremap <leader>gc :vertical Gcommit<CR>
+nnoremap <silent> <leader>gc :vertical Gcommit<CR>
 " Switch branch
 nnoremap <leader>gb :G switch 
 
