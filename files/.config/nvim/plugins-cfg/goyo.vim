@@ -1,6 +1,10 @@
+let g:goyo_width = 100
+
 function! s:goyo_enter()
   if exists(":SignifyDisableAll")
+    set wrap
     SignifyDisableAll
+    set background=dark
   endif
 
   set number
@@ -9,7 +13,9 @@ endfunction
 
 function! s:goyo_leave()
   if exists(":SignifyEnableAll")
+    set nowrap
     SignifyEnableAll
+    hi Normal guibg=NONE ctermbg=NONE
   endif
 
   set relativenumber

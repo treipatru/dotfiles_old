@@ -19,3 +19,6 @@ let g:one_allow_italics = 1 "Italics for comments if possible
 highlight Comment cterm=italic gui=italic
 set background=dark "Use colors for dark background
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
+
+" Override theme settings and set transparent background
+hi Normal guibg=NONE ctermbg=NONE

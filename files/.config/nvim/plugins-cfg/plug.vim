@@ -40,6 +40,7 @@ Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
 "Fern
 Plug 'LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
 Plug 'lambdalisue/fern-git-status.vim' "Tree view
+Plug 'lambdalisue/fern-hijack.vim' "Replace netrw with fern
 Plug 'lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
 Plug 'lambdalisue/fern.vim' "Tree view
 
