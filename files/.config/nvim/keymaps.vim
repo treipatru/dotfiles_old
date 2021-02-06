@@ -90,10 +90,10 @@ nmap <silent> <leader>fd <Plug>(coc-definition)
 " Coc - Find references of selected symbol
 nmap <silent> <leader>fr <Plug>(coc-references)
 
-" Git integration
 " ---------------------------------------------------------
+" Git integration
 " Status
-nnoremap <silent> <leader>gs :vertical G<CR>
+nnoremap <silent> <leader>gs :call ToggleGstatus()<CR>
 " Open Diff
 nnoremap <silent> <leader>gd :Gvdiffsplit!<CR>
 " Apply diff Left pane
@@ -107,7 +107,7 @@ nnoremap <leader>gw :Gwrite<CR>
 " Show log of current file
 nnoremap <silent> <leader>gl :0Gclog<CR>
 " Commit staged files
-nnoremap <silent> <leader>gc :vertical Gcommit<CR>
+nnoremap <silent> <leader>gc :call ToggleGCommit()<CR>
 " Switch branch
 nnoremap <leader>gb :G switch 
 

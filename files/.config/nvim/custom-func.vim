@@ -20,6 +20,28 @@ function StatusBarUpdate()
     let b:fileicon = nerdfont#find()
 endfunc
 
+" Toggle git fugitive status pane
+function ToggleGstatus() abort
+    for l:winnr in range(1, winnr('$'))
+        if !empty(getwinvar(l:winnr, 'fugitive_status'))
+            execute l:winnr.'close'
+        else
+            vertical G
+        endif
+    endfor
+endfunction
+
+" Toggle git fugitive commit pane
+function ToggleGCommit() abort
+    for l:winnr in range(1, winnr('$'))
+        if !empty(getwinvar(l:winnr, 'fugitive_status'))
+            execute l:winnr.'close'
+        else
+            vertical Gcommit
+        endif
+    endfor
+endfunction
+
 " Autocommands
 autocmd BufEnter,BufWritePost * call StatusBarUpdate()
 :autocmd InsertEnter,InsertLeave * set list! "Toggle display whitespace
