@@ -3,8 +3,8 @@ let g:goyo_width = 100
 function! s:goyo_enter()
   if exists(":SignifyDisableAll")
     set wrap
+    set showtabline=0
     SignifyDisableAll
-    set background=dark
   endif
 
   set number
@@ -14,8 +14,8 @@ endfunction
 function! s:goyo_leave()
   if exists(":SignifyEnableAll")
     set nowrap
+    set showtabline=2
     SignifyEnableAll
-    hi Normal guibg=NONE ctermbg=NONE
   endif
 
   set relativenumber

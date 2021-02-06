@@ -12,6 +12,7 @@ source $HOME/.config/nvim/plugins-cfg/fern.vim
 source $HOME/.config/nvim/plugins-cfg/fzf.vim
 source $HOME/.config/nvim/plugins-cfg/rooter.vim
 source $HOME/.config/nvim/plugins-cfg/goyo.vim
+source $HOME/.config/nvim/plugins-cfg/buftabline.vim
 
 " NeoVim and/or post plugin settings
 colorscheme onedark
