@@ -33,8 +33,6 @@ Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'tpope/vim-commentary' "Commenting shortcuts
 Plug 'tpope/vim-fugitive' "Git management
-Plug 'vim-airline/vim-airline' "Airline
-Plug 'vim-airline/vim-airline-themes' "Airline themes
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
 
