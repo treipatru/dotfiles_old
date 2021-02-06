@@ -114,12 +114,16 @@ nnoremap <silent> <leader>gdl :diffget //3<CR>
 nnoremap <leader>gr :Gread<CR>
 " Save and stage file
 nnoremap <leader>gw :Gwrite<CR>
+
 " Show log of current file
-nnoremap <silent> <leader>gl :0Gclog<CR>
+nnoremap <leader>gl <cmd>lua require('telescope.builtin').git_bcommits()<cr>
+
 " Commit staged files
 nnoremap <silent> <leader>gc :call ToggleGCommit()<CR>
+
 " Switch branch
-nnoremap <leader>gb :G switch 
+nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
+" nnoremap <leader>gb :G switch 
 
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gu :Gpush<CR>
