@@ -72,19 +72,29 @@ nmap  [c <Plug>(signify-prev-hunk):SignifyHunkDiff<CR>
 " Finding resources
 " ---------------------------------------------------------
 " Jump to file in project
-nnoremap <silent> <leader>fj :Files<CR>
+nnoremap <leader>fj <cmd>lua require('telescope.builtin').find_files()<cr>
+
 " Grep all files in project
-nnoremap <silent> <leader>fg :Rg<CR>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+
 " Jump to file in Vim History
-nnoremap <silent> <leader>fh :History<CR>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').oldfiles()<cr>
+
+" Jump to file in Vim History
+nnoremap <leader>fq <cmd>lua require('telescope.builtin').quickfix()<cr>
+
 " Find in all project files using Ack
-nnoremap <leader>/ :Ack!<Space>
+nnoremap <leader>/ <cmd>lua require('telescope.builtin').grep_string()<cr>
+
 " Toggle explorer
 nnoremap <silent> <leader>ff :Fern . -drawer -width=35 -toggle -reveal=%<CR>
+
 " Find symbol in current file
 nnoremap <leader>fs :CocList outline<CR>
+
 " Find open buffers
-nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+
 " Coc - Find definition of selected symbol
 nmap <silent> <leader>fd <Plug>(coc-definition)
 " Coc - Find references of selected symbol
