@@ -18,6 +18,7 @@ Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'airblade/vim-rooter' "On open file look up for project root
 Plug 'blueyed/vim-diminactive' "Highlight active splits
 Plug 'christoomey/vim-sort-motion' "Sort motions
+Plug 'https://github.com/ap/vim-buftabline' "Buffer management in tabline
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'joshdick/onedark.vim' "Theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary

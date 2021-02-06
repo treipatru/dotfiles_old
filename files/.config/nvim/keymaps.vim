@@ -27,9 +27,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>c <C-w>c
-nnoremap <leader>w <C-w>w
 nnoremap <leader>o <C-w>o
-nnoremap <leader>o <C-w>o
+nnoremap <silent> <Tab> <C-w>w
 
 " Buffers
 " ---------------------------------------------------------
@@ -39,9 +38,10 @@ nnoremap <leader>bd :lclose<bar>b#<bar>bd #<CR>
 nnoremap <silent> <leader>bo :BufOnly<CR>
 
 nnoremap <silent> <leader>bn :bnext<CR>
-nnoremap <silent> <Tab> :bnext<CR>
-
 nnoremap <silent> <leader>bp :bprevious<CR>
+
+nnoremap <silent> <C-N> :bnext<CR>
+nnoremap <silent> <C-P> :bprev<CR>
 
 " Brackets jumping
 " ---------------------------------------------------------
