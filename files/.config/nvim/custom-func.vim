@@ -9,15 +9,14 @@ function StatusBarUpdate()
     let gitoutput = split(system('git status --porcelain -b '.shellescape(expand('%')).' 2>/dev/null'),'\n')
 
     if len(gitoutput) > 0
-        let b:gitstatus = strpart(get(gitoutput,1,'--'),0,2)
-        let b:gitbranch = system('git branch --show-current')[:-2]
+        let b:gitstatus = '[' . strpart(get(gitoutput,1,'--'),0,2) . ']'
+        let b:gitbranch = ' ' . system('git branch --show-current')[:-2]
     else
-        let b:gitstatus = '∅'
-        let b:gitbranch = '∅'
+        let b:gitstatus = ''
+        let b:gitbranch = ' ∅'
     endif
 
-    let b:shortpath = expand("%:R")
-    let b:fileicon = nerdfont#find()
+    let b:shortpath = pathshorten(expand("%:R"))
 endfunc
 
 " Toggle git fugitive status pane
