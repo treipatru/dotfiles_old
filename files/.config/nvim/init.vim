@@ -12,13 +12,13 @@ source $HOME/.config/nvim/plugins-cfg/diminactive.vim
 source $HOME/.config/nvim/plugins-cfg/fern.vim
 source $HOME/.config/nvim/plugins-cfg/fzf.vim
 source $HOME/.config/nvim/plugins-cfg/goyo.vim
+source $HOME/.config/nvim/plugins-cfg/quickscope.vim
 source $HOME/.config/nvim/plugins-cfg/rooter.vim
 
 " NeoVim only and/or post plugin settings
 source $HOME/.config/nvim/statusline.vim
 colorscheme onedark
-let g:one_allow_italics = 1
-highlight Comment cterm=italic gui=italic
 set background=dark "Use colors for dark background
+
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
 set inccommand=split "Live substitute preview

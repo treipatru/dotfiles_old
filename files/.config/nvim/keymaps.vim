@@ -83,8 +83,8 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').oldfiles()<cr>
 " Jump to file in Vim History
 nnoremap <leader>fq <cmd>lua require('telescope.builtin').quickfix()<cr>
 
-" Find in all project files using Ack
-nnoremap <leader>/ <cmd>lua require('telescope.builtin').grep_string()<cr>
+" Find in all project files
+nnoremap <leader>/ :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Toggle explorer
 nnoremap <silent> <leader>ff :Fern . -drawer -width=35 -toggle -reveal=%<CR>
