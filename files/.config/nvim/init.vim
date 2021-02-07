@@ -21,3 +21,4 @@ let g:one_allow_italics = 1
 highlight Comment cterm=italic gui=italic
 set background=dark "Use colors for dark background
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
+set inccommand=split "Live substitute preview
