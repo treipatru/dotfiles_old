@@ -13,6 +13,9 @@ vnoremap <C-y> "+y
 " Presentation mode via Goyo
 nnoremap <silent> <leader>p :Goyo<CR>
 
+" Zoom - Maximize/Minimize current split
+nmap <leader>m <Plug>(zoom-toggle)
+
 " Remap scroll to smooth zoom
 noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
 noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>

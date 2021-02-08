@@ -24,7 +24,7 @@ Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 
 " Visual enhancements
-Plug 'blueyed/vim-diminactive' "Highlight active splits
+Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
 Plug 'joshdick/onedark.vim' "Theme
 Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter
