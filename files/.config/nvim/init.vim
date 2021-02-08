@@ -20,6 +20,7 @@ source $HOME/.config/nvim/statusline.vim
 colorscheme onedark
 set background=dark "Use colors for dark background
 highlight Comment cterm=italic gui=italic
+highlight CursorLine cterm=NONE guibg=#223d6b
 
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
 set inccommand=split "Live substitute preview

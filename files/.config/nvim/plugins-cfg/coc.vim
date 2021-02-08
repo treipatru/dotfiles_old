@@ -4,8 +4,8 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-eslint'
   \ ]
-
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" If active will highlight occurenced of word under cursor
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
