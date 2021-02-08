@@ -4,6 +4,6 @@ alias cat="bat"
 
 alias g="git"
 alias gd="batdiff"
-alias gs="git status"
+alias gs="git status -s"
 alias gp="git pull"
 alias gu="git push"

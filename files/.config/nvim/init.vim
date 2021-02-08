@@ -19,6 +19,7 @@ source $HOME/.config/nvim/plugins-cfg/rooter.vim
 source $HOME/.config/nvim/statusline.vim
 colorscheme onedark
 set background=dark "Use colors for dark background
+highlight Comment cterm=italic gui=italic
 
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
 set inccommand=split "Live substitute preview
