@@ -44,3 +44,9 @@ endfunction
 " Autocommands
 autocmd BufEnter,BufWritePost * call StatusBarUpdate()
 :autocmd InsertEnter,InsertLeave * set list! "Toggle display whitespace
+
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set cursorline
+    autocmd WinLeave * set nocursorline
+augroup END
