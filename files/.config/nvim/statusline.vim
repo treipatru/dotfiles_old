@@ -7,15 +7,15 @@ set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ Replace\ ':''}
 set statusline+=%#Cursor#%{(mode()=='v')?'\ \ V\ ':''}
 
 set statusline+=%#Visual#
+set statusline+=\ %{nerdfont#find()}
+set statusline+=\ %(%{b:shortpath}%)
+
 set statusline+=\ %(%{b:gitbranch}%)
 set statusline+=\ %(%{b:gitstatus}%)
 
 set statusline+=%{&paste?'\ PASTE\ ':''}
 set statusline+=%{&spell?'\ SPELL\ ':''}
 set statusline+=%R
-
-set statusline+=%=\%(%{b:shortpath}%)
-set statusline+=\ %{nerdfont#find()}
 
 set statusline+=%=
 set statusline+=\%{coc#status()}
