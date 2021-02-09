@@ -117,7 +117,6 @@ gls.left[3] = {
         provider = get_current_file_name,
         condition = buffer_not_empty,
         highlight = {colors.fg, colors.section_bg},
-        separator = "",
         separator_highlight = {colors.section_bg, colors.bg}
     }
 }
@@ -203,10 +202,21 @@ gls.right[6] = {
         highlight = {colors.middlegrey, colors.bg}
     }
 }
+
 gls.right[7] = {
+    LineInfo = {
+        provider = {
+            function()
+                return string.format('  %s:%s ', vim.fn.line('.'), vim.fn.col('.'))
+            end,
+        },
+    }
+}
+
+gls.right[8] = {
     PerCent = {
+        separator = ' ',
         provider = 'LinePercent',
-        separator = '',
         separator_highlight = {colors.blue, colors.bg},
         highlight = {colors.gray2, colors.blue}
     }
@@ -217,7 +227,6 @@ gls.short_line_left[1] = {
     BufferType = {
         provider = 'FileTypeName',
         highlight = {colors.fg, colors.section_bg},
-        separator = ' ',
         separator_highlight = {colors.section_bg, colors.bg}
     }
 }
