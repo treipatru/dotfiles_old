@@ -61,4 +61,9 @@ Plug 'kana/vim-textobj-user' "Support for user defined text objects
 Plug 'kana/vim-textobj-indent' "same indend block text obj like
 Plug 'rhysd/vim-textobj-anyblock' "any block text obj like ([{'>
 
+" Status bar
+Plug 'doums/barow' "Barow minimalist status line
+Plug 'doums/barowGit' "Git support
+Plug 'doums/barowLSP' "CoC support
+
 call plug#end()
