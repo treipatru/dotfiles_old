@@ -22,3 +22,13 @@ highlight CursorLine cterm=NONE guibg=#223d6b
 
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
 set inccommand=split "Live substitute preview
+
+
+function! ConfigStatusLine()
+  lua require('plugins.status-line')
+endfunction
+
+augroup status_line_init
+  autocmd!
+  autocmd VimEnter * call ConfigStatusLine()
+augroup END

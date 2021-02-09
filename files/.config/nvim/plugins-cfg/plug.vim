@@ -24,7 +24,9 @@ Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 
 " Visual enhancements
 Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
 Plug 'joshdick/onedark.vim' "Theme
+Plug 'kyazdani42/nvim-web-devicons' "Sweeter icons for lua
 Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
@@ -49,7 +51,6 @@ Plug 'nvim-telescope/telescope.nvim'
 
 "Fern
 Plug 'lambdalisue/fern.vim'
-
 Plug 'LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
 Plug 'lambdalisue/fern-git-status.vim' "Tree view
 Plug 'lambdalisue/fern-hijack.vim' "Replace netrw with fern
@@ -57,13 +58,7 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
 
 "Text objects
 Plug 'kana/vim-textobj-user' "Support for user defined text objects
-
 Plug 'kana/vim-textobj-indent' "same indend block text obj like
 Plug 'rhysd/vim-textobj-anyblock' "any block text obj like ([{'>
-
-" Status bar
-Plug 'doums/barow' "Barow minimalist status line
-Plug 'doums/barowGit' "Git support
-Plug 'doums/barowLSP' "CoC support
 
 call plug#end()
