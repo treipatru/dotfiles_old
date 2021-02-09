@@ -16,7 +16,7 @@ function StatusBarUpdate()
         let b:gitbranch = ' ∅'
     endif
 
-    let b:shortpath = pathshorten(expand("%:R"))
+    let b:shortpath = expand("%:t")
 endfunc
 
 " Toggle git fugitive status pane
