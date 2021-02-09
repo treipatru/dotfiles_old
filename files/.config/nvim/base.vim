@@ -34,6 +34,7 @@ set smartcase "Automatically switch search to case-sensitive when query contains
 set smarttab "Insert tabstop number of spaces when tab is pressed
 set splitbelow "Automatic h split to bottom
 set splitright "Automatic v split to right
+set switchbuf="useopen" "Switch to window if buffer already open
 set tabstop=4 "Tabs are now 4 spaces
 set termguicolors
 set timeoutlen=1000 "Leader timeout
