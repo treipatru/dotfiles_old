@@ -25,8 +25,10 @@ set inccommand=split "Live substitute preview
 
 
 function! ConfigStatusLine()
-  lua require('plugins.status-line')
+  lua require('plugins.cfg-bufferline')
 endfunction
+
+lua require('plugins.cfg-galaxyline')
 
 augroup status_line_init
   autocmd!

@@ -31,6 +31,7 @@ Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
+Plug 'akinsho/nvim-bufferline.lua'
 
 " Junegunn
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
