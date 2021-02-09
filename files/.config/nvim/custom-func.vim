@@ -27,7 +27,6 @@ function ToggleGCommit() abort
 endfunction
 
 " Autocommands
-autocmd BufEnter,BufWritePost * call StatusBarUpdate()
 :autocmd InsertEnter,InsertLeave * set list! "Toggle display whitespace
 
 augroup BgHighlight
