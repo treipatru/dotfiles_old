@@ -17,7 +17,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'airblade/vim-rooter' "On open file look up for project root
 Plug 'christoomey/vim-sort-motion' "Sort motions
-Plug 'https://github.com/ap/vim-buftabline' "Buffer management in tabline
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t

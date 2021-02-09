@@ -6,7 +6,6 @@ source $HOME/.config/nvim/keymaps.vim
 source $HOME/.config/nvim/plugins-cfg/plug.vim
 
 source $HOME/.config/nvim/plugins-cfg/ack.vim
-source $HOME/.config/nvim/plugins-cfg/buftabline.vim
 source $HOME/.config/nvim/plugins-cfg/coc.vim
 source $HOME/.config/nvim/plugins-cfg/diminactive.vim
 source $HOME/.config/nvim/plugins-cfg/fern.vim
