@@ -45,15 +45,15 @@ nnoremap <silent> <leader>bp :bprevious<CR>
 nnoremap <silent> <C-N> :bnext<CR>
 nnoremap <silent> <C-P> :bprev<CR>
 
-nnoremap <A-1> :lua require"bufferline".go_to_buffer(1)<CR>
-nnoremap <A-2> :lua require"bufferline".go_to_buffer(2)<CR>
-nnoremap <A-3> :lua require"bufferline".go_to_buffer(3)<CR>
-nnoremap <A-4> :lua require"bufferline".go_to_buffer(4)<CR>
-nnoremap <A-5> :lua require"bufferline".go_to_buffer(5)<CR>
-nnoremap <A-6> :lua require"bufferline".go_to_buffer(6)<CR>
-nnoremap <A-7> :lua require"bufferline".go_to_buffer(7)<CR>
-nnoremap <A-8> :lua require"bufferline".go_to_buffer(8)<CR>
-nnoremap <A-9> :lua require"bufferline".go_to_buffer(9)<CR>
+nnoremap <silent> <A-1> :lua require"bufferline".go_to_buffer(1)<CR>
+nnoremap <silent> <A-2> :lua require"bufferline".go_to_buffer(2)<CR>
+nnoremap <silent> <A-3> :lua require"bufferline".go_to_buffer(3)<CR>
+nnoremap <silent> <A-4> :lua require"bufferline".go_to_buffer(4)<CR>
+nnoremap <silent> <A-5> :lua require"bufferline".go_to_buffer(5)<CR>
+nnoremap <silent> <A-6> :lua require"bufferline".go_to_buffer(6)<CR>
+nnoremap <silent> <A-7> :lua require"bufferline".go_to_buffer(7)<CR>
+nnoremap <silent> <A-8> :lua require"bufferline".go_to_buffer(8)<CR>
+nnoremap <silent> <A-9> :lua require"bufferline".go_to_buffer(9)<CR>
 
 " Brackets jumping
 " ---------------------------------------------------------
