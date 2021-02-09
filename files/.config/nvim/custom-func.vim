@@ -34,3 +34,14 @@ augroup BgHighlight
     autocmd WinEnter * set cursorline
     autocmd WinLeave * set nocursorline
 augroup END
+
+function! ConfigStatusLine()
+  lua require('plugins.cfg-bufferline')
+endfunction
+
+lua require('plugins.cfg-galaxyline')
+
+augroup status_line_init
+  autocmd!
+  autocmd VimEnter * call ConfigStatusLine()
+augroup END
