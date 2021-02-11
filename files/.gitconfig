@@ -1,8 +1,12 @@
 [include]
   path = ~/.gitconfig.local
+  path = ~/.gitconfig.delta.themes
 [core]
   autocrlf = input
   editor = vim
+  pager = delta
+[delta]
+  features = villsau
 [push]
   default = simple
 [pull]
