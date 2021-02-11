@@ -12,6 +12,9 @@ vnoremap <C-y> "+y
 " Presentation mode via Goyo
 nnoremap <silent> <leader>p :Goyo<CR>
 
+" Toggle undo tree plugin
+nnoremap <silent> <leader>u :UndotreeToggle<CR>
+
 " Zoom - Maximize/Minimize current split
 nmap <leader>m <Plug>(zoom-toggle)
 
