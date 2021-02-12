@@ -23,6 +23,12 @@ Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 
+" Git
+Plug 'tpope/vim-fugitive' "Git management
+Plug 'rickhowe/diffchar.vim' "Highlight chars instead of lines in diff
+Plug 'rhysd/conflict-marker.vim' "Highlight chars instead of lines in diff
+Plug 'AndrewRadev/linediff.vim' "Diff any lines
+
 " Visual enhancements
 Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
@@ -43,7 +49,6 @@ Plug 'junegunn/limelight.vim' "Highlight current paragraph
 " Tpope
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'tpope/vim-commentary' "Commenting shortcuts
-Plug 'tpope/vim-fugitive' "Git management
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
