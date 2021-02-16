@@ -2,7 +2,8 @@
 let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-tsserver',
-  \ 'coc-eslint'
+  \ 'coc-eslint',
+  \ 'coc-json'
   \ ]
 " If active will highlight occurenced of word under cursor
 " autocmd CursorHold * silent call CocActionAsync('highlight')
