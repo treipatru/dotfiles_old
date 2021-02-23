@@ -60,7 +60,7 @@ function! MyFoldText()
     " Collapses folds that start and end on braces with everything between
     " the braces replaced with {...}
     " let foldtext = line
-    let foldtext = substitute( line, '\([^ \t]\)', ' \1', '')
+    let foldtext = substitute( line, '\([^ \t]\)', ' \1', '')
     let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
     if startbrace == '{'
         let line = getline(v:foldend)
