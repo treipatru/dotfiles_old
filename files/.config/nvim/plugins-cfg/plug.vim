@@ -22,6 +22,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
+Plug 'voldikss/vim-floaterm'
 
 " Git
 Plug 'tpope/vim-fugitive' "Git management
