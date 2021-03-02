@@ -1,2 +1,5 @@
 .netrwhist
 .uuid
+
+files/.config/coc/*
+!files/.config/coc/ultisnips
