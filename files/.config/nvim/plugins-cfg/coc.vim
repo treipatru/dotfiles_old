@@ -1,9 +1,10 @@
 "Auto install these coc extensions
 let g:coc_global_extensions = [
-  \ 'coc-highlight',
-  \ 'coc-tsserver',
   \ 'coc-eslint',
-  \ 'coc-json'
+  \ 'coc-highlight',
+  \ 'coc-json',
+  \ 'coc-snippets',
+  \ 'coc-tsserver'
   \ ]
 " If active will highlight occurenced of word under cursor
 " autocmd CursorHold * silent call CocActionAsync('highlight')
