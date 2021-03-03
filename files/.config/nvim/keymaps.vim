@@ -76,6 +76,7 @@ nmap  [c <Plug>(signify-prev-hunk):SignifyHunkDiff<CR>
 " ---------------------------------------------------------
 " Jump to file in project
 nnoremap <leader>fj <cmd>lua require('telescope.builtin').find_files()<cr>
+" nnoremap <silent> <leader>fj <cmd>:FloatermNew broot<cr>
 
 " Grep all files in project
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
