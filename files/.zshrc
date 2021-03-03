@@ -50,3 +50,5 @@ batdiff() {
 }
 
 source $HOME/.config/zsh/aliases
+
+source ~/.config/broot/launcher/bash/br
