@@ -47,7 +47,7 @@ function ToggleGCommit() abort
         if !empty(getwinvar(l:winnr, 'fugitive_status'))
             execute l:winnr.'close'
         else
-            vertical Gcommit
+            vertical Git commit
         endif
     endfor
 endfunction
