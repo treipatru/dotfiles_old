@@ -30,28 +30,37 @@ runtime macros/matchit.vim
 " Delete all buffers except the current one
 command! BufOnly silent! execute "%bd|e#|bd#"
 
-" Make Git Fugitive Status function as a toggleable vertical split 
+" Toggle Git Fugitive Status considering itself and open commit message
 function ToggleGstatus() abort
-    for l:winnr in range(1, winnr('$'))
-        if !empty(getwinvar(l:winnr, 'fugitive_status'))
-            execute l:winnr.'close'
-        else
-            vertical G
-        endif
-    endfor
+    let commitbuff = bufwinnr('.git/COMMIT_EDITMSG')
+    let statusbuff = bufwinnr('.git/index')
+
+    if commitbuff > 0
+        execute commitbuff.'close'
+        vertical G
+    elseif statusbuff > 0
+        execute statusbuff.'close'
+    else
+        vertical G
+    endif
 endfunction
 
-" Make Git Fugitive Commit replace Status split if it exists
+" Toggle Git Fugitive Status considering itself and open status
 function ToggleGCommit() abort
-    for l:winnr in range(1, winnr('$'))
-        if !empty(getwinvar(l:winnr, 'fugitive_status'))
-            execute l:winnr.'close'
-        else
-            vertical Git commit
-        endif
-    endfor
+    let commitbuff = bufwinnr('.git/COMMIT_EDITMSG')
+    let statusbuff = bufwinnr('.git/index')
+
+    if statusbuff > 0
+        execute statusbuff.'close'
+        vertical Git commit
+    elseif commitbuff > 0
+        execute commitbuff.'close'
+    else
+        vertical Git commit
+    endif
 endfunction
 
+" Configure the text displayed for a closed fold
 " Configure the text displayed for a closed fold
 function! MyFoldText()
     " Get the line where the fold starts
