@@ -75,8 +75,8 @@ nmap  [c <Plug>(signify-prev-hunk):SignifyHunkDiff<CR>
 " Finding resources
 " ---------------------------------------------------------
 " Jump to file in project
-nnoremap <leader>fj <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <silent> <leader>t <cmd>:FloatermNew broot<cr>
+" nnoremap <leader>fj <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <silent> <leader>fj <cmd>:FloatermNew broot<cr>
 
 " Grep all files in project
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -91,7 +91,8 @@ nnoremap <leader>fq <cmd>lua require('telescope.builtin').quickfix()<cr>
 nnoremap <leader>/ :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Toggle explorer
-nnoremap <silent> <leader>ff :Fern . -drawer -width=35 -toggle -reveal=%<CR>
+" nnoremap <silent> <leader>ff :Fern . -drawer -width=35 -toggle -reveal=%<CR>
+nnoremap <silent> <leader>ff :FloatermNew ranger<CR>
 
 " Find symbol in current file
 nnoremap <leader>fs :CocList outline<CR>
