@@ -11,10 +11,12 @@ bash <(wget -O - http://planet34.org/dotinstall)
 ## Deps
 
 * [ ] `bat`
+* [ ] `broot`
 * [ ] `fzf`
 * [ ] `git`
 * [ ] `node`, `npm`
 * [ ] `nvim`
+* [ ] `ranger`
 * [ ] `ripgrep`
 * [ ] `zsh`
 
