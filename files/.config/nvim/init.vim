@@ -109,14 +109,9 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set cursorline
     autocmd WinLeave * set nocursorline
+    autocmd WinNew * wincmd L
+    autocmd VimEnter * call ConfigStatusLine()
 augroup END
-
-" Boot status line
-augroup status_line_init
-  autocmd!
-  autocmd VimEnter * call ConfigStatusLine()
-augroup END
-
 
 " Post plugin load settings (Order matters)
 " · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
