@@ -45,8 +45,6 @@ Plug 'akinsho/nvim-bufferline.lua'
 " Junegunn
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
 Plug 'junegunn/fzf.vim' "Fzf vim wrapper
-Plug 'junegunn/goyo.vim' "Distractionf free writing
-Plug 'junegunn/limelight.vim' "Highlight current paragraph
 
 " Tpope
 Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
@@ -55,15 +53,9 @@ Plug 'tpope/vim-commentary' "Commenting shortcuts
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
-"Fern
-" Plug 'lambdalisue/fern.vim'
-" Plug 'LumaKernel/fern-mapping-fzf.vim' "Map fd to fzf jump to folder
-" Plug 'lambdalisue/fern-git-status.vim' "Tree view
-" Plug 'lambdalisue/fern-hijack.vim' "Replace netrw with fern
-" Plug 'lambdalisue/fern-renderer-nerdfont.vim' "Plug icons
 
 "Text objects
 Plug 'kana/vim-textobj-user' "Support for user defined text objects

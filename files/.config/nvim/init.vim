@@ -9,9 +9,7 @@ source $HOME/.config/nvim/plugins-cfg/plug.vim
 
 " VIM plugins cfg
 source $HOME/.config/nvim/plugins-cfg/coc.vim
-source $HOME/.config/nvim/plugins-cfg/fern.vim
 source $HOME/.config/nvim/plugins-cfg/fzf.vim
-source $HOME/.config/nvim/plugins-cfg/goyo.vim
 source $HOME/.config/nvim/plugins-cfg/quickscope.vim
 source $HOME/.config/nvim/plugins-cfg/rooter.vim
 
@@ -60,7 +58,6 @@ function ToggleGCommit() abort
     endif
 endfunction
 
-" Configure the text displayed for a closed fold
 " Configure the text displayed for a closed fold
 function! MyFoldText()
     " Get the line where the fold starts
