@@ -37,6 +37,6 @@ set splitright "Automatic v split to right
 set switchbuf="useopen" "Switch to window if buffer already open
 set tabstop=4 "Tabs are now 4 spaces
 set termguicolors
-set timeoutlen=1000 "Leader timeout
+set timeoutlen=500 "Leader timeout
 set updatetime=100 "Refresh rate
 syntax enable "Enable syntax highlighting

@@ -130,8 +130,8 @@ nnoremap <silent> <leader>gc :call ToggleGCommit()<CR>
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 " nnoremap <leader>gb :G switch 
 
-nnoremap <leader>gp :Gpull<CR>
-nnoremap <leader>gu :Gpush<CR>
+nnoremap <leader>gp :Git pull<CR>
+nnoremap <leader>gu :Git push<CR>
 
 " Open terminal
 nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
