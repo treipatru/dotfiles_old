@@ -136,3 +136,7 @@ nnoremap <leader>gu :Git push<CR>
 " Open terminal
 nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
 tnoremap   <silent>   <leader>t   <C-\><C-n>:FloatermToggle<CR>
+
+" Quickfix list navigation
+nnoremap <silent> <C-j> :cn<CR>
+nnoremap <silent> <C-k> :cp<CR>
