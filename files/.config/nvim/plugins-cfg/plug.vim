@@ -23,13 +23,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
-Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/vim-floaterm' "Floating terminal
 
 " Git
-Plug 'tpope/vim-fugitive' "Git management
-Plug 'rickhowe/diffchar.vim' "Highlight chars instead of lines in diff
-Plug 'rhysd/conflict-marker.vim' "Highlight chars instead of lines in diff
 Plug 'AndrewRadev/linediff.vim' "Diff any lines
+Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
+Plug 'rhysd/conflict-marker.vim' "Highlight chars instead of lines in diff
+Plug 'rickhowe/diffchar.vim' "Highlight chars instead of lines in diff
+Plug 'tpope/vim-commentary' "Commenting shortcuts
+Plug 'tpope/vim-fugitive' "Git management
 
 " Visual enhancements
 Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
@@ -42,20 +44,13 @@ Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
 Plug 'akinsho/nvim-bufferline.lua'
 
-" Junegunn
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fzf binary
-Plug 'junegunn/fzf.vim' "Fzf vim wrapper
-
-" Tpope
-Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
-Plug 'tpope/vim-commentary' "Commenting shortcuts
-
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 "Text objects
 Plug 'kana/vim-textobj-user' "Support for user defined text objects
