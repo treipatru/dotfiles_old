@@ -24,6 +24,7 @@ Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'voldikss/vim-floaterm' "Floating terminal
+Plug 'romainl/vim-qf' "Quickfix enhancements
 
 " Git
 Plug 'AndrewRadev/linediff.vim' "Diff any lines
