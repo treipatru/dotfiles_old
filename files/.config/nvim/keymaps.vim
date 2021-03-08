@@ -132,3 +132,7 @@ nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 
 nnoremap <leader>gp :Gpull<CR>
 nnoremap <leader>gu :Gpush<CR>
+
+" Open terminal
+nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
+tnoremap   <silent>   <leader>t   <C-\><C-n>:FloatermToggle<CR>
