@@ -8,8 +8,6 @@ source $HOME/.config/nvim/keymaps.vim
 source $HOME/.config/nvim/functions.vim
 " Enable matchit(ex. use % to jump between html tags)
 runtime macros/matchit.vim
-" Delete all buffers except the current one
-command! BufOnly silent! execute "%bd|e#|bd#"
 
 " Toggle dispay whitespace
 :autocmd InsertEnter,InsertLeave * set list!
