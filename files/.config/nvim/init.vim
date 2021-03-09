@@ -33,10 +33,8 @@ source $HOME/.config/nvim/plugins-cfg/rooter.vim
 lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
 
-" function! ConfigStatusLine()
-"   lua require('plugins.cfg-bufferline')
-" endfunction
-
+let g:bufferline_show_bufnr = 0
+let g:bufferline_excludes = []
 
 " Post plugin load settings (Order matters)
 " · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·

@@ -16,15 +16,16 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'airblade/vim-rooter' "On open file look up for project root
+Plug 'bling/vim-bufferline' "Buffer tabs
 Plug 'christoomey/vim-sort-motion' "Sort motions
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'mbbill/undotree' "Undo tree visualizer
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
+Plug 'romainl/vim-qf' "Quickfix enhancements
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'voldikss/vim-floaterm' "Floating terminal
-Plug 'romainl/vim-qf' "Quickfix enhancements
 
 " Git
 Plug 'AndrewRadev/linediff.vim' "Diff any lines
