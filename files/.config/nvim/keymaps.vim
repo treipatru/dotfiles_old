@@ -24,11 +24,6 @@ noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
 
 " Splits
 " ---------------------------------------------------------
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>c <C-w>c
@@ -42,22 +37,6 @@ nnoremap <silent> <leader>bd :lclose<bar>b#<bar>bd #<CR>
 " Delete all buffers except current one
 nnoremap <silent> <leader>bo :BufOnly<CR>
 
-nnoremap <silent> <leader>bn :bnext<CR>
-nnoremap <silent> <leader>bp :bprevious<CR>
-
-nnoremap <silent> <C-N> :bnext<CR>
-nnoremap <silent> <C-P> :bprev<CR>
-
-nnoremap <silent> <A-1> :lua require"bufferline".go_to_buffer(1)<CR>
-nnoremap <silent> <A-2> :lua require"bufferline".go_to_buffer(2)<CR>
-nnoremap <silent> <A-3> :lua require"bufferline".go_to_buffer(3)<CR>
-nnoremap <silent> <A-4> :lua require"bufferline".go_to_buffer(4)<CR>
-nnoremap <silent> <A-5> :lua require"bufferline".go_to_buffer(5)<CR>
-nnoremap <silent> <A-6> :lua require"bufferline".go_to_buffer(6)<CR>
-nnoremap <silent> <A-7> :lua require"bufferline".go_to_buffer(7)<CR>
-nnoremap <silent> <A-8> :lua require"bufferline".go_to_buffer(8)<CR>
-nnoremap <silent> <A-9> :lua require"bufferline".go_to_buffer(9)<CR>
-
 " Brackets jumping
 " ---------------------------------------------------------
 " Quicklist
@@ -68,9 +47,17 @@ nnoremap <silent> ]q :cnext<CR>
 nmap ]g <Plug>(coc-diagnostic-next)
 nmap [g <Plug>(coc-diagnostic-prev)
 
-" Signify - Git file changes
+" Signify - modified chunk navigation
 nmap ]c <Plug>(signify-next-hunk):SignifyHunkDiff<CR>
 nmap  [c <Plug>(signify-prev-hunk):SignifyHunkDiff<CR>
+
+" Quickfix list navigation
+nnoremap <silent> ]q :cn<CR>
+nnoremap <silent> [q :cp<CR>
+
+" Buffer navigation list navigation
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [b :bprevious<CR>
 
 " Finding resources
 " ---------------------------------------------------------
@@ -136,7 +123,3 @@ nnoremap <leader>gu :Git push<CR>
 " Open terminal
 nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
 tnoremap   <silent>   <leader>t   <C-\><C-n>:FloatermToggle<CR>
-
-" Quickfix list navigation
-nnoremap <silent> <C-j> :cn<CR>
-nnoremap <silent> <C-k> :cp<CR>

@@ -17,7 +17,6 @@ set hidden "CoC recommended
 set hlsearch "Enable search highlighting
 set ignorecase "Ignore case when searching
 set incsearch "Incremental search that shows partial matches
-set list "Show whitespace
 set mouse=a "Enable mouse for scrolling and resizing
 set nobackup "CoC recommended
 set noshowmode "Disable mode since it's handled by airline
