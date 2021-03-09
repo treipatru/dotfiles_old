@@ -11,10 +11,6 @@ runtime macros/matchit.vim
 " Delete all buffers except the current one
 command! BufOnly silent! execute "%bd|e#|bd#"
 
-set foldtext=CodeFolder()
-set inccommand=split "Live substitute preview
-set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol as...
-
 " Toggle dispay whitespace
 :autocmd InsertEnter,InsertLeave * set list!
 
@@ -23,7 +19,7 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set cursorline
     autocmd WinLeave * set nocursorline
-    autocmd VimEnter * call ConfigStatusLine()
+    " autocmd VimEnter * call ConfigStatusLine()
 augroup END
 
 " PLUGINS
@@ -37,13 +33,18 @@ source $HOME/.config/nvim/plugins-cfg/rooter.vim
 lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
 
-function! ConfigStatusLine()
-  lua require('plugins.cfg-bufferline')
-endfunction
+" function! ConfigStatusLine()
+"   lua require('plugins.cfg-bufferline')
+" endfunction
 
 
 " Post plugin load settings (Order matters)
 " · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+set list "Show whitespace
+set foldtext=CodeFolder()
+set inccommand=split "Live substitute preview
+set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol
+
 colorscheme onedark
 set background=dark
 highlight Comment cterm=italic gui=italic "Italic comments

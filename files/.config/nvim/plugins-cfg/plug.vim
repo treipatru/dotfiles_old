@@ -43,7 +43,6 @@ Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
 Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
-Plug 'akinsho/nvim-bufferline.lua'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
