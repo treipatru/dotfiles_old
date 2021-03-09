@@ -39,7 +39,7 @@ Plug 'tpope/vim-fugitive' "Git management
 " Visual enhancements
 Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
-Plug 'joshdick/onedark.vim' "Theme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons' "Sweeter icons for lua
 Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter

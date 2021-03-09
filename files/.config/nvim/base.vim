@@ -1,9 +1,17 @@
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
 let g:netrw_banner=0 "Hide banner
 let g:netrw_browse_split=4 "Open file in previous window
 let g:netrw_liststyle=3 "Display file list as tree
 let g:netrw_winsize=20 "Width of netrw split
 let javaScript_fold=1 "Activate folding by JS syntax
+
 set autoindent "New lines inherit indentation of previous line
 set autoread "Automatically re-read files if unmodified inside Vim
 set cmdheight=1 "Command height
@@ -35,7 +43,6 @@ set splitbelow "Automatic h split to bottom
 set splitright "Automatic v split to right
 set switchbuf="useopen" "Switch to window if buffer already open
 set tabstop=4 "Tabs are now 4 spaces
-set termguicolors
 set timeoutlen=500 "Leader timeout
 set updatetime=100 "Refresh rate
 syntax enable "Enable syntax highlighting

@@ -1,54 +1,53 @@
-" BASE CONFIG SHARED WITH VIM
-" · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-source $HOME/.config/nvim/base.vim
-
-" EXTRA FUNCTIONALITY
-" · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-source $HOME/.config/nvim/keymaps.vim
+" Base
+" ---------------------------------------------------------
+source $HOME/.config/nvim/base.vim "Shared with vim
 source $HOME/.config/nvim/functions.vim
+source $HOME/.config/nvim/keymaps.vim
+
+set foldtext=CodeFolder()
+set inccommand=split "Live substitute preview
+set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol
+
 " Enable matchit(ex. use % to jump between html tags)
 runtime macros/matchit.vim
 
-" Toggle dispay whitespace
-:autocmd InsertEnter,InsertLeave * set list!
-
 " Hide cursorline in active splits
-augroup BgHighlight
+augroup stuff
     autocmd!
     autocmd WinEnter * set cursorline
     autocmd WinLeave * set nocursorline
-    " autocmd VimEnter * call ConfigStatusLine()
+    autocmd InsertEnter,InsertLeave * set list!
 augroup END
 
-" PLUGINS
-" · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+
+" Plugins
+" ---------------------------------------------------------
 source $HOME/.config/nvim/plugins-cfg/plug.vim
 
 source $HOME/.config/nvim/plugins-cfg/coc.vim
 source $HOME/.config/nvim/plugins-cfg/quickscope.vim
 source $HOME/.config/nvim/plugins-cfg/rooter.vim
 
+" Lua plugins
 lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
-
+" Plugin settings
 let g:bufferline_show_bufnr = 0
-let g:bufferline_excludes = []
-
-let g:floaterm_opener = 'edit'
-
+let g:floaterm_opener = 'vsplit'
 let g:qf_shorten_path = 3
 
-" Post plugin load settings (Order matters)
-" · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-set list "Show whitespace
-set foldtext=CodeFolder()
-set inccommand=split "Live substitute preview
-set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol
 
-colorscheme onedark
-set background=dark
-highlight Comment cterm=italic gui=italic "Italic comments
-highlight CursorLine cterm=NONE guibg=#223d6b "More visible cursor line
-highlight DiffAdd guibg=#41492d
-highlight DiffDelete guifg=#4b1818 guibg=#4b1818
+" Theme
+" ---------------------------------------------------------
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'default'
+colorscheme material
+
+highlight CursorLine cterm=NONE guibg=#223d6b
+highlight DiffAdd guibg=#365e2e guifg=#FFFFFF
+highlight DiffDelete guifg=#4b1818 guibg=#4b1818 guifg=#FFFFFF
 hi Normal guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE ctermbg=NONE
+
+hi Floaterm guibg=#263238
+hi FloatermBorder guibg=#263238 guifg=#eeffff
