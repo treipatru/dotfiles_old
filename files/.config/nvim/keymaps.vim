@@ -33,7 +33,7 @@ nnoremap <silent> <Tab> <C-w>w
 " Buffers
 " ---------------------------------------------------------
 " When deleting buffer render the previous one in the current split
-nnoremap <silent> <leader>bd :lclose<bar>b#<bar>bd #<CR>
+nnoremap <silent> <leader>bd :BUN<CR>
 " Delete all buffers except current one
 nnoremap <silent> <leader>bo :BufOnly<CR>
 

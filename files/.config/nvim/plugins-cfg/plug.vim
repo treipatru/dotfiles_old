@@ -16,11 +16,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'airblade/vim-rooter' "On open file look up for project root
-Plug 'bling/vim-bufferline' "Buffer tabs
+Plug 'bling/vim-bufferline' "Buffers in command line
 Plug 'christoomey/vim-sort-motion' "Sort motions
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'mbbill/undotree' "Undo tree visualizer
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
+Plug 'qpkorr/vim-bufkill' " Close buffer without closing split
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'romainl/vim-qf' "Quickfix enhancements
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t

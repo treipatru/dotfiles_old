@@ -36,6 +36,10 @@ lua require('plugins.cfg-telescope')
 let g:bufferline_show_bufnr = 0
 let g:bufferline_excludes = []
 
+let g:floaterm_opener = 'edit'
+
+let g:qf_shorten_path = 3
+
 " Post plugin load settings (Order matters)
 " · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
 set list "Show whitespace
