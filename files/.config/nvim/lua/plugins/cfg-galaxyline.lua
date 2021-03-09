@@ -112,14 +112,14 @@ gls.left[2] = {
         }
     }
 }
-gls.left[3] = {
-    FileName = {
-        provider = get_current_file_name,
-        condition = buffer_not_empty,
-        highlight = {colors.fg, colors.section_bg},
-        separator_highlight = {colors.section_bg, colors.bg}
-    }
-}
+-- gls.left[3] = {
+--     FileName = {
+--         provider = get_current_file_name,
+--         condition = buffer_not_empty,
+--         highlight = {colors.fg, colors.section_bg},
+--         separator_highlight = {colors.section_bg, colors.bg}
+--     }
+-- }
 gls.left[9] = {
     DiagnosticError = {
         provider = 'DiagnosticError',
