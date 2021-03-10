@@ -32,6 +32,8 @@ source $HOME/.config/nvim/plugins-cfg/rooter.vim
 lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
 " Plugin settings
+let g:bufferline_active_buffer_left = '[ '
+let g:bufferline_active_buffer_right = ']'
 let g:bufferline_show_bufnr = 0
 let g:floaterm_opener = 'vsplit'
 let g:qf_shorten_path = 3

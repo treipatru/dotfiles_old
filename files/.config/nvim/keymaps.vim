@@ -35,26 +35,26 @@ nnoremap <silent> [b :bprevious<CR>
 
 " Finding resources
 " ---------------------------------------------------------
-" Jump to file in project
+" Files in project
 nnoremap <silent> <leader>fj <cmd>:FloatermNew broot<cr>
-" Grep all files in project
+" Grep in project
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-" Jump to file in Vim History
+" Files in global file history
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').oldfiles()<cr>
-" Jump to file in Vim History
-nnoremap <leader>fq <cmd>lua require('telescope.builtin').quickfix()<cr>
-" Find in all project files
+" Cocsearch current word in project
 nnoremap <leader>/ :CocSearch <C-R>=expand("<cword>")<CR><CR>
-" Toggle explorer
+" File via ranger explorer
 nnoremap <silent> <leader>ff :FloatermNew ranger<CR>
-" Find symbol in current file
+" Current file symbols
 nnoremap <leader>fs :CocList outline<CR>
-" Find open buffers
+" Open buffers
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 " Coc - Find definition of selected symbol
 nmap <silent> <leader>fd <Plug>(coc-definition)
 " Coc - Find references of selected symbol
 nmap <silent> <leader>fr <Plug>(coc-references)
+" Previous vim commands
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 
 " ---------------------------------------------------------
 " Git integration
