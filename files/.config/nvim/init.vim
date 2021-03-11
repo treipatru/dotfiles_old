@@ -32,6 +32,8 @@ source $HOME/.config/nvim/plugins-cfg/rooter.vim
 lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
 " Plugin settings
+call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
+let g:leaderGuide_display_plus_menus = 1
 let g:bufferline_active_buffer_left = '[ '
 let g:bufferline_active_buffer_right = ']'
 let g:bufferline_show_bufnr = 0

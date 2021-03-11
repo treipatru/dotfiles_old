@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete engine and more
 Plug 'qpkorr/vim-bufkill' " Close buffer without closing split
 Plug 'raimondi/delimitmate' "Auto close quotes, brackets
 Plug 'romainl/vim-qf' "Quickfix enhancements
+Plug 'spinks/vim-leader-guide' "Show leader guide keys
 Plug 'unblevable/quick-scope' "Highlight unique chars when jumping with f/t
 Plug 'vim-scripts/restore_view.vim' "Auto restore folds and positions
 Plug 'voldikss/vim-floaterm' "Floating terminal
