@@ -7,6 +7,7 @@ source $HOME/.config/nvim/keymaps.vim
 set foldtext=CodeFolder()
 set inccommand=split "Live substitute preview
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol
+set list
 
 " Enable matchit(ex. use % to jump between html tags)
 runtime macros/matchit.vim
@@ -16,7 +17,8 @@ augroup stuff
     autocmd!
     autocmd WinEnter * set cursorline
     autocmd WinLeave * set nocursorline
-    autocmd InsertEnter,InsertLeave * set list!
+    autocmd InsertEnter * set nolist
+    autocmd InsertLeave * set list
 augroup END
 
 
@@ -49,7 +51,7 @@ colorscheme material
 
 highlight CursorLine cterm=NONE guibg=#223d6b
 highlight DiffAdd guibg=#365e2e guifg=#FFFFFF
-highlight DiffDelete guifg=#4b1818 guibg=#4b1818 guifg=#FFFFFF
+highlight DiffDelete guibg=#4b1818 guifg=#FFFFFF
 hi Normal guibg=NONE ctermbg=NONE
 highlight SignColumn guibg=NONE ctermbg=NONE
 
