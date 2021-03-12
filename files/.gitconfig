@@ -23,16 +23,11 @@
 [push]
   default = current
 [alias]
-  a = add
-  co = checkout
-  cm = commit
   graph = log --graph --all --decorate --stat --date=iso
-  local = log @{u}..
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   s = status -s
   stats = shortlog -sn --all --no-merges
   tags = log --no-walk --tags --decorate=full
-  publish = "!git push -u origin $(git branch-name)"
   wd = diff --word-diff
 [diff "sopsdiffer"]
   textconv = sops -d
