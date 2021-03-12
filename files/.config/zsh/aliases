@@ -2,7 +2,7 @@ alias v="nvim"
 alias cat="bat"
 
 alias g="git"
-alias ga="git add"
+alias ga="git add "
 alias gcm="git commit"
 alias gco="git checkout"
 alias gd="git diff"
