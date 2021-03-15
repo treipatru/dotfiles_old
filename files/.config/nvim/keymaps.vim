@@ -43,8 +43,11 @@ nnoremap <silent> [b :bprevious<CR>
 " ---------------------------------------------------------
 let g:lmap.f = {'name' : 'find'}
 
-nnoremap <silent> <leader>fj <cmd>:FloatermNew broot<cr>
+nnoremap <leader>fj <cmd>lua require('telescope.builtin').find_files()<cr>
 let g:lmap.f.j = 'file in project'
+
+nnoremap <silent> <leader>ft <cmd>:FloatermNew broot<cr>
+let g:lmap.f.t = 'file in project tree'
 
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 let g:lmap.f.g = 'string in project'
