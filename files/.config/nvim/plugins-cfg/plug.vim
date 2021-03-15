@@ -38,9 +38,9 @@ Plug 'tpope/vim-commentary' "Commenting shortcuts
 Plug 'tpope/vim-fugitive' "Git management
 
 " Visual enhancements
+Plug 'christianchiarulli/nvcode-color-schemes.vim' " Theme w/ treesitter support
 Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons' "Sweeter icons for lua
 Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter

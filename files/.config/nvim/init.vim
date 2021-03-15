@@ -45,9 +45,20 @@ let g:qf_shorten_path = 3
 
 " Theme
 " ---------------------------------------------------------
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'default'
-colorscheme material
+" Configure treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
+EOF
+
+" Configure nvcode-color-schemes
+let g:nvcode_termcolors=256
+colorscheme onedark
 
 highlight CursorLine cterm=NONE guibg=#223d6b
 highlight DiffAdd guibg=#365e2e guifg=#FFFFFF
