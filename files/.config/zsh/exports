@@ -28,6 +28,13 @@ XDG_DOCUMENTS_DIR="$HOME/docs"
 XDG_MUSIC_DIR="$HOME/music"
 XDG_PICTURES_DIR="$HOME/images"
 XDG_VIDEOS_DIR="$HOME/videos"
-
+# NVM conig
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# Ruby gems cfg
+if test -f "/etc/arch-release"; then
+    export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+    export PATH="$PATH:$GEM_HOME/bin"
+fi
+# Local user bins
+export PATH="$PATH:$HOME/.local/bin"
