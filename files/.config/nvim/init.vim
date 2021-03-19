@@ -39,7 +39,7 @@ let g:leaderGuide_display_plus_menus = 1
 let g:bufferline_active_buffer_left = '[ '
 let g:bufferline_active_buffer_right = ']'
 let g:bufferline_show_bufnr = 0
-let g:floaterm_opener = 'vsplit'
+let g:floaterm_opener = 'edit'
 let g:qf_shorten_path = 3
 
 

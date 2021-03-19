@@ -132,7 +132,7 @@ let g:lmap.z = 'toggle split zoom'
 noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
 noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
 " Bufkil - close buffer without closing split
-nnoremap <silent> <leader>bd :BUN<CR>
+nnoremap <silent> <leader>bd :BD<CR>
 " Toggle terminal
 nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
 let g:lmap.t = 'toggle terminal'
