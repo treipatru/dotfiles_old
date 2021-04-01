@@ -31,11 +31,11 @@ Plug 'voldikss/vim-floaterm' "Floating terminal
 
 " Git
 Plug 'AndrewRadev/linediff.vim' "Diff any lines
-Plug 'https://tpope.io/vim/surround.git' "Better text surrounding patterns
 Plug 'rhysd/conflict-marker.vim' "Highlight chars instead of lines in diff
 Plug 'rickhowe/diffchar.vim' "Highlight chars instead of lines in diff
 Plug 'tpope/vim-commentary' "Commenting shortcuts
 Plug 'tpope/vim-fugitive' "Git management
+Plug 'tpope/vim-surround' "Better text surrounding patterns
 
 " Visual enhancements
 Plug 'christianchiarulli/nvcode-color-schemes.vim' " Theme w/ treesitter support
