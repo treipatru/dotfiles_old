@@ -37,7 +37,9 @@ nmap [q <Plug>(qf_qf_previous)
 " Buffers
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [b :bprevious<CR>
-
+" Edits
+nnoremap <silent> ]e g,
+nnoremap <silent> [e g;
 
 " Finding resources
 " ---------------------------------------------------------
@@ -138,6 +140,8 @@ nnoremap   <silent>   <leader>t   :FloatermToggle<CR>
 let g:lmap.t = 'toggle terminal'
 tnoremap   <silent>   <leader>t   <C-\><C-n>:FloatermToggle<CR>
 
+nmap <leader>r <Plug>(coc-rename)
+let g:lmap.r = 'CoC rename'
 
 " LeaderGuide config
 " ---------------------------------------------------------
