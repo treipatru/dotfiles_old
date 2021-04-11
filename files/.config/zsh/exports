@@ -38,3 +38,6 @@ if test -f "/etc/arch-release"; then
 fi
 # Local user bins
 export PATH="$PATH:$HOME/.local/bin"
+
+# Polybar scripts
+export PATH=$PATH:$HOME/.config/polybar/scripts
