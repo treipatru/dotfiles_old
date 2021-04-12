@@ -5,6 +5,9 @@ source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/keymaps.vim
 
 set foldtext=CodeFolder()
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 set inccommand=split "Live substitute preview
 set lcs=tab:»_,trail:·,eol:↵ "Display tabs, trailing whitespace and eol
 set list
