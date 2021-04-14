@@ -57,11 +57,34 @@
 ;; depends of global npm package eslint_d
 (add-hook 'js2-mode-hook #'eslintd-fix-mode)
 
-;; Disable projectile caching to make sure we're always up to date
-(setq projectile-enable-caching nil)
 
 ;; Auto refresh magit
 (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+
+;; Ask to switch workspace buffer when opening split
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+(defadvice! prompt-for-buffer (&rest _)
+  :after '(evil-window-split evil-window-vsplit)
+  (+ivy/switch-workspace-buffer))
+
+
+
+
+
+;; -----------------------------------------------------------------------------
+;; MODELINE
+;;
+
+;; We expect the encoding to be LF UTF-8, so only show the modeline when this is not the case
+(defun doom-modeline-conditional-buffer-encoding ()
+  (setq-local doom-modeline-buffer-encoding
+              (unless (and (memq (plist-get (coding-system-plist buffer-file-coding-system) :category)
+                                 '(coding-category-undecided coding-category-utf-8))
+                           (not (memq (coding-system-eol-type buffer-file-coding-system) '(1 2))))
+                t)))
+
+(add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
 
 ;; Shorten status line file path
 (setq doom-modeline-buffer-file-name-style 'truncate-with-project)
@@ -69,9 +92,26 @@
 ;; Longer branch names
 (setq doom-modeline-vcs-max-length 32)
 
+
+
+
+
+;; -----------------------------------------------------------------------------
+;; MISC
+;;
+
+;; Disable projectile caching to make sure we're always up to date
+(setq projectile-enable-caching nil)
+
+(setq undo-limit 80000000                         ; Raise undo-limit to 80Mb
+      evil-want-fine-undo t                       ; By default while in insert all changes are one big blob. Be more granular
+      truncate-string-ellipsis "…")               ; Truncate with unicode ellispis
+
 (setq scroll-margin 10)
 (setq hscroll-margin 40)
 
 ;; Current line background color
 (global-hl-line-mode)
 (set-face-background hl-line-face "color-234" )
+
+(setq +ivy-buffer-preview t)
