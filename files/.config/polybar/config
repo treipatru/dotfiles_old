@@ -29,17 +29,18 @@ alert = #bd2c40
 
 red = #E06C75
 green = #98C379
-yellow = E5C07B
+yellow = #E5C07B
 blue = #61AFEF
-indigo = C678DD
-cyan = 56B6C2
+indigo = #C678DD
+cyan = #56B6C2
 orange = #FF7F50
 pinkish = #d44e88
 
 
 [bar/wesh]
 bottom = true
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-1}
+monitor-fallback = eDP-1
 width = 100%
 height = 42
 ;offset-x = 1%
@@ -65,7 +66,7 @@ module-margin-right = 1
 font-0 = "JetBrainsMono Nerd Font Mono:size=18;2"
 
 modules-left = bspwm
-modules-center = fs cpu temperature memory download upload eth battery pulseaudio-control
+modules-center = cpu temperature fs memory wlan eth battery pulseaudio-control
 modules-right = date
 
 tray-position = right
@@ -123,7 +124,7 @@ format-mounted-foreground = ${colors.blue}
 type = internal/cpu
 interval = 2
 
-label = "   ﬙ %percentage:2%% -"
+label = "%percentage:2%% ﬙"
 label-foreground = ${colors.red}
 
 [module/temperature]
@@ -134,7 +135,7 @@ warn-temperature = 60
 format = <label>
 format-warn = <label-warn>
 
-label = "%temperature-c%   "
+label = "%temperature-c%  "
 label-foreground = ${colors.red}
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
@@ -147,30 +148,30 @@ ramp-foreground = ${colors.foreground-alt}
 [module/memory]
 type = internal/memory
 interval = 2
-label = " %percentage_used%%   "
+
+label = " %percentage_used%%"
 label-foreground= ${colors.yellow}
+format-margin = 1
 
 [module/wlan]
 type = internal/network
 interface = wlan0
 interval = 1.0
+
 format-connected = <label-connected>
-
-[module/download]
-inherit = module/wlan
-
-label-connected =  %downspeed%
-label-connected-foreground = ${colors.cyan}
-
-[module/upload]
-inherit = module/wlan
-
-label-connected = "祝 %upspeed%   "
-label-connected-foreground = ${colors.orange}
-
+format-connected-padding = 1
 format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.orange}
+format-disconnected-padding = 1
+
+label-connected = "%{F#56B6C2} %downspeed% %{F-}%{F#FF7F50}祝 %upspeed% %{F-}"
+label-disconnected = "%ifname% disconnected"
+
+ramp-signal-0 = 1
+ramp-signal-1 = 2
+ramp-signal-2 = 3
+ramp-signal-3 = 4
+ramp-signal-4 = 5
+ramp-signal-5 = 6
 
 [module/eth]
 type = internal/network
@@ -186,13 +187,18 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+time-format = %H:%M
 
-format-charging = "<animation-charging> <label-charging>  "
-label-charging = %percentage%%
+format-charging = <animation-charging> <label-charging>
+format-charging-padding = 1
+
+label-charging = %percentage%% %time%
 label-charging-foreground = ${colors.indigo}
 
-format-discharging = "<ramp-capacity> <label-discharging>  "
-label-discharging = %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 1
+
+label-discharging = %percentage%% %time%
 label-discharging-foreground = ${colors.indigo}
 
 format-full-prefix = ""
@@ -215,11 +221,12 @@ animation-charging-framerate = 750
 type = custom/script
 tail = true
 label-foreground = ${colors.pinkish}
+format-label-padding = 1
 
 exec = ~/.config/polybar/scripts/pulseaudio-control --icons-volume " , " --icon-muted " " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo: " --sink-nickname "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo:  Headphones" listen
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
-click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" next-sink
+click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_00_1f.3.analog-stereo:" next-sink
 scroll-up = pulseaudio-control --volume-max 130 up
 scroll-down = pulseaudio-control --volume-max 130 down
 
