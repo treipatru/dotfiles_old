@@ -39,8 +39,8 @@ pinkish = #d44e88
 
 [bar/wesh]
 bottom = true
-monitor = ${env:MONITOR:HDMI-1}
-monitor-fallback = eDP-1
+# monitor = ${env:MONITOR:HDMI-1}
+# monitor-fallback = eDP-1
 width = 100%
 height = 42
 ;offset-x = 1%
@@ -63,10 +63,10 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = "JetBrainsMono Nerd Font Mono:size=18;2"
+font-0 = "JetBrainsMono Nerd Font Mono:size=13;2"
 
 modules-left = bspwm
-modules-center = cpu temperature fs memory wlan eth battery pulseaudio-control
+modules-center = cpu temperature fs memory wlan0 wlan1 eth battery pulseaudio-control
 modules-right = date
 
 tray-position = right
@@ -74,6 +74,7 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+tray-max-size = 30
 
 
 
@@ -153,9 +154,8 @@ label = " %percentage_used%%"
 label-foreground= ${colors.yellow}
 format-margin = 1
 
-[module/wlan]
+[module/wlanBase]
 type = internal/network
-interface = wlan0
 interval = 1.0
 
 format-connected = <label-connected>
@@ -172,6 +172,14 @@ ramp-signal-2 = 3
 ramp-signal-3 = 4
 ramp-signal-4 = 5
 ramp-signal-5 = 6
+
+[module/wlan0]
+inherit = module/wlanBase
+interface = wlan0
+
+[module/wlan1]
+inherit = module/wlanBase
+interface = wlp0s20f3
 
 [module/eth]
 type = internal/network
@@ -223,7 +231,7 @@ tail = true
 label-foreground = ${colors.pinkish}
 format-label-padding = 1
 
-exec = ~/.config/polybar/scripts/pulseaudio-control --icons-volume " , " --icon-muted " " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo: " --sink-nickname "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo:  Headphones" listen
+exec = ~/.config/polybar/scripts/pulseaudio-control --icons-volume " , " --icon-muted " " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo: " --sink-nickname "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y7ENE1T9C2859E-00.analog-stereo:Focusrite" listen
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_00_1f.3.analog-stereo:" next-sink
