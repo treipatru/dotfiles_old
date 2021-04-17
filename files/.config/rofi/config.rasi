@@ -51,7 +51,7 @@ configuration {
     window-format: "{w}    {c}   {t}";
     click-to-exit: true;
     show-match: true;
-    theme: "dracula";
+    theme: "onedark";
     max-history-size: 25;
     combi-hide-mode-prefix: false;
     pid: "/run/user/1000/rofi.pid";

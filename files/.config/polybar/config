@@ -42,7 +42,7 @@ bottom = true
 # monitor = ${env:MONITOR:HDMI-1}
 # monitor-fallback = eDP-1
 width = 100%
-height = 42
+height = 45
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
@@ -61,20 +61,26 @@ padding-left = 0
 padding-right = 0
 
 module-margin-left = 0
-module-margin-right = 1
+module-margin-right = 0
 
-font-0 = "Noto Sans:size=13;2"
+font-0 = "JetBrains Mono:style=ExtraBold:size=18;2"
 
 modules-left = bspwm
-modules-center = cpu temperature fs memory wlan0 wlan1 eth battery pulseaudio-control
-modules-right = date
+modules-center = cpu temperature sep memory sep fs sep battery sep wlan0 wlan1 eth
+modules-right = pulseaudio-control sep date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 4
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-tray-max-size = 30
+tray-max-size = 50
+
+[module/sep]
+type = custom/text
+content = "   "
+content-foreground = ${colors.foreground-alt}
+content-padding = 1
 
 
 
@@ -113,19 +119,19 @@ label-empty-padding = 2
 type = internal/fs
 interval = 25
 
-mount-0 = /
-mount-1 = /home
-
-label-mounted = %mountpoint% %{F#61AFEF}%free%
+label-mounted = %mountpoint% %{F#E5C07B}%free%
 label-unmounted = %mountpoint% not mounted
 
-format-mounted-foreground = ${colors.blue}
+format-mounted-foreground = ${colors.yellow}
+
+mount-0 = /
+mount-1 = /home
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 
-label = "%percentage:2%% CPU"
+label = "%percentage:2%% "
 label-foreground = ${colors.red}
 
 [module/temperature]
@@ -136,42 +142,27 @@ warn-temperature = 60
 format = <label>
 format-warn = <label-warn>
 
-label = "%temperature-c%  "
+label = %temperature-c% 
 label-foreground = ${colors.red}
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [module/memory]
 type = internal/memory
 interval = 2
 
-label = "RAM %percentage_used%%"
-label-foreground= ${colors.yellow}
-format-margin = 1
+label = %mb_free%
+label-foreground= ${colors.blue}
 
 [module/wlanBase]
 type = internal/network
 interval = 1.0
 
 format-connected = <label-connected>
-format-connected-padding = 1
 format-disconnected = <label-disconnected>
-format-disconnected-padding = 1
 
-label-connected = "%{F#56B6C2}%downspeed% %{F-}%{F#FF7F50}%upspeed% %{F-}"
-label-disconnected = "%ifname% disconnected"
-
-ramp-signal-0 = 1
-ramp-signal-1 = 2
-ramp-signal-2 = 3
-ramp-signal-3 = 4
-ramp-signal-4 = 5
-ramp-signal-5 = 6
+label-connected = %{F#56B6C2}%downspeed% %{F-}%{F#FF7F50}%upspeed% %{F-}
+label-disconnected = %ifname% disconnected
 
 [module/wlan0]
 inherit = module/wlanBase
@@ -197,43 +188,34 @@ adapter = AC
 full-at = 98
 time-format = %H:%M
 
-format-charging = <animation-charging> <label-charging>
-format-charging-padding = 1
+format-charging = <label-charging> <animation-charging> 
 
-label-charging = %percentage%% %time%
+label-charging = %percentage%% 
 label-charging-foreground = ${colors.indigo}
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 1
+format-discharging = <label-discharging>
 
 label-discharging = %percentage%% %time%
 label-discharging-foreground = ${colors.indigo}
 
-format-full-prefix = ""
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.indigo}
 format-full-foreground = ${colors.indigo}
 
-ramp-capacity-0 = ▁
-ramp-capacity-1 = ▂
-ramp-capacity-2 = ▃
-ramp-capacity-3 = ▄
-ramp-capacity-4 = ▅
-ramp-capacity-5 = ▆
-ramp-capacity-6 = ▇
-ramp-capacity-7 = █
-ramp-capacity-foreground = ${colors.indigo}
+animation-charging-0 =  ".  "
+animation-charging-1 =  ".. "
+animation-charging-2 =  "..."
+animation-charging-3 =  " .."
+animation-charging-4 =  "  ."
+animation-charging-5 =  "   "
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
 animation-charging-foreground = ${colors.indigo}
-animation-charging-framerate = 750
+animation-charging-framerate = 500
 
 [module/pulseaudio-control]
 type = custom/script
 tail = true
 label-foreground = ${colors.pinkish}
-format-label-padding = 1
 
 exec = ~/.config/polybar/scripts/pulseaudio-control --icons-volume "🔉 ,🔊 " --icon-muted "🔇 " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo: " --sink-nickname "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y7ENE1T9C2859E-00.analog-stereo:Focusrite" listen
 click-right = exec pavucontrol &
@@ -259,7 +241,6 @@ time = %I:%M
 format-prefix-foreground = ${colors.green}
 label = %time% %date% 
 format-foreground =  ${colors.green}
-format-margin = 1
 
 [settings]
 screenchange-reload = true
