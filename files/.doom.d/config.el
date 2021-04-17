@@ -115,3 +115,6 @@
 (set-face-background hl-line-face "color-234" )
 
 (setq +ivy-buffer-preview t)
+
+;; Vim(and evil) move the cursor one character back when exiting insert mode. If you prefer that it didn’t, set
+(setq evil-move-cursor-back nil)
