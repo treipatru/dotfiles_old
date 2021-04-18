@@ -39,19 +39,14 @@ Plug 'tpope/vim-surround' "Better text surrounding patterns
 
 " Visual enhancements
 Plug 'christianchiarulli/nvcode-color-schemes.vim' " Theme w/ treesitter support
-Plug 'dhruvasagar/vim-zoom' "Allow zoom on a single split
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
-Plug 'kyazdani42/nvim-web-devicons' "Sweeter icons for lua
-Plug 'lambdalisue/nerdfont.vim' "Sweet icons
 Plug 'mhinz/vim-signify' "Git gutter
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
-Plug 'yuttie/comfortable-motion.vim' "Smooth scrolling
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 

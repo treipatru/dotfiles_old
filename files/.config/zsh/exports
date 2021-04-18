@@ -42,5 +42,8 @@ export PATH="$PATH:$HOME/.local/bin"
 # Polybar scripts
 export PATH=$PATH:$HOME/.config/polybar/scripts
 
+# rofi scripts
+export PATH=$PATH:$HOME/.config/rofi/scripts
+
 # Doom Emacs exec
 export PATH="$PATH:$HOME/.emacs.d/bin"
