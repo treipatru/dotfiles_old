@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim' "Split/join multiline statements
 Plug 'airblade/vim-rooter' "On open file look up for project root
-Plug 'bling/vim-bufferline' "Buffers in command line
 Plug 'christoomey/vim-sort-motion' "Sort motions
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'mbbill/undotree' "Undo tree visualizer
