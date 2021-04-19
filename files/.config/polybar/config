@@ -39,8 +39,6 @@ pinkish = #d44e88
 
 [bar/wesh]
 bottom = true
-# monitor = ${env:MONITOR:HDMI-1}
-# monitor-fallback = eDP-1
 width = 100%
 height = 45
 ;offset-x = 1%
@@ -63,13 +61,13 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "JetBrains Mono:style=ExtraBold:size=18;2"
+font-0 = "JetBrains Mono:style=ExtraBold:size=12;2"
 
 modules-left = bspwm
-modules-center = cpu temperature sep memory sep fs sep battery sep wlan0 wlan1 eth
+modules-center = cpu temperature sep memory sep fs sep ip sep battery
 modules-right = pulseaudio-control sep date
 
-tray-position = right
+tray-position = none
 tray-padding = 4
 
 cursor-click = pointer
@@ -78,9 +76,8 @@ tray-max-size = 50
 
 [module/sep]
 type = custom/text
-content = "   "
+content = " "
 content-foreground = ${colors.foreground-alt}
-content-padding = 1
 
 
 
@@ -154,6 +151,13 @@ interval = 2
 label = %mb_free%
 label-foreground= ${colors.blue}
 
+[module/ip]
+type = custom/script
+tail = true
+
+exec = dig +short myip.opendns.com @resolver1.opendns.com
+click-left = exec alacritty -e nmtui
+
 [module/wlanBase]
 type = internal/network
 interval = 1.0
@@ -190,7 +194,7 @@ time-format = %H:%M
 
 format-charging = <label-charging> <animation-charging> 
 
-label-charging = %percentage%% 
+label-charging = + %percentage%%
 label-charging-foreground = ${colors.indigo}
 
 format-discharging = <label-discharging>
@@ -198,7 +202,7 @@ format-discharging = <label-discharging>
 label-discharging = %percentage%% %time%
 label-discharging-foreground = ${colors.indigo}
 
-format-full-prefix = ""
+format-full-prefix = "++"
 format-full-prefix-foreground = ${colors.indigo}
 format-full-foreground = ${colors.indigo}
 
@@ -239,7 +243,7 @@ date = "%a %d"
 time = %I:%M
 
 format-prefix-foreground = ${colors.green}
-label = %time% %date% 
+label = %date% %time%
 format-foreground =  ${colors.green}
 
 [settings]
