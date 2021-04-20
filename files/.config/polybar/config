@@ -61,11 +61,11 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "JetBrains Mono:style=ExtraBold:size=12;2"
+font-0 = "JetBrains Mono:style=ExtraBold:size=18;2"
 
 modules-left = bspwm
 modules-center = cpu temperature sep memory sep fs sep ip sep battery
-modules-right = pulseaudio-control sep date
+modules-right = pulseaudio-control sep date sep
 
 tray-position = none
 tray-padding = 4
