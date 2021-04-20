@@ -38,7 +38,6 @@ Plug 'tpope/vim-surround' "Better text surrounding patterns
 
 " Visual enhancements
 Plug 'christianchiarulli/nvcode-color-schemes.vim' " Theme w/ treesitter support
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} "Galaxyline status
 Plug 'mhinz/vim-signify' "Git gutter
 Plug 'sheerun/vim-polyglot' "All the languages syntax highlighting
 

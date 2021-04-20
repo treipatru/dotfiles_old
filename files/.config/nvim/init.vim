@@ -34,7 +34,6 @@ source $HOME/.config/nvim/plugins-cfg/quickscope.vim
 source $HOME/.config/nvim/plugins-cfg/rooter.vim
 
 " Lua plugins
-lua require('plugins.cfg-galaxyline')
 lua require('plugins.cfg-telescope')
 " Plugin settings
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
