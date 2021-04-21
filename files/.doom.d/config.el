@@ -119,10 +119,8 @@
 ;; Vim(and evil) move the cursor one character back when exiting insert mode. If you prefer that it didn’t, set
 (setq evil-move-cursor-back nil)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (after! rustic
   (setq rustic-format-on-save t)
   (setq lsp-rust-server 'rust-analyzer))
-
-;; (setq lsp-ui-peek-always-show t)
-;; (setq lsp-ui-sideline-show-hover t)
-;; (setq lsp-ui-doc-enable t)
