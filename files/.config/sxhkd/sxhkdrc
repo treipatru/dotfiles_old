@@ -118,11 +118,8 @@ super + d
     rofi -show combi
 
 # pulse audio
-XF86AudioLowerVolume
-    pulseaudio-control --volume-max 130 down
-
-XF86AudioRaiseVolume
-    pulseaudio-control --volume-max 130 up
-
 XF86AudioMute
     pulseaudio-control togmute
+
+XF86Audio{Raise,Lower}Volume
+    pulseaudio-control --volume-max 130 {up,down} 5
