@@ -10,10 +10,6 @@ fpath+=$HOME/.zsh/pure
 export EDITOR=/usr/bin/nvim
 # Key timeout in shell VI mode
 export KEYTIMEOUT=1
-# Go paths
-export GOPATH=$HOME/Go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
 # Gpg
 export SOPS_GPG_EXEC=/usr/bin/gpg2
 # Bat config
