@@ -9,3 +9,5 @@ alias gd="git diff"
 alias gp="git pull"
 alias gs="git status -s"
 alias gu="git push"
+
+alias dropboxctl="python ~/scripts/dropboxctl.py"
