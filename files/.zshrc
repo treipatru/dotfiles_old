@@ -50,7 +50,3 @@ batdiff() {
 }
 
 source $HOME/.config/zsh/aliases
-
-source ~/.config/broot/launcher/bash/br
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
