@@ -1,15 +1,5 @@
 #!/bin/sh
 #
-#   (          ) (       (
-#   )\ )    ( /( )\ ) (  )\  (
-#  (()/( (  )\()|()/( )\((_)))\(
-#   ((_)))\(_))/ /(_)|(_)_ /((_)\
-#   _| |((_) |_ (_) _|(_) (_))((_)
-# / _` / _ \  _| |  _|| | / -_|_-<
-# \__,_\___/\__| |_|  |_|_\___/__/
-#
-
-
 
 ######## Defs
 # Logging
@@ -65,7 +55,7 @@ fi
 
 ######## Run
 # Make any missing dirs
-mkdir -p {~/.config,~/scripts,~/.ssh,~/repos}
+mkdir -p {~/.config,~/.ssh,~/repos}
 
 # Clone repo
 git -C ~/repos/ clone https://github.com/treipatru/dotfiles.git
