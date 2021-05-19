@@ -59,7 +59,8 @@
 
 
 ;; Auto refresh magit
-(add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+(with-eval-after-load 'magit-mode
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
 
 ;; Ask to switch workspace buffer when opening split
 (setq evil-vsplit-window-right t
@@ -124,3 +125,5 @@
 (after! rustic
   (setq rustic-format-on-save t)
   (setq lsp-rust-server 'rust-analyzer))
+
+(setq org-agenda-files '("~/org"))
