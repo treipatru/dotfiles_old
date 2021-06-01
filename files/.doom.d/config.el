@@ -113,11 +113,11 @@
 
 ;; Current line background color
 (global-hl-line-mode)
-(set-face-background hl-line-face "color-234" )
+(set-face-background hl-line-face "grey24" )
 
 (setq +ivy-buffer-preview t)
 
-;; Vim(and evil) move the cursor one character back when exiting insert mode. If you prefer that it didn’t, set
+;; Don't move the cursor one character back when exiting insert mode
 (setq evil-move-cursor-back nil)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -126,4 +126,11 @@
   (setq rustic-format-on-save t)
   (setq lsp-rust-server 'rust-analyzer))
 
+;; Window opacity
+(set-frame-parameter (selected-frame) 'alpha '(97 . 97))
+(add-to-list 'default-frame-alist '(alpha . (97 . 97)))
+
+;; Org settings
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (setq org-agenda-files '("~/org"))
+(setq +org-capture-todo-file '("~/todos.org"))
