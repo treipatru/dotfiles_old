@@ -119,7 +119,7 @@ super + d
 
 # pulse audio
 XF86AudioMute
-    pulseaudio-control togmute
+    pulseaudio-ctl mute
 
 XF86Audio{Raise,Lower}Volume
-    pulseaudio-control --volume-max 130 {up,down} 5
+    pulseaudio-ctl {up,down}
