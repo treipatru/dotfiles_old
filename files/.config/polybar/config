@@ -67,7 +67,8 @@ modules-left = bspwm
 modules-center = cpu temperature sep memory sep fs sep ip sep battery
 modules-right = date sep
 
-tray-position = right
+; tray-position = right
+tray-position =
 tray-padding = 4
 
 cursor-click = pointer
