@@ -1,2 +1,5 @@
 " Setup an absolute minimum cfg for Vim use
-source $HOME/.config/nvim/base.vim
+
+if !exists('g:vscode')
+    source $HOME/.config/nvim/base.vim
+endif
