@@ -1,0 +1,23 @@
+# key: /RCT
+# name: React Component Test
+# --
+// Third-party
+import {
+    render,
+    screen,
+    userEvent,
+} from 'helpers/testingLibraryUtils'
+
+// Builders
+
+// Components
+import ${1:`(substring (f-base buffer-file-name) 0 -5)`} from './$1'
+
+// Utils
+
+const props = {
+}
+
+test('it should', () => {
+    render(<$1 { ...props } />')
+})
