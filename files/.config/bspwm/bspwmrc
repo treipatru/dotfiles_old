@@ -1,27 +1,39 @@
 #! /bin/sh
 
 # Hotkey listener
+killall -q sxhkd &
 sxhkd &
 
 # Boot polybar
 killall -q polybar
-~/scripts/polybar_launch.sh
+~/scripts/polybar_launch.sh &
 
 # Reset any previously registered external monitors
-# bspc monitor DP-2 -r
-# bspc monitor HDMI-1 -r
-# bspc monitor HDMI-2 -r
+# bspc monitor DP-1 -r &&
+# bspc monitor DP-2 -r &&
+# bspc monitor HDMI-1 -r &&
+# bspc monitor HDMI-2 -r &&
+# bspc monitor eDP-1 -r
 
 # Single screen
 # bspc monitor eDP-1 -d 1 2 3 4 5
 
 # Left side USB-C display (laptop is main)
-# bspc monitor DP-2 -d 1 2
-# bspc monitor eDP-1 -d 3 4 5
+# bspc monitor eDP-1 -d 1 2 3
+# bspc monitor DP-2 -d 4 5
 
 # Left side HDMI display (HDMI is main)
-# bspc monitor HDMI-1 -d 1 2 3 4
-# bspc monitor eDP-1 -d 5
+# bspc monitor eDP-1 -d 1 2 3
+# bspc monitor HDMI-2 -d 4 5
+
+# Left side HDMI display (main), bottom DP-2 and laptop
+bspc monitor DP-1 -d 1
+bspc monitor HDMI-2 -d 2 3
+bspc monitor eDP-1 -d 4 5
+
+# Right side external HDMI
+# bspc monitor eDP-1 -d 1 2 3
+# bspc monitor HDMI-2 -d 4 5
 
 # Borders
 bspc config border_width         3
