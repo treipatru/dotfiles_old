@@ -26,7 +26,7 @@ fi
 # ZSH
 ZSH_THEME=""
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git z zsh-autosuggestions colored-man-pages)
+plugins=(git kubectl z zsh-autosuggestions colored-man-pages)
 # Pure Prompt
 autoload -U promptinit; promptinit
 prompt pure
