@@ -23,6 +23,8 @@
 [push]
   default = current
 [alias]
+  a = add
+  c = commit -m
   graph = log --graph --all --decorate --stat --date=iso
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   s = status -s
