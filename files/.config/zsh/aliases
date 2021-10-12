@@ -2,12 +2,5 @@ alias v="nvim"
 alias cat="bat"
 
 alias g="git"
-alias ga="git add "
-alias gcm="git commit"
-alias gco="git checkout"
-alias gd="git diff"
-alias gp="git pull"
-alias gs="git status -s"
-alias gu="git push"
 
 alias dropboxctl="python ~/scripts/dropboxctl.py"
