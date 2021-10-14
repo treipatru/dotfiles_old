@@ -137,30 +137,30 @@
 
 
 ;; Treemacs ignoring
-(after! treemacs
-  (defvar treemacs-file-ignore-extensions '()
-    "File extension which `treemacs-ignore-filter' will ensure are ignored")
-  (defvar treemacs-file-ignore-globs '()
-    "Globs which will are transformed to `treemacs-file-ignore-regexps' which `treemacs-ignore-filter' will ensure are ignored")
-  (defvar treemacs-file-ignore-regexps '()
-    "RegExps to be tested to ignore files, generated from `treeemacs-file-ignore-globs'")
-  (defun treemacs-file-ignore-generate-regexps ()
-    "Generate `treemacs-file-ignore-regexps' from `treemacs-file-ignore-globs'"
-    (setq treemacs-file-ignore-regexps (mapcar 'dired-glob-regexp treemacs-file-ignore-globs)))
-  (if (equal treemacs-file-ignore-globs '()) nil (treemacs-file-ignore-generate-regexps))
-  (defun treemacs-ignore-filter (file full-path)
-    "Ignore files specified by `treemacs-file-ignore-extensions', and `treemacs-file-ignore-regexps'"
-    (or (member (file-name-extension file) treemacs-file-ignore-extensions)
-        (let ((ignore-file nil))
-          (dolist (regexp treemacs-file-ignore-regexps ignore-file)
-            (setq ignore-file (or ignore-file (if (string-match-p regexp full-path) t nil)))))))
-  (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-filter))
+;; (after! treemacs
+;;   (defvar treemacs-file-ignore-extensions '()
+;;     "File extension which `treemacs-ignore-filter' will ensure are ignored")
+;;   (defvar treemacs-file-ignore-globs '()
+;;     "Globs which will are transformed to `treemacs-file-ignore-regexps' which `treemacs-ignore-filter' will ensure are ignored")
+;;   (defvar treemacs-file-ignore-regexps '()
+;;     "RegExps to be tested to ignore files, generated from `treeemacs-file-ignore-globs'")
+;;   (defun treemacs-file-ignore-generate-regexps ()
+;;     "Generate `treemacs-file-ignore-regexps' from `treemacs-file-ignore-globs'"
+;;     (setq treemacs-file-ignore-regexps (mapcar 'dired-glob-regexp treemacs-file-ignore-globs)))
+;;   (if (equal treemacs-file-ignore-globs '()) nil (treemacs-file-ignore-generate-regexps))
+;;   (defun treemacs-ignore-filter (file full-path)
+;;     "Ignore files specified by `treemacs-file-ignore-extensions', and `treemacs-file-ignore-regexps'"
+;;     (or (member (file-name-extension file) treemacs-file-ignore-extensions)
+;;         (let ((ignore-file nil))
+;;           (dolist (regexp treemacs-file-ignore-regexps ignore-file)
+;;             (setq ignore-file (or ignore-file (if (string-match-p regexp full-path) t nil)))))))
+;;   (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-filter))
 
-(setq treemacs-file-ignore-extensions
-      '(;; Files
-        ))
+;; (setq treemacs-file-ignore-extensions
+;;       '(;; Files
+;;         ))
 
-(setq treemacs-file-ignore-globs
-      '(;; Folders
-        "*/node_modules"
-        "*/dist"))
+;; (setq treemacs-file-ignore-globs
+;;       '(;; Folders
+;;         "*/node_modules"
+;;         "*/dist"))
