@@ -66,10 +66,16 @@ listview {
 }
 
 element {
-  padding: 5px;
+  padding: 10px;
   text-color: @text-alt;
   highlight: bold #95ee8f; /* green */
-  border-radius: 3px;
+  border-radius: 5px;
+  vertical-align: center ;
+}
+
+element-icon {
+    padding: 5px;
+    size: 2ch ;
 }
 
 element selected {
