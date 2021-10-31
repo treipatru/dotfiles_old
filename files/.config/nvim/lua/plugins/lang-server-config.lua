@@ -3,7 +3,7 @@ local lspcfg = require('lspconfig')
 -- Coq setttings must be defined before require
 vim.g.coq_settings = {
   ['auto_start'] = 'shut-up',
-  ['keymap.recommended'] = false,
+  ['keymap.jump_to_mark'] = '', -- just do override the annoying <c-h> default
 }
 local coq = require "coq"
 
