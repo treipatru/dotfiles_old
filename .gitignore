@@ -7,3 +7,4 @@ files/.config/coc/*
 
 files/.config/broot/*
 !files/.config/broot/conf.hjson
+files/.config/nvim/plugin/**/*
