@@ -49,6 +49,5 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! eslintd-fix)
-(package! rustic)
 (package! lsp-mode)
 (package! lsp-ui)

@@ -122,10 +122,6 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(after! rustic
-  (setq rustic-format-on-save t)
-  (setq lsp-rust-server 'rust-analyzer))
-
 ;; Window opacity
 ;; (set-frame-parameter (selected-frame) 'alpha '(97 . 97))
 ;; (add-to-list 'default-frame-alist '(alpha . (97 . 97)))
