@@ -15,14 +15,10 @@ return require('packer').startup(function(use)
   -- Color scheme
   use 'EdenEast/nightfox.nvim'
 
-  -- Fuzzy finders
+  -- Fuzzy finder
   use {
       'nvim-telescope/telescope.nvim',
       requires = { 'nvim-lua/plenary.nvim' },
-  }
-  use {
-      'Yggdroot/LeaderF',
-      run = ':LeaderfInstallCExtension'
   }
 
   -- LSP
