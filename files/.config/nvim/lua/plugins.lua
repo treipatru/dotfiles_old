@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use 'airblade/vim-rooter'
   use 'mbbill/undotree'
   use 'norcalli/nvim-colorizer.lua'
+  use 'stevearc/qf_helper.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'

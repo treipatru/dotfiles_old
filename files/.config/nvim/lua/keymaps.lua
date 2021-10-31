@@ -57,11 +57,11 @@ map('n', '<Leader>;', ':Telescope resume<CR>')
 -- QuickFix
 
 -- Next item
-map('n', ']q', ':cnext<CR>')
+map('n', ']q', '<cmd>QNext<CR>')
 -- Prev item
-map('n', '[q', ':cprevious<CR>')
+map('n', '[q', '<cmd>QPrev<CR>')
 -- Open list
-map('n', '<Leader>q', ':copen<CR>')
+map('n', '<Leader>q', '<cmd>QFToggle!<CR>')
 
 -----------------------------------------------------------------------------------------
 -- LSP
