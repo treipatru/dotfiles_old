@@ -1,5 +1,0 @@
-{
-    "coc.preferences.colorSupport": true,
-    "coc.preferences.useQuickfixForLocations": true,
-    "eslint.autoFixOnSave": true
-}
