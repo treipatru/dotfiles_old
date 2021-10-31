@@ -41,9 +41,27 @@ map('n', '<Leader>el', ':HopLine <CR>')
 -- Open explorer
 map('n', '<Leader>,', ':Explore <CR>')
 -- Fuzzy file finder
-map('n', '<Leader><Leader>', ':LeaderfFile<CR>')
+map('n', '<Leader><Leader>', ':Telescope git_files<CR>')
 -- Buffer switcher
-map('n', '<Leader>.', ':LeaderfBuffer<CR>')
+map('n', '<Leader>.', ':Telescope buffers<CR>')
+-- Commands
+map('n', '<Leader>c', ':Telescope commands<CR>')
+-- Live grep
+map('n', '<Leader>f', ':Telescope live_grep<CR>')
+-- Grep word under cursor
+map('n', '<Leader>*', ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>')
+-- Resume previous search
+map('n', '<Leader>;', ':Telescope resume<CR>')
+
+-----------------------------------------------------------------------------------------
+-- QuickFix
+
+-- Next item
+map('n', ']q', ':cnext<CR>')
+-- Prev item
+map('n', '[q', ':cprevious<CR>')
+-- Open list
+map('n', '<Leader>q', ':copen<CR>')
 
 -----------------------------------------------------------------------------------------
 -- LSP
