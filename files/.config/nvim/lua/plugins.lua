@@ -1,7 +1,5 @@
 -- Plugin manager: packer.nvim
 -- https://github.com/wbthomason/packer.nvim
-
-local cmd = vim.cmd
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
@@ -33,22 +31,15 @@ return require('packer').startup(function(use)
       run = ':TSUpdate'
   }
   use 'neovim/nvim-lspconfig'
-
-  -- Autocomplete
-  -- use { 'hrsh7th/nvim-cmp',
-  --   requires = {
-  --     'hrsh7th/cmp-buffer',
-  --     'hrsh7th/cmp-cmdline',
-  --     'hrsh7th/cmp-nvim-lsp',
-  --     'hrsh7th/cmp-path',
-  --     'saadparwaiz1/cmp_luasnip',
-  --   },
-  -- }
-
   use {
       'ms-jpq/coq_nvim',
       branch  ='coq',
   }
+  use {
+      'ms-jpq/coq.artifacts',
+      branch  ='artifacts',
+  }
+  use 'p00f/nvim-ts-rainbow'
 
   -- Easymotion replacement
   use {
@@ -60,22 +51,21 @@ return require('packer').startup(function(use)
   }
 
   -- Various interface
+  use 'sunjon/shade.nvim'
   use 'kyazdani42/nvim-web-devicons'
+  use 'tamton-aquib/staline.nvim'
   use {
       'lewis6991/gitsigns.nvim',
       requires = { 'nvim-lua/plenary.nvim' },
   }
 
   -- Others
-  use 'p00f/nvim-ts-rainbow'
   use 'airblade/vim-rooter'
   use 'mbbill/undotree'
+  use 'norcalli/nvim-colorizer.lua'
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
   use 'windwp/nvim-autopairs'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'tamton-aquib/staline.nvim'
-  use 'sunjon/shade.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
