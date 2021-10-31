@@ -40,7 +40,7 @@ source $HOME/.config/zsh/fzf
 # X
 #..................................................................................................
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  startx
+  startxfce4
 fi
 
 # Other
