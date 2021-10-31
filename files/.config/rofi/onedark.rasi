@@ -26,7 +26,7 @@
   spacing: 0;
   background-color: transparent;
 
-  font: "Noto Sans 25";
+  font: "Noto Sans 30";
   text-color: @text;
 }
 
