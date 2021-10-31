@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
