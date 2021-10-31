@@ -1,34 +1,55 @@
-local map = vim.api.nvim_set_keymap
-local default_opts = {noremap = true, silent = true}
-local global = vim.g
+-- Map helper
+local function map(mode, lhs, rhs, opts)
+  local options = {
+      noremap = true,
+      silent = true,
+  }
 
--- Example map to lua function
--- vim.api.nvim_set_keymap('n', '$', "<cmd>lua require'hop'.hint_words()<cr>", {})
+  if opts then options = vim.tbl_extend('force', options, opts) end
+
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+-----------------------------------------------------------------------------------------
+-- Git
+map('n', '<Leader>gg', ':0G <CR>')
+
+-----------------------------------------------------------------------------------------
+-- Windows and splits
 
 -- Move around splits with ctrl+arrows
-map('n', '<C-h>', '<C-w>h', default_opts)
-map('n', '<C-j>', '<C-w>j', default_opts)
-map('n', '<C-k>', '<C-w>k', default_opts)
-map('n', '<C-l>', '<C-w>l', default_opts)
-
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
 -- Open new vertical split
-map('n', '<Leader>wv', ':vsp<CR>', default_opts)
+map('n', '<Leader>wv', ':vsp<CR>')
 -- Close active split
-map('n', '<Leader>wd', '<C-w>c', default_opts)
+map('n', '<Leader>wd', '<C-w>c')
 -- Close buffer without closing split
-map('n', '<Leader>bd', '::b#|bd#<CR>', default_opts)
+map('n', '<Leader>bd', '::b#|bd#<CR>')
 
--- Finders
-map('n', '<Leader><Leader>', ':LeaderfFile<CR>', default_opts)
-map('n', '<Leader>.',        ':LeaderfBuffer<CR>', default_opts)
+-----------------------------------------------------------------------------------------
+-- Hop - easymotion replacement
+map('n', '<Leader>ef', ':HopChar1 <CR>')
+map('n', '<Leader>es', ':HopChar2 <CR>')
+map('n', '<Leader>el', ':HopLine <CR>')
 
--- Hop (easymotion replacement)
-map('n', '<Leader>ef', ':HopChar1 <CR>', default_opts)
-map('n', '<Leader>es', ':HopChar2 <CR>', default_opts)
-map('n', '<Leader>el', ':HopLine <CR>', default_opts)
+-----------------------------------------------------------------------------------------
+-- Finders and explorers
 
--- Netrw
-map('n', '<Leader>,', ':Explore <CR>', default_opts)
+-- Open explorer
+map('n', '<Leader>,', ':Explore <CR>')
+-- Fuzzy file finder
+map('n', '<Leader><Leader>', ':LeaderfFile<CR>')
+-- Buffer switcher
+map('n', '<Leader>.', ':LeaderfBuffer<CR>')
 
--- Fugitive
-map('n', '<Leader>gg', ':vertical G <CR>', default_opts)
+-----------------------------------------------------------------------------------------
+-- LSP
+map('n', '<Leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>')
+map('n', '<Leader>cd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', '<Leader>cu', '<cmd>lua vim.lsp.buf.references()<CR>')
+map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+map('n', '<Leader>cf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
