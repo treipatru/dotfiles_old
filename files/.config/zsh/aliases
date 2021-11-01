@@ -5,3 +5,4 @@ alias g="git"
 
 alias dropboxctl="python ~/scripts/dropboxctl.py"
 alias luamake=$HOME/repos/lua-language-server/3rd/luamake/luamake
+alias bspwmcfg="v ~/.config/bspwm/bspwmrc"
