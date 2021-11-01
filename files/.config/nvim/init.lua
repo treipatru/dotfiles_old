@@ -4,16 +4,18 @@ require'settings'                           -- base settings
 require'plugins'                            -- packer plugins
 vim.cmd [[packadd packer.nvim]]             -- init packer
 
-require'colorizer'.setup()                  -- colorize color strings
-require'plugins.autopairs'                  -- autopairs config
-require'plugins.gitsigns'                   -- git gutter
-require'plugins.lang-server-config'         -- lsp settings
-require'plugins.qf'                         -- quick fix helper
-require'plugins.shade'                      -- dim inactive window
-require'plugins.staline'                    -- status line
-require'plugins.telescope'                  -- telescope cfg
-require'plugins.treesitter'                 -- autocomplete
-require'plugins.webdev-icons'               -- icons
+-- plugin configs
+require'colorizer'.setup()
+require'plugins.autopairs'
+require'plugins.editorconfig'
+require'plugins.gitsigns'
+require'plugins.lang-server-config'
+require'plugins.qf'
+require'plugins.shade'
+require'plugins.staline'
+require'plugins.telescope'
+require'plugins.treesitter'
+require'plugins.webdev-icons'
 
 require'utils'                              -- autocmds
 require'keymaps'                            -- keys

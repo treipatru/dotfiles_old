@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
   use 'EdenEast/nightfox.nvim'                 -- color scheme
   use 'airblade/vim-rooter'                    -- set cwd root
+  use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
   use 'lewis6991/gitsigns.nvim'                -- git sidebar
   use 'mbbill/undotree'                        -- git-like undo tree

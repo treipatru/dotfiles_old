@@ -15,8 +15,11 @@ function nvim_create_augroups(definitions)
 end
 
 local autocmds = {
-    packer = {
-        { "BufWritePost", "plugins.lua", "PackerCompile" };
+    git_commit = {
+        { "FileType", "gitcommit", [[silent! let b:EditorConfig_disable = 1 ]] };
+    };
+    lua_highlight = {
+        { "TextYankPost", "*", [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=400}]] };
     };
     netrw = {
         { "FileType", "netrw",
@@ -27,20 +30,20 @@ local autocmds = {
             ]]
         };
     };
-    restore_cursor = {
-        { 'BufRead', '*', [[call setpos(".", getpos("'\""))]] };
+    packer = {
+        { "BufWritePost", "plugins.lua", "PackerCompile" };
+    };
+    remove_whitespace_on_save = {
+        { 'BufWritePre', '*', [[:%s/\s\+$//e]] };
     };
     resize_windows_proportionally = {
         { "VimResized", "*", ":wincmd =" };
     };
+    restore_cursor = {
+        { 'BufRead', '*', [[call setpos(".", getpos("'\""))]] };
+    };
     toggle_search_highlighting = {
         { "InsertEnter", "*", "setlocal nohlsearch" };
-    };
-    lua_highlight = {
-        { "TextYankPost", "*", [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=400}]] };
-    };
-    remove_whitespace_on_save = {
-        { 'BufWritePre', '*', [[:%s/\s\+$//e]] };
     };
 }
 
