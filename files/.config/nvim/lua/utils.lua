@@ -23,6 +23,7 @@ local autocmds = {
             [[
                 setlocal bufhidden=wipe
                 nmap <silent> <buffer> <Esc> :Rexplore<cr>
+                nmap <silent> <buffer> q :Rexplore<cr>
             ]]
         };
     };

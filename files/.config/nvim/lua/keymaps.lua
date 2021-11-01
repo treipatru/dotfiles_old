@@ -1,3 +1,5 @@
+local wk = require("which-key")
+
 -- Map helper
 local function map(mode, lhs, rhs, opts)
   local options = {
@@ -11,10 +13,6 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -----------------------------------------------------------------------------------------
--- Git
-map('n', '<Leader>gg', ':0G <CR>')
-
------------------------------------------------------------------------------------------
 -- Windows and splits
 
 -- Move around splits with ctrl+arrows
@@ -22,52 +20,71 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
--- Open new vertical split
-map('n', '<Leader>wv', ':vsp<CR>')
--- Close active split
-map('n', '<Leader>wd', '<C-w>c')
--- Close buffer without closing split
-map('n', '<Leader>bd', ':lua require("bufdelete").bufdelete(0, true)<CR>')
 
 -----------------------------------------------------------------------------------------
--- Hop - easymotion replacement
-map('n', '<Leader>ef', ':HopChar1 <CR>')
-map('n', '<Leader>es', ':HopChar2 <CR>')
-map('n', '<Leader>el', ':HopLine <CR>')
+-- Leader Keys
+wk.register({
+  b = {
+    name = "Buffers",
+    d = { ":lua require('bufdelete').bufdelete(0, true)<CR>", "Delete" }
+  },
+  c = {
+    name = "Code",
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition of symbol" },
+    f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format buffer" },
+    o = { "<cmd>lua vim.lsp.buf.references()<CR>", "Occurences of symbol" },
+    r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename symbol in buffer" },
+  },
+  f = {
+    name = "Find",
+    b = { ':Telescope buffers<CR>', "Buffers"},
+    c = { ':Telescope commands<CR>', "Commands"},
+    e = { ':Explore<CR>', "Explore"},
+    f = { ':Telescope git_files<CR>', "Find files"},
+    g = { ':Telescope live_grep<CR>', "Grep" },
+  },
+  g = {
+    name = "Git",
+    b = { "<cmd>lua require'gitsigns'.blame_line(true)<CR>", "Blame line" },
+    c = { ":Telescope git_branches<CR>", "Checkout branch" },
+    g = { ":0G <CR>", "Fugitive Status" },
+    r = { "<cmd>lua require'gitsigns'.reset_hunk()<CR>", "Reset hunk" },
+    R = { "<cmd>lua require'gitsigns'.reset_buffer()<CR>", "Reset buffer" },
+    s = { "<cmd>lua require'gitsigns'.stage_hunk()<CR>", "Stage hunk" },
+    S = { "<cmd>lua require'gitsigns'.stage_buffer()<CR>", "Stage buffer" },
+  },
+  j = {
+    name = "Jump",
+    c = { ":HopChar1 <CR>", "Character" },
+    l = { ":HopLine <CR>", "Line" },
+    w = { ":HopWord <CR>", "Word" },
+  },
+  q = { "<cmd>QFToggle!<CR>", "QuickFix list toggle"},
+  w = {
+    name = "Window",
+    d = { "<C-w>c", "Delete split" },
+    v = { ":vsp<CR>", "Vertical split" },
+  },
+  ["<Space>"] = { ':Telescope git_files<CR>', "Find files"},
+  [","] = { ':Explore<CR>', "Explore"},
+  ["."] = { ':Telescope buffers<CR>', "Buffers"},
+  ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
+  [";"] = { ":Telescope resume<CR>", "Resume Telescope"}
+}, { prefix = "<leader>" })
 
 -----------------------------------------------------------------------------------------
--- Finders and explorers
+-- Next
+wk.register({
+    c = { "<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>", "Hunk" },
+    d = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Diagnostic" },
+    q = { "<cmd>QNext<CR>", "QuickFix list item" },
+}, { prefix = "]" })
 
--- Open explorer
-map('n', '<Leader>,', ':Explore <CR>')
--- Fuzzy file finder
-map('n', '<Leader><Leader>', ':Telescope git_files<CR>')
--- Buffer switcher
-map('n', '<Leader>.', ':Telescope buffers<CR>')
--- Commands
-map('n', '<Leader>c', ':Telescope commands<CR>')
--- Live grep
-map('n', '<Leader>f', ':Telescope live_grep<CR>')
--- Grep word under cursor
-map('n', '<Leader>*', ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>')
--- Resume previous search
-map('n', '<Leader>;', ':Telescope resume<CR>')
 
 -----------------------------------------------------------------------------------------
--- QuickFix
-
--- Next item
-map('n', ']q', '<cmd>QNext<CR>')
--- Prev item
-map('n', '[q', '<cmd>QPrev<CR>')
--- Open list
-map('n', '<Leader>q', '<cmd>QFToggle!<CR>')
-
------------------------------------------------------------------------------------------
--- LSP
-map('n', '<Leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>')
-map('n', '<Leader>cd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-map('n', '<Leader>cu', '<cmd>lua vim.lsp.buf.references()<CR>')
-map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
-map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
-map('n', '<Leader>cf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+-- Previous
+wk.register({
+    c = { "<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>", "Hunk" },
+    d = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", "Diagnostic" },
+    q = { "<cmd>QPrev<CR>", "QuickFix list item" },
+}, { prefix = "[" })

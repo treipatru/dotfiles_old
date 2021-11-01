@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
       branch  ='artifacts',
   }
 
-  use {                                        -- easyMotion replacement
+  use {                                        -- easymotion replacement
       'phaazon/hop.nvim',
       as = 'hop',
       config = function()
@@ -63,10 +63,18 @@ return require('packer').startup(function(use)
       end
   }
 
-  use {                                        -- Highlight TODO comments
+  use {                                        -- highlight TODO comments
       "folke/todo-comments.nvim",
       config = function()
           require("todo-comments").setup {
+          }
+      end
+  }
+
+  use {
+      "folke/which-key.nvim",
+      config = function()
+          require("which-key").setup {
           }
       end
   }
