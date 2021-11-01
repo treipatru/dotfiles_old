@@ -1,5 +1,3 @@
-local actions = require('telescope.actions')
-
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {
@@ -9,11 +7,11 @@ require('telescope').setup{
     },
     mappings = {
       i = {
-        ["<esc>"] = actions.close,
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-        ["<C-s>"] = actions.toggle_selection,
-        ["<C-q>"] = actions.smart_send_to_qflist,
+        ["<esc>"] = "close",
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
+        ["<C-s>"] = "toggle_selection",
+        ["<C-q>"] = "smart_send_to_qflist",
       },
     },
   },
@@ -24,6 +22,15 @@ require('telescope').setup{
       find_files = {
           previewer = false,
           theme = "ivy",
+      },
+      git_branches = {
+          previewer = false,
+          theme = "ivy",
+          mappings = {
+              i = {
+                  ["<CR>"] = "git_create_branch",
+              }
+          },
       },
       git_files = {
           previewer = false,
