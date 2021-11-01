@@ -9,36 +9,53 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim'                 -- packer can manage itself
 
-  -- Color scheme
-  use 'EdenEast/nightfox.nvim'
+  -- Global dependencies
+  use 'kyazdani42/nvim-web-devicons'           -- patched fonts
+  use 'nvim-lua/plenary.nvim'                  -- nvim UI utils
+  --
 
-  -- Fuzzy finder
-  use {
-      'nvim-telescope/telescope.nvim',
-      requires = { 'nvim-lua/plenary.nvim' },
-  }
+  use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
+  use 'EdenEast/nightfox.nvim'                 -- color scheme
+  use 'airblade/vim-rooter'                    -- set cwd root
+  use 'famiu/bufdelete.nvim'                   -- better buffer delete
+  use 'lewis6991/gitsigns.nvim'                -- git sidebar
+  use 'mbbill/undotree'                        -- git-like undo tree
+  use 'neovim/nvim-lspconfig'                  -- config for LSP
+  use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
+  use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
+  use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
+  use 'stevearc/qf_helper.nvim'                -- better quickfix list
+  use 'sunjon/shade.nvim'                      -- dim inactive splits
+  use 'tamton-aquib/staline.nvim'              -- status line
+  use 'tpope/vim-commentary'                   -- better commenting
+  use 'tpope/vim-fugitive'                     -- git interface
+  use 'tpope/vim-surround'                     -- easy change surrounding pairs
+  use 'windwp/nvim-autopairs'                  -- auto-add end symbols
+  use 'windwp/nvim-ts-autotag'                 -- auto-add end tags
 
-  -- LSP
-  use {
+  use {                                        -- treesitter
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
-  use 'neovim/nvim-lspconfig'
-  use {
+
+  use {                                        -- code documentation generation
+      'kkoomen/vim-doge',
+      run = '-> doge#install()'
+  }
+
+  use {                                        -- autocompletion engine
       'ms-jpq/coq_nvim',
       branch  ='coq',
   }
-  use {
+
+  use {                                        -- snippets for COQ
       'ms-jpq/coq.artifacts',
       branch  ='artifacts',
   }
-  use 'p00f/nvim-ts-rainbow'
 
-  -- Easymotion replacement
-  use {
+  use {                                        -- easyMotion replacement
       'phaazon/hop.nvim',
       as = 'hop',
       config = function()
@@ -46,26 +63,14 @@ return require('packer').startup(function(use)
       end
   }
 
-  -- Various interface
-  use 'sunjon/shade.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'tamton-aquib/staline.nvim'
-  use {
-      'lewis6991/gitsigns.nvim',
-      requires = { 'nvim-lua/plenary.nvim' },
+  use {                                        -- Highlight TODO comments
+      "folke/todo-comments.nvim",
+      config = function()
+          require("todo-comments").setup {
+          }
+      end
   }
 
-  -- Others
-  use 'airblade/vim-rooter'
-  use 'famiu/bufdelete.nvim'
-  use 'mbbill/undotree'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'stevearc/qf_helper.nvim'
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-surround'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
