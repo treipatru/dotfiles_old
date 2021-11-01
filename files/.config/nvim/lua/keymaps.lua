@@ -65,6 +65,7 @@ wk.register({
   w = {
     name = "Window",
     d = { "<C-w>c", "Delete split" },
+    h = { ":split<CR>", "Horizontal split" },
     v = { ":vsp<CR>", "Vertical split" },
   },
   ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},

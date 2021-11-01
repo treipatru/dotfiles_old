@@ -1,7 +1,6 @@
 local nvim_command = vim.api.nvim_command
 
--- autocommands
--------- This function is taken from https://github.com/norcalli/nvim_utils
+-- helper to create autocommand groups
 function nvim_create_augroups(definitions)
     for group_name, definition in pairs(definitions) do
         nvim_command('augroup '..group_name)
@@ -25,8 +24,10 @@ local autocmds = {
         { "FileType", "netrw",
             [[
                 setlocal bufhidden=wipe
-                nmap <silent> <buffer> <Esc> :Rexplore<cr>
-                nmap <silent> <buffer> q :Rexplore<cr>
+                nmap <silent> <buffer> <Esc>        :Rexplore<cr>
+                nmap <silent> <buffer> q            :Rexplore<cr>
+                nmap <silent> <buffer> <Backspace>  -
+                nmap <silent> <buffer> <Tab>        <CR>
             ]]
         };
     };
@@ -48,4 +49,3 @@ local autocmds = {
 }
 
 nvim_create_augroups(autocmds)
--- autocommands END
