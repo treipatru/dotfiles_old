@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 
   -- Others
   use 'airblade/vim-rooter'
+  use 'famiu/bufdelete.nvim'
   use 'mbbill/undotree'
   use 'norcalli/nvim-colorizer.lua'
   use 'stevearc/qf_helper.nvim'

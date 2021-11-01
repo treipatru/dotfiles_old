@@ -27,7 +27,7 @@ map('n', '<Leader>wv', ':vsp<CR>')
 -- Close active split
 map('n', '<Leader>wd', '<C-w>c')
 -- Close buffer without closing split
-map('n', '<Leader>bd', '::b#|bd#<CR>')
+map('n', '<Leader>bd', ':lua require("bufdelete").bufdelete(0, true)<CR>')
 
 -----------------------------------------------------------------------------------------
 -- Hop - easymotion replacement
