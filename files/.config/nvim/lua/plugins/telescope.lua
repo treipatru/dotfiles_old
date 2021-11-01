@@ -42,5 +42,8 @@ require('telescope').setup{
       live_grep = {
           theme = "ivy",
       },
+      oldfiles = {
+          theme = "ivy",
+      },
   },
 }

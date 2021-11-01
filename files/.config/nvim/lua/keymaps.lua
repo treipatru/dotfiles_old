@@ -42,12 +42,14 @@ wk.register({
     e = { ':Explore<CR>', "Explore"},
     f = { ':Telescope git_files<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
+    r = { ':Telescope oldfiles<CR>', "Recent files"},
   },
   g = {
     name = "Git",
     b = { "<cmd>lua require'gitsigns'.blame_line(true)<CR>", "Blame line" },
     c = { ":Telescope git_branches<CR>", "Checkout branch" },
     g = { ":0G <CR>", "Fugitive Status" },
+    h = { ":0GcLog <CR>", "File history" },
     r = { "<cmd>lua require'gitsigns'.reset_hunk()<CR>", "Reset hunk" },
     R = { "<cmd>lua require'gitsigns'.reset_buffer()<CR>", "Reset buffer" },
     s = { "<cmd>lua require'gitsigns'.stage_hunk()<CR>", "Stage hunk" },
@@ -65,11 +67,11 @@ wk.register({
     d = { "<C-w>c", "Delete split" },
     v = { ":vsp<CR>", "Vertical split" },
   },
-  ["<Space>"] = { ':Telescope git_files<CR>', "Find files"},
+  ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
   [","] = { ':Explore<CR>', "Explore"},
   ["."] = { ':Telescope buffers<CR>', "Buffers"},
-  ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
-  [";"] = { ":Telescope resume<CR>", "Resume Telescope"}
+  [";"] = { ":Telescope resume<CR>", "Resume Telescope"},
+  ["<Space>"] = { ':Telescope git_files<CR>', "Find files"},
 }, { prefix = "<leader>" })
 
 -----------------------------------------------------------------------------------------
