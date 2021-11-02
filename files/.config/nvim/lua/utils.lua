@@ -46,6 +46,9 @@ local autocmds = {
     toggle_search_highlighting = {
         { "InsertEnter", "*", "setlocal nohlsearch" };
     };
+    eslint_fix = {
+        { "BufWritePre", "*", [[EslintFixAll]] };
+    };
 }
 
 nvim_create_augroups(autocmds)

@@ -18,6 +18,6 @@ for _, lsp in ipairs(servers) do
 end
 
 -- TypeScript
-lspcfg.tsserver.setup{}
+require('plugins.lang-server-typescript')
 -- LUA
 require('plugins.lang-server-lua')
