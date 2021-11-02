@@ -61,7 +61,8 @@ wk.register({
     l = { ":HopLine <CR>", "Line" },
     w = { ":HopWord <CR>", "Word" },
   },
-  q = { "<cmd>QFToggle!<CR>", "QuickFix list toggle"},
+  q = { "<cmd>QFToggle!<CR>", "QuickFix list"},
+  u = { "<cmd>UndotreeToggle<CR>", "Undotree"},
   w = {
     name = "Window",
     d = { "<C-w>c", "Delete split" },

@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
   use 'airblade/vim-rooter'                    -- set cwd root
   use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
+  use 'folke/todo-comments.nvim'               -- highlight TODO comments
   use 'lewis6991/gitsigns.nvim'                -- git sidebar
   use 'mbbill/undotree'                        -- git-like undo tree
   use 'neovim/nvim-lspconfig'                  -- config for LSP
@@ -28,7 +29,6 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
-  use 'sunjon/shade.nvim'                      -- dim inactive splits
   use 'tamton-aquib/staline.nvim'              -- status line
   use 'tpope/vim-commentary'                   -- better commenting
   use 'tpope/vim-fugitive'                     -- git interface
@@ -64,22 +64,12 @@ return require('packer').startup(function(use)
       end
   }
 
-  use {                                        -- highlight TODO comments
-      "folke/todo-comments.nvim",
-      config = function()
-          require("todo-comments").setup {
-          }
-      end
-  }
-
   use {
       "folke/which-key.nvim",
       config = function()
-          require("which-key").setup {
-          }
+          require("which-key").setup {}
       end
   }
-
 
   -- automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
