@@ -2,23 +2,29 @@
 
 > Setup own configuration files for Unix-like environments.
 
-## Install
+> v5
 
-```
-bash <(wget -O - http://planet34.org/dotinstall)
-```
+## System deps
 
-## Deps
+* [x] `bat`
+* [x] `fd`
+* [x] `fzf`
+* [x] `git`
+* [x] `node`, `npm`
+* [x] `nvim`
+* [x] `ranger`
+* [x] `ripgrep`
+* [x] `zsh`
 
-* [ ] `bat`
-* [ ] `fzf`
-* [ ] `git`
-* [ ] `node`, `npm`
-* [ ] `nvim`
-* [ ] `ranger`
-* [ ] `ripgrep`
-* [ ] `zsh`
+## NPM globals
 
-## v5
+* [x] `diagnostic_languageserver`
+* [x] `eslint_d`
+* [x] `prettier`
+* [x] `typescript_language_server`
+* [x] `typescript`
+* [x] `vscode-langservers-extracted`
 
-_"Look deep into vim, and then you will understand everything better"_ Albert Einstein
+## Other
+
+* [x] [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server)
