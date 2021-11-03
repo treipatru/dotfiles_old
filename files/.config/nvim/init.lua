@@ -6,12 +6,14 @@ vim.cmd [[packadd packer.nvim]]             -- init packer
 
 -- plugin configs
 require'colorizer'.setup()
+require('feline').setup({
+    preset = 'noicon'
+})
 require'plugins.autopairs'
 require'plugins.editorconfig'
 require'plugins.gitsigns'
 require'plugins.lang-server-config'
 require'plugins.qf'
-require'plugins.staline'
 require'plugins.telescope'
 require'plugins.todo-comments'
 require'plugins.transparency-settings'

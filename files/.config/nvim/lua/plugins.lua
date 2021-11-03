@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
-  use 'tamton-aquib/staline.nvim'              -- status line
+  use 'Famiu/feline.nvim'                      -- status line
   use 'tpope/vim-commentary'                   -- better commenting
   use 'tpope/vim-fugitive'                     -- git interface
   use 'tpope/vim-surround'                     -- easy change surrounding pairs
