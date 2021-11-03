@@ -35,15 +35,21 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'                     -- easy change surrounding pairs
   use 'windwp/nvim-autopairs'                  -- auto-add end symbols
   use 'windwp/nvim-ts-autotag'                 -- auto-add end tags
+  use 'xiyaowong/nvim-transparent'             -- make vim transparent
 
   use {                                        -- treesitter
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
 
+  use {                                        -- telescope native fzf
+      'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'make',
+  }
+
   use {                                        -- code documentation generation
       'kkoomen/vim-doge',
-      run = '-> doge#install()'
+      run = '-> doge#install()'                -- :call doge#install()
   }
 
   use {                                        -- autocompletion engine
