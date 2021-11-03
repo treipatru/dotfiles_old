@@ -61,7 +61,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "JetBrains Mono:style=ExtraBold:size=16;2"
+font-0 = "JetBrains Mono:style=ExtraBold:size=12;2"
 
 modules-left = bspwm
 modules-center = cpu temperature sep memory sep fs sep ip sep battery
