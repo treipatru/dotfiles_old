@@ -50,6 +50,7 @@ wk.register({
     c = { ":Telescope git_branches<CR>", "Checkout branch" },
     g = { ":0G <CR>", "Fugitive Status" },
     h = { ":0GcLog <CR>", "File history" },
+    l = { ":GcLog <CR>", "Log" },
     r = { "<cmd>lua require'gitsigns'.reset_hunk()<CR>", "Reset hunk" },
     R = { "<cmd>lua require'gitsigns'.reset_buffer()<CR>", "Reset buffer" },
     s = { "<cmd>lua require'gitsigns'.stage_hunk()<CR>", "Stage hunk" },
