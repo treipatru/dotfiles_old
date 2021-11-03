@@ -47,7 +47,7 @@ local autocmds = {
         { "InsertEnter", "*", "setlocal nohlsearch" };
     };
     eslint_fix = {
-        { "BufWritePre", "*", [[EslintFixAll]] };
+        { "BufWritePre", "*", [[ if exists(":EslintFixAll") | exe "EslintFixAll" | endif ]] };
     };
 }
 
