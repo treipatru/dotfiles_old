@@ -18,7 +18,7 @@
 
 ## NPM globals
 
-* [x] `diagnostic_languageserver`
+* [x] `diagnostic-languageserver`
 * [x] `eslint_d`
 * [x] `prettier`
 * [x] `typescript_language_server`
