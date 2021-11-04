@@ -13,13 +13,38 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -----------------------------------------------------------------------------------------
--- Windows and splits
+-- Navigation and other improvements
 
 -- Move around splits with ctrl+arrows
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+
+-- Uppercase y yanks from cursor to last non-blank character of line
+map('n', 'Y', 'yg_')
+
+-- Change whatever is under cursor, use repeat for next/prev occurence
+map('n', 'c*', '*``cgn')
+map('n', 'c#', '#``cgN')
+
+-- Easier jump to start/end of line
+map('n', 'H', '^')
+map('n', 'L', '$')
+
+-- Keep things centered when jumping to next
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
+
+-- Keep cursor in place when joining lines
+map('n', 'J', 'mzJ`z')
+
+-- Spaces in insert mode act as undo break points
+map('i', ' ', ' <c-g>u')
+
+-- o/O adds empty line without insert mode
+map('n', 'o', 'o<Esc>')
+map('n', 'O', 'O<Esc>')
 
 -----------------------------------------------------------------------------------------
 -- Leader Keys
@@ -66,8 +91,10 @@ wk.register({
   u = { "<cmd>UndotreeToggle<CR>", "Undotree"},
   w = {
     name = "Window",
+    ["="] = { "<C-w>=", "Equalize splits" },
     d = { "<C-w>c", "Delete split" },
     h = { ":split<CR>", "Horizontal split" },
+    m = { ":MaximizerToggle<CR>", "Maximize split" },
     v = { ":vsp<CR>", "Vertical split" },
   },
   ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
@@ -80,16 +107,15 @@ wk.register({
 -----------------------------------------------------------------------------------------
 -- Next
 wk.register({
-    c = { "<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>", "Hunk" },
-    d = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Diagnostic" },
-    q = { "<cmd>QNext<CR>", "QuickFix list item" },
+    c = { "<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>zzzv", "Hunk" },
+    d = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>zzzv", "Diagnostic" },
+    q = { "<cmd>QNext<CR>zzzv", "QuickFix list item" },
 }, { prefix = "]" })
-
 
 -----------------------------------------------------------------------------------------
 -- Previous
 wk.register({
-    c = { "<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>", "Hunk" },
-    d = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", "Diagnostic" },
-    q = { "<cmd>QPrev<CR>", "QuickFix list item" },
+    c = { "<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>zzzv", "Hunk" },
+    d = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>zzzv", "Diagnostic" },
+    q = { "<cmd>QPrev<CR>zzzv", "QuickFix list item" },
 }, { prefix = "[" })
