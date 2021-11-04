@@ -34,11 +34,6 @@ require('telescope').setup{
       git_branches = {
           previewer = false,
           theme = "ivy",
-          mappings = {
-              i = {
-                  ["<CR>"] = "git_create_branch",
-              }
-          },
       },
       git_files = {
           previewer = false,
