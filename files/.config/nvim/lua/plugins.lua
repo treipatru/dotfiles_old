@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use 'folke/todo-comments.nvim'               -- highlight TODO comments
   use 'lewis6991/gitsigns.nvim'                -- git sidebar
   use 'mbbill/undotree'                        -- git-like undo tree
+  use 'mhinz/vim-startify'                     -- start page
   use 'neovim/nvim-lspconfig'                  -- config for LSP
   use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
