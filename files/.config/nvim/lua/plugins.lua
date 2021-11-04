@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
   use 'EdenEast/nightfox.nvim'                 -- color scheme
+  use 'Famiu/feline.nvim'                      -- status line
   use 'airblade/vim-rooter'                    -- set cwd root
   use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
@@ -29,7 +30,7 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
-  use 'Famiu/feline.nvim'                      -- status line
+  use 'szw/vim-maximizer'                      -- maximize split
   use 'tpope/vim-commentary'                   -- better commenting
   use 'tpope/vim-fugitive'                     -- git interface
   use 'tpope/vim-surround'                     -- easy change surrounding pairs
