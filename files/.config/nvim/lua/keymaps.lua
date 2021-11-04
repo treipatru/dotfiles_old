@@ -12,6 +12,12 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- Helper to escape termcodes when dealing with expression keymaps
+-- local function t(str)
+--     return vim.api.nvim_replace_termcodes(str, true, true, true)
+-- end
+
+
 -----------------------------------------------------------------------------------------
 -- Navigation and other improvements
 
@@ -98,8 +104,8 @@ wk.register({
     v = { ":vsp<CR>", "Vertical split" },
   },
   ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
-  [","] = { ':Explore<CR>', "Explore"},
-  ["."] = { ':Telescope buffers<CR>', "Buffers"},
+  ["."] = { ':Explore<CR>', "Explore"},
+  [","] = { ':Telescope buffers<CR>', "Buffers"},
   [";"] = { ":Telescope resume<CR>", "Resume Telescope"},
   ["<Space>"] = { ':Telescope git_files<CR>', "Find files"},
 }, { prefix = "<leader>" })
