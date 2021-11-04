@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'                  -- auto-add end symbols
   use 'windwp/nvim-ts-autotag'                 -- auto-add end tags
   use 'xiyaowong/nvim-transparent'             -- make vim transparent
+  use ''
 
   use {                                        -- treesitter
       'nvim-treesitter/nvim-treesitter',
@@ -54,15 +55,13 @@ return require('packer').startup(function(use)
       run = '-> doge#install()'                -- :call doge#install()
   }
 
-  use {                                        -- autocompletion engine
-      'ms-jpq/coq_nvim',
-      branch  ='coq',
-  }
-
-  use {                                        -- snippets for COQ
-      'ms-jpq/coq.artifacts',
-      branch  ='artifacts',
-  }
+  use({                                        -- autocomplete
+      'hrsh7th/nvim-cmp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lsp',
+  })
 
   use {                                        -- easymotion replacement
       'phaazon/hop.nvim',
