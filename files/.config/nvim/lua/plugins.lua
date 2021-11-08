@@ -19,13 +19,14 @@ return require('packer').startup(function(use)
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
   use 'EdenEast/nightfox.nvim'                 -- color scheme
   use 'Famiu/feline.nvim'                      -- status line
+  use 'Shatur/neovim-session-manager'          -- session manager
   use 'airblade/vim-rooter'                    -- set cwd root
   use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
   use 'folke/todo-comments.nvim'               -- highlight TODO comments
+  use 'goolord/alpha-nvim'                     -- startup screen
   use 'lewis6991/gitsigns.nvim'                -- git sidebar
   use 'mbbill/undotree'                        -- git-like undo tree
-  use 'mhinz/vim-startify'                     -- start page
   use 'neovim/nvim-lspconfig'                  -- config for LSP
   use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
@@ -38,7 +39,6 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'                  -- auto-add end symbols
   use 'windwp/nvim-ts-autotag'                 -- auto-add end tags
   use 'xiyaowong/nvim-transparent'             -- make vim transparent
-  use ''
 
   use {                                        -- treesitter
       'nvim-treesitter/nvim-treesitter',

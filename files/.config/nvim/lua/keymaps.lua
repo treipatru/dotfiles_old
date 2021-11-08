@@ -74,6 +74,7 @@ wk.register({
     f = { ':Telescope git_files<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
     r = { ':Telescope oldfiles<CR>', "Recent files"},
+    s = { ":Telescope sessions<CR>", "Sessions"},
   },
   g = {
     name = "Git",
