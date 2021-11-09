@@ -16,8 +16,8 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'                  -- nvim UI utils
   --
 
+
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
-  use 'EdenEast/nightfox.nvim'                 -- color scheme
   use 'Famiu/feline.nvim'                      -- status line
   use 'Shatur/neovim-session-manager'          -- session manager
   use 'airblade/vim-rooter'                    -- set cwd root
@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
+  use 'rmehri01/onenord.nvim'                  -- color theme
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
   use 'szw/vim-maximizer'                      -- maximize split
   use 'tpope/vim-commentary'                   -- better commenting

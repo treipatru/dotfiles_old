@@ -16,6 +16,7 @@ require'plugins.lang-server-config'
 require'plugins.qf'
 require'plugins.startup-screen'
 require'plugins.telescope'
+require'plugins.theme'
 require'plugins.todo-comments'
 require'plugins.transparency-settings'
 require'plugins.treesitter'
@@ -23,6 +24,3 @@ require'plugins.webdev-icons'
 
 require'utils'                              -- autocmds
 require'keymaps'                            -- keys
-
-vim.cmd [[colorscheme nordfox]]             -- set theme
-

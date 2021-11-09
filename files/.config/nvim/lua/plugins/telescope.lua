@@ -25,6 +25,7 @@ require('telescope').setup{
   },
   pickers = {
       buffers = {
+          previewer = false,
           theme = "ivy",
       },
       find_files = {
