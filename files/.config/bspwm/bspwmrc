@@ -1,12 +1,12 @@
 #! /bin/sh
 
 # Hotkey listener
-killall -q sxhkd &
-sxhkd &
+killall -q sxhkd
+sxhkd
 
 # Boot polybar
 killall -q polybar
-~/scripts/polybar_launch.sh &
+~/scripts/polybar_launch.sh
 
 # Config desktops
 ~/scripts/bspwm_auto_config.sh
