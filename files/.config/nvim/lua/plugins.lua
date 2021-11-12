@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
   use 'folke/todo-comments.nvim'               -- highlight TODO comments
   use 'goolord/alpha-nvim'                     -- startup screen
+  use 'karb94/neoscroll.nvim'                  -- smooth scrolling
   use 'lewis6991/gitsigns.nvim'                -- git sidebar
   use 'mbbill/undotree'                        -- git-like undo tree
   use 'neovim/nvim-lspconfig'                  -- config for LSP
@@ -73,9 +74,9 @@ return require('packer').startup(function(use)
   }
 
   use {
-      "folke/which-key.nvim",
+      'folke/which-key.nvim',
       config = function()
-          require("which-key").setup {}
+          require('which-key').setup {}
       end
   }
 

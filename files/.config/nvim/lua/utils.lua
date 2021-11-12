@@ -15,13 +15,13 @@ end
 
 local autocmds = {
     git_commit = {
-        { "FileType", "gitcommit", [[silent! let b:EditorConfig_disable = 1 ]] };
+        { 'FileType', 'gitcommit', [[silent! let b:EditorConfig_disable = 1 ]] };
     };
     lua_highlight = {
-        { "TextYankPost", "*", [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=400}]] };
+        { 'TextYankPost', '*', [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=400}]] };
     };
     netrw = {
-        { "FileType", "netrw",
+        { 'FileType', 'netrw',
             [[
                 setlocal bufhidden=wipe
                 hi! link netrwMarkFile IncSearch
@@ -38,22 +38,22 @@ local autocmds = {
         };
     };
     packer = {
-        { "BufWritePost", "plugins.lua", "PackerCompile" };
+        { 'BufWritePost', 'plugins.lua', 'PackerCompile' };
     };
     remove_whitespace_on_save = {
         { 'BufWritePre', '*', [[:%s/\s\+$//e]] };
     };
     resize_windows_proportionally = {
-        { "VimResized", "*", ":wincmd =" };
+        { 'VimResized', '*', ':wincmd =' };
     };
     restore_cursor = {
         { 'BufRead', '*', [[call setpos(".", getpos("'\""))]] };
     };
     toggle_search_highlighting = {
-        { "InsertEnter", "*", "setlocal nohlsearch" };
+        { 'InsertEnter', '*', 'setlocal nohlsearch' };
     };
     eslint_fix = {
-        { "BufWritePre", "*", [[ if exists(":EslintFixAll") | exe "EslintFixAll" | endif ]] };
+        { 'BufWritePre', '*', [[ if exists(":EslintFixAll") | exe "EslintFixAll" | endif ]] };
     };
 }
 
