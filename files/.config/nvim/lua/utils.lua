@@ -24,10 +24,16 @@ local autocmds = {
         { "FileType", "netrw",
             [[
                 setlocal bufhidden=wipe
+                hi! link netrwMarkFile IncSearch
+
                 nmap <silent> <buffer> <Esc>        :Rexplore<cr>
                 nmap <silent> <buffer> q            :Rexplore<cr>
-                nmap <silent> <buffer> <Backspace>  -
-                nmap <silent> <buffer> <Tab>        <CR>
+                nmap <silent> <buffer> <c-j>        j
+                nmap <silent> <buffer> <c-k>        k
+                nmap <silent> <buffer> h            -
+                nmap <silent> <buffer> l            <CR>
+                nmap <silent> <buffer> <Tab>        mf
+                nmap <silent> <buffer> <S-Tab>      mF
             ]]
         };
     };

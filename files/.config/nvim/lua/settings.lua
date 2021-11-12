@@ -1,17 +1,20 @@
-local o = vim.o                                     -- global
-local opt = vim.opt                                 -- global/buffer/windows-scoped options
+local cmd = vim.cmd
+local g = vim.g
+local o = vim.o
+local opt = vim.opt
 
+g.netrw_special_syntax = true
+o.completeopt = 'menu,menuone,noselect'             -- completion
+o.foldtext = [[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 o.hlsearch = true
 o.ignorecase = true
 o.incsearch = true
 o.wildmenu = false
-o.completeopt = 'menu,menuone,noselect'             -- completion
 opt.clipboard = 'unnamedplus'                       -- copy/paste to system clipboard
 opt.cursorline = true
 opt.expandtab = true                                -- use spaces instead of tabs
 opt.foldexpr='nvim_treesitter#foldexpr()'
 opt.foldlevel = 4
-o.foldtext = [[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 opt.foldlevelstart = 3
 opt.foldmethod = 'expr'
 opt.hidden = true                                   -- enable background buffers
@@ -33,3 +36,5 @@ opt.timeoutlen = 500                                -- leader key timeout
 opt.undofile = true                                 -- store undo history in files
 opt.updatetime = 50
 opt.wrap = false                                    -- disable line wrap
+
+vim.cmd [[set noshowmode]]                          -- hide mode from command

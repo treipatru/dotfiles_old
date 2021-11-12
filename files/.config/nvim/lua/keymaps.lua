@@ -57,7 +57,8 @@ map('n', 'O', 'O<Esc>')
 wk.register({
   b = {
     name = "Buffers",
-    d = { ":lua require('bufdelete').bufdelete(0, true)<CR>", "Delete" }
+    d = { ":lua require('bufdelete').bufdelete(0, true)<CR>", "Delete" },
+    o = { ":execute '%bdelete|edit #|normal `\"'|bdelete#<CR>", "Delete all" },
   },
   c = {
     name = "Code",
@@ -102,6 +103,7 @@ wk.register({
     d = { "<C-w>c", "Delete split" },
     h = { ":split<CR>", "Horizontal split" },
     m = { ":MaximizerToggle<CR>", "Maximize split" },
+    o = { ":only<CR>", "Delete all" },
     v = { ":vsp<CR>", "Vertical split" },
   },
   ["*"] = { ':lua require("telescope.builtin").grep_string({ search = vim.fn.expand "<cword>" })<CR>', "Grep word"},
