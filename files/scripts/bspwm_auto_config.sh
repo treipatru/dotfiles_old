@@ -1,26 +1,19 @@
-# Cleanup old desktops
-for DESKTOP in $(bspc query -D)
-do
-    bspc desktop $DESKTOP -r
-done
-
-# Setup new desktops
-readonly SCREENS_NO=$(bspc query -M | wc -l)
+readonly SCREENS=$(xrandr| rg '\sconnected' | awk '{print $1}')
+readonly SCREENS_NO=$(wc -w <<< $SCREENS)
 readonly SCREEN_BUILTIN="eDP-1"
 
 if [ "$SCREENS_NO" == "1" ]
 then
-    bspc monitor "$SCREEN_BUILTIN" -d 1 2 3 4 5
-    exit 0
+    xrandr --output $SCREEN_BUILTIN --primary --mode 1920x1080 --rotate normal &&
+    bspc monitor $SCREEN_BUILTIN -d 1 2 3 4 5
 elif [ "$SCREENS_NO" == "2" ]
 then
-    for MONITOR in $(bspc query -M --names); do
-        if [ "$MONITOR" == "$SCREEN_BUILTIN" ]
-        then
-            bspc monitor "$MONITOR" -d 1 2 3
-        else
-            echo "$MONITOR"
-            bspc monitor "$MONITOR" -d 4 5
-        fi
-    done
+    ## Considering built-in screen is always second in list
+    readonly SCREEN_SECOND=$(echo $SCREENS | awk '{print $2}')
+
+    xrandr --output $SCREEN_BUILTIN --primary --mode 1920x1080 --rotate normal \
+           --output $SCREEN_SECOND --mode 1920x1080 --rotate normal --left-of $SCREEN_BUILTIN
+
+    bspc monitor $SCREEN_BUILTIN -d 1 2 3
+    bspc monitor $SCREEN_SECOND -d 4 5
 fi

@@ -45,9 +45,6 @@ map('n', 'N', 'Nzzzv')
 -- Keep cursor in place when joining lines
 map('n', 'J', 'mzJ`z')
 
--- Spaces in insert mode act as undo break points
-map('i', ' ', ' <c-g>u')
-
 -- o/O adds empty line without insert mode
 map('n', 'o', 'o<Esc>')
 map('n', 'O', 'O<Esc>')
