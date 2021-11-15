@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
   use 'Famiu/feline.nvim'                      -- status line
+  use 'RRethy/nvim-treesitter-textsubjects'    -- treesitter objects
   use 'Shatur/neovim-session-manager'          -- session manager
   use 'airblade/vim-rooter'                    -- set cwd root
   use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
@@ -63,6 +64,11 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
+  })
+
+  use({                                        -- custom text objects
+      'kana/vim-textobj-user',
+      'rhysd/vim-textobj-anyblock',
   })
 
   use {                                        -- easymotion replacement
