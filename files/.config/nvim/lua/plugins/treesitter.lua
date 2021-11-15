@@ -38,5 +38,12 @@ require'nvim-treesitter.configs'.setup {
   },
   autotag = {
     enable = true,
-  }
+  },
+  textsubjects = {
+      enable = true,
+      keymaps = {
+          ['<cr>'] = 'textsubjects-smart',
+          -- [';'] = 'textsubjects-container-outer',
+      }
+  },
 }
