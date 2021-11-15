@@ -1,0 +1,5 @@
+--heading
+--hidden
+--smart-case
+--max-columns=100
+--ignore-file=~/.config/rg/rgignore
