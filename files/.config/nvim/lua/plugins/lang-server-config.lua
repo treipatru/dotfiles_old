@@ -49,11 +49,14 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 ----------------------------------------------------------------------
--- TypeScript
+-- Setup servers
 lspcfg.eslint.setup{
     capabilities = capabilities,
 }
 lspcfg.tsserver.setup{
+    capabilities = capabilities,
+}
+lspcfg.pyright.setup{
     capabilities = capabilities,
 }
 

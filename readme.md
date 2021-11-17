@@ -21,6 +21,7 @@
 * [x] `diagnostic-languageserver`
 * [x] `eslint_d`
 * [x] `prettier`
+* [x] `pyright`
 * [x] `typescript_language_server`
 * [x] `typescript`
 * [x] `vscode-langservers-extracted`
