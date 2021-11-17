@@ -8,7 +8,10 @@ require('telescope').setup{
     }
   },
   defaults = {
-    path_display = { "truncate" },
+    path_display = {
+        "shorten",                     -- shorten paths to max 4 chars
+        shorten = 4,
+    },
     file_ignore_patterns = {
         ".git",
         "build",
@@ -23,6 +26,17 @@ require('telescope').setup{
         ["<C-q>"] = "smart_send_to_qflist",
       },
     },
+    prompt_prefix = '$ ',
+    vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--hidden",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+    },
   },
   pickers = {
       buffers = {
@@ -30,6 +44,10 @@ require('telescope').setup{
           theme = "ivy",
       },
       find_files = {
+          previewer = false,
+          theme = "ivy",
+      },
+      file_browser = {
           previewer = false,
           theme = "ivy",
       },
@@ -48,6 +66,7 @@ require('telescope').setup{
           theme = "ivy",
       },
       oldfiles = {
+          previewer = false,
           theme = "ivy",
       },
   },
