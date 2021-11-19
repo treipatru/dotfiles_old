@@ -10,7 +10,7 @@ end
 -- Search for snippets
 M.snippets = function()
     local opts = {
-        search_dirs = {"~/snippets"},
+        cwd = "~/snippets",
     }
 
     require'telescope.builtin'.find_files(opts)
