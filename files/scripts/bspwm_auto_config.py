@@ -58,9 +58,6 @@ def set_xrandr(monitors):
         if "primary" in monitor:
             xrandr_cmd += " --primary"
 
-        xrandr_cmd += " --mode "
-        xrandr_cmd += monitor["resolution"] if "resolution" in monitor else "1920x1080"
-
         if "position" in monitor and "anchor" in monitor:
             xrandr_cmd += f" --{monitor['position']} {monitor['anchor']}"
 
