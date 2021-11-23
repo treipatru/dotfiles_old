@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use 'AndrewRadev/splitjoin.vim'              -- easy split/join statements
   use 'RRethy/nvim-treesitter-textsubjects'    -- treesitter objects
   use 'Shatur/neovim-session-manager'          -- session manager
+  use 'ThePrimeagen/harpoon'                   -- mark files
   use 'airblade/vim-rooter'                    -- set cwd root
   use 'editorconfig/editorconfig-vim'          -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                   -- better buffer delete
@@ -63,6 +64,11 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
+  })
+
+  use({                                        -- snippets
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
   })
 
   use({                                        -- custom text objects

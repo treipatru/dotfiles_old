@@ -49,6 +49,19 @@ map('n', 'J', 'mzJ`z')
 map('n', 'o', 'o<Esc>')
 map('n', 'O', 'O<Esc>')
 
+
+-- Harpoon mark mappings
+map('n', '<M-1>', ':lua require("harpoon.ui").nav_file(1)<CR>')
+map('n', '<M-2>', ':lua require("harpoon.ui").nav_file(2)<CR>')
+map('n', '<M-3>', ':lua require("harpoon.ui").nav_file(3)<CR>')
+map('n', '<M-4>', ':lua require("harpoon.ui").nav_file(4)<CR>')
+map('n', '<M-5>', ':lua require("harpoon.ui").nav_file(5)<CR>')
+map('n', '<M-6>', ':lua require("harpoon.ui").nav_file(6)<CR>')
+map('n', '<M-7>', ':lua require("harpoon.ui").nav_file(7)<CR>')
+map('n', '<M-8>', ':lua require("harpoon.ui").nav_file(8)<CR>')
+map('n', '<M-9>', ':lua require("harpoon.ui").nav_file(9)<CR>')
+map('n', '<M-0>', ':lua require("harpoon.mark").add_file()<CR>')
+
 -----------------------------------------------------------------------------------------
 -- Leader Keys
 wk.register({
@@ -71,6 +84,7 @@ wk.register({
     e = { ':Explore<CR>', "Explore"},
     f = { ':lua require("plugins.telescope-custom").project_files()<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
+    m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
     r = { ':Telescope oldfiles<CR>', "Recent files"},
     s = { ":Telescope sessions<CR>", "Sessions"},
   },
