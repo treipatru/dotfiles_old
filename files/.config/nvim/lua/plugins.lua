@@ -30,8 +30,8 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'                        -- git-like undo tree
   use 'neovim/nvim-lspconfig'                  -- config for LSP
   use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
+  use 'nvim-lualine/lualine.nvim'              -- status line
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
-  use 'ojroques/nvim-hardline'                 -- status line
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
   use 'rmehri01/onenord.nvim'                  -- color theme
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
