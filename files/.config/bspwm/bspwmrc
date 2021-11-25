@@ -1,13 +1,7 @@
 #! /bin/sh
 
-# Boot key listener
-pgrep -x sxhkd > /dev/null || sxhkd &
-
-# Boot polybar
-killall -q polybar &&
-~/scripts/polybar_launch.sh
-
-# Config desktops and displays
+killall -q sxhkd & sxhkd &
+killall -q polybar & ~/scripts/polybar_launch.sh &
 ~/scripts/bspwm_auto_config.py
 
 # Bspwm options
