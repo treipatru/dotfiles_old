@@ -61,6 +61,9 @@ lspcfg.tsserver.setup{
 lspcfg.pyright.setup{
     capabilities = capabilities,
 }
+lspcfg.tailwindcss.setup{
+    capabilities = capabilities,
+}
 
 ----------------------------------------------------------------------
 -- LUA
