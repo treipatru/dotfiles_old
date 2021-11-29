@@ -5,16 +5,16 @@ killall -q polybar & ~/scripts/polybar_launch.sh &
 ~/scripts/bspwm_auto_config.py
 
 # Bspwm options
-bspc config border_width         3
-bspc config focused_border_color "#98C379"
-bspc config window_gap           2
-bspc config split_ratio 0.52
-bspc config borderless_monocle true
-bspc config gapless_monocle true
-bspc config single_monocle true
-bspc config focus_follows_pointer true
-bspc config pointer_follows_focus true
-bspc config top_padding 0
+bspc config border_width                3
+bspc config focused_border_color        "#98C379"
+bspc config window_gap                  2
+bspc config split_ratio                 0.52
+bspc config borderless_monocle          true
+bspc config gapless_monocle             true
+bspc config single_monocle              true
+bspc config focus_follows_pointer       true
+bspc config pointer_follows_focus       true
+bspc config top_padding                 0
 
 # Window rules
 bspc rule -a Emacs state=tiled
