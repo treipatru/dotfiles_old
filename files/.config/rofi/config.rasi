@@ -37,16 +37,8 @@ configuration {
     scroll-method: 0;
     window-format: "{w}    {c}   {t}";
     click-to-exit: true;
-    theme: "onedark";
     max-history-size: 25;
     combi-hide-mode-prefix: false;
     pid: "/run/user/1000/rofi.pid";
-    /* kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab,Control+p"; */
-    /* kb-cancel: "Escape"; */
-    /* kb-row-down:  "Down,Control+j,Control+n"; */
-    /* kb-accept-entry:  "Control+y,Return,KP_Enter"; */
-    /* kb-remove-to-eol:  "Control+Shift+e"; */
-    /* kb-mode-next:  "Shift+Right,Control+Tab,Control+l"; */
-    /* kb-mode-previous:  "Shift+Left,Control+Shift+Tab,Control+h"; */
-    /* kb-remove-char-back:  "BackSpace"; */
 }
+@theme "onedark"
