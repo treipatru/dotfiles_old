@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'            -- show colors in buffers
   use 'nvim-lualine/lualine.nvim'              -- status line
   use 'nvim-telescope/telescope.nvim'          -- fuzzy finder
+  use 'pantharshit00/vim-prisma'               -- prisma highlighting
   use 'p00f/nvim-ts-rainbow'                   -- rainboq brackets for Treesitter
   use 'rmehri01/onenord.nvim'                  -- color theme
   use 'stevearc/qf_helper.nvim'                -- better quickfix list
