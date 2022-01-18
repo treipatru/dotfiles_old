@@ -10,7 +10,7 @@ super + shift + {d,a}
 
 # Close current window
 super + w
-    bspc node -k
+    bspc node -c
 
 # Toggle between tiled and monocle layout
 super + m
