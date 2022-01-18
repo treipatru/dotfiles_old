@@ -11,7 +11,7 @@ require'lualine'.setup{
     lualine_a = {'mode'},
     lualine_b = {'filename'},
     lualine_c = {'branch', 'diff',
-                  {'diagnostics', sources={'nvim_lsp', 'coc'}}},
+                  {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
     lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
