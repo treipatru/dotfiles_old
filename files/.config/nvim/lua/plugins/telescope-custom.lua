@@ -22,7 +22,7 @@ M.browse_buffer_folder  = function()
         cwd = require("telescope.utils").buffer_dir()
     }
 
-    require'telescope.builtin'.file_browser(opts)
+    require 'telescope'.extensions.file_browser.file_browser(opts)
 end
 
 -- Prompt for word to grep
