@@ -86,7 +86,6 @@ wk.register({
     g = { ':Telescope live_grep<CR>', "Grep" },
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
     r = { ':Telescope oldfiles<CR>', "Recent files"},
-    s = { ":Telescope sessions<CR>", "Sessions"},
   },
   g = {
     name = "Git",
