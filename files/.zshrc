@@ -50,3 +50,4 @@ batdiff() {
 }
 
 source $HOME/.config/zsh/aliases
+source /usr/share/nvm/init-nvm.sh
