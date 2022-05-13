@@ -1,14 +1,14 @@
 require'lualine'.setup{
   options = {
-    icons_enabled = false,
-    theme = 'auto',
+    icons_enabled = true,
+    theme = 'palenight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {{ 'mode', fmt = function(str) return str:sub(1,1) end }},
     lualine_b = {'filename'},
     lualine_c = {'branch', 'diff',
                   {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
