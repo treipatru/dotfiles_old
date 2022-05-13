@@ -131,7 +131,7 @@ wk.register({
 -- Next
 wk.register({
     c = { "<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>zzzv", "Hunk" },
-    d = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>zzzv", "Diagnostic" },
+    d = { "<cmd>lua vim.diagnostic.get_next()<CR>zzzv", "Diagnostic" },
     q = { "<cmd>QNext<CR>zzzv", "QuickFix list item" },
 }, { prefix = "]" })
 
@@ -139,6 +139,6 @@ wk.register({
 -- Previous
 wk.register({
     c = { "<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>zzzv", "Hunk" },
-    d = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>zzzv", "Diagnostic" },
+    d = { "<cmd>lua vim.diagnostic.get_prev()<CR>zzzv", "Diagnostic" },
     q = { "<cmd>QPrev<CR>zzzv", "QuickFix list item" },
 }, { prefix = "[" })
