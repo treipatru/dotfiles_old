@@ -45,3 +45,5 @@ export PATH="$PATH:$HOME/go/bin"
 
 # RG config
 export RIPGREP_CONFIG_PATH="$HOME/.config/rg/ripgreprc"
+
+export SSH_AUTH_SOCK=~/.1password/agent.sock
