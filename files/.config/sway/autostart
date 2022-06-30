@@ -1,0 +1,20 @@
+## Privilege management
+    # Requires polkit and polkit-gnome
+    exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+## Idle management
+    # Lock the screen after 5 minutes of inactivity.
+    # Turn off the screen after another 3 minutes.
+    # Suspend the system after another 12 minutes.
+    exec swayidle -w \
+        timeout 300  'swaylock' \
+        timeout 480  'swaymsg "output * dpms off"' \
+            resume  'swaymsg "output * dpms on"' \
+        timeout 1020 'systemctl suspend' \
+        before-sleep 'swaylock'
+
+## Other software
+    exec ulauncher &
+    exec dropbox &
+    exec swaync &
+    exec swaymsg "workspace 1; exec 1password;"

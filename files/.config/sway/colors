@@ -1,0 +1,13 @@
+set {
+    $base00   #292929
+    $base01   #60af5d
+    $base02   #3F3F3F
+    $base03   #DCDCCC
+    $base04   #AB6C71
+    $base05   #709080
+}
+
+client.unfocused          $base02  $base02  $base03
+client.focused_inactive   $base02  $base02  $base03
+client.focused            $base01  $base01  $base02  $base02
+client.urgent             $base04  $base04  $base01

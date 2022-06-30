@@ -1,0 +1,102 @@
+## Containers and workspaces
+    # Move focused container
+    bindsym {
+        $mod+Shift+$left move left
+        $mod+Shift+$down move down
+        $mod+Shift+$up move up
+        $mod+Shift+$right move right
+    }
+    # Move focused container to workspace
+    bindsym {
+        $mod+Shift+1 move container to workspace $ws1
+        $mod+Shift+2 move container to workspace $ws2
+        $mod+Shift+3 move container to workspace $ws3
+        $mod+Shift+4 move container to workspace $ws4
+        $mod+Shift+5 move container to workspace $ws5
+        $mod+Shift+6 move container to workspace $ws6
+        $mod+Shift+7 move container to workspace $ws7
+        $mod+Shift+8 move container to workspace $ws8
+        $mod+Shift+9 move container to workspace $ws9
+    }
+    # Set container focus
+    bindsym {
+        $mod+$left focus left
+        $mod+$down focus down
+        $mod+$up focus up
+        $mod+$right focus right
+    }
+    # Switch to workspace
+    bindsym {
+        $mod+1 workspace $ws1
+        $mod+2 workspace $ws2
+        $mod+3 workspace $ws3
+        $mod+4 workspace $ws4
+        $mod+5 workspace $ws5
+        $mod+6 workspace $ws6
+        $mod+7 workspace $ws7
+        $mod+8 workspace $ws8
+        $mod+9 workspace $ws9
+    }
+    # Resizing containers:
+    mode "resize" {
+        bindsym {
+            $left resize shrink width $resizeunit
+            $down resize grow height $resizeunit
+            $up resize shrink height $resizeunit
+            $right resize grow width $resizeunit
+            Return mode "default"
+            Escape mode "default"
+        }
+    }
+
+    bindsym $mod+r mode "resize"
+
+## Layouts
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym {
+        $mod+b splith
+        $mod+v splitv
+    }
+    # Switch the current container between different layout styles
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
+    # bindsym $mod+e layout toggle split
+    # Make the current focus fullscreen (maximize)
+    bindsym $mod+m fullscreen
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+f floating toggle
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+    # Move focus to the parent container
+    # bindsym $mod+a focus parent
+
+## Software
+    # Terminal
+    bindsym $mod+Return exec $term
+    # File manager
+    bindsym $mod+e exec thunar
+    # Launcher
+    bindsym $mod+d exec $menu
+    # Take a screenshopt
+    bindsym $mod+p exec grim -g "$(slurp)"
+
+## Sway core
+    # Exit sway
+    bindsym $mod+Shift+w exec swaynag -t warning -m 'Unless of course war were declared.' -B 'War were declared' 'swaymsg exit'
+    # Kill focused window
+    bindsym $mod+w kill
+    # Reload sway config
+    bindsym $mod+Shift+r reload
+    # Sway Notification Center
+    bindsym $mod+n exec swaync-client -t -sw
+
+## Multimedia keys
+    bindsym {
+        XF86MonBrightnessUp exec sudo light -A 2
+        XF86MonBrightnessDown exec sudo light -U 2
+        XF86AudioLowerVolume exec pulseaudio-ctl down
+        XF86AudioRaiseVolume exec pulseaudio-ctl up
+        XF86AudioMute exec pulseaudio-ctl mute
+    }

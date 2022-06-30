@@ -1,0 +1,24 @@
+# Set system bar
+bar swaybar_command waybar
+# Hide window title
+default_border pixel 2
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+# Set font
+font Noto 10
+# Add some gaps between windows
+gaps inner 3
+# Hide cursor if computer is idle
+seat * hide_cursor 10000
+# Hide borders if there's only one window
+smart_borders on
+smart_gaps on
+
+
+## Window rules
+# "swaymsg -t get_tree" to find app ids
+for_window [app_id="ulauncher"] border none

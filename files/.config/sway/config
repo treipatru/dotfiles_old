@@ -1,0 +1,10 @@
+include variables
+
+include colors
+include io
+include keymaps
+include options
+
+include autostart
+
+include /etc/sway/config.d/*

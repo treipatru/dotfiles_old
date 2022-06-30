@@ -1,0 +1,25 @@
+set {
+    $down j
+    $left h
+    $mod Mod4
+    $resizeunit 10px
+    $right l
+    $term alacritty
+    $up k
+    $video-out-builtin eDP-1
+    $video-out-hub DP-1
+    $ws1  1
+    $ws2  2
+    $ws3  3
+    $ws4  4
+    $ws5  5
+    $ws6  6
+    $ws7  7
+    $ws8  8
+    $ws9  9
+}
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu ulauncher-toggle | xargs swaymsg exec --

@@ -1,0 +1,40 @@
+## Input
+    # Generic inputs
+    input "type:keyboard" {
+        repeat_delay  500
+        repeat_rate   50
+        xkb_layout    us
+    }
+    input "type:touchpad" {
+        dwt              enabled
+        middle_emulation enabled
+        natural_scroll   disabled
+        tap              enabled
+    }
+
+    # Builtin keyboard
+    # Caps as control, control as compose
+    input "1:1:AT_Translated_Set_2_keyboard" {
+        xkb_options   ctrl:nocaps,compose:lctrl
+    }
+
+    # External keyboard
+    # Caps as compose
+    # input "" {
+    #    xkb_options   compose:caps
+    #}
+
+## OUTPUT
+    # Screens
+    output $video-out-hub resolution 1920x1080 position 0,0 scale 1
+    output $video-out-builtin resolution 2560x1440 position 1920,0 scale 1.7
+
+    # Workspaces assign
+    workspace $ws1 output $video-out-builtin
+    workspace $ws2 output $video-out-builtin
+    workspace $ws3 output $video-out-builtin
+    workspace $ws4 output $video-out-hub
+    workspace $ws5 output $video-out-hub
+
+    # Wallpaper
+    output * bg $HOME/img/wall/t1nS6vu.jpg fill
