@@ -16,7 +16,7 @@ export SOPS_GPG_EXEC=/usr/bin/gpg2
 export BAT_CONFIG_PATH=$HOME/.config/bat/config
 # Pretty terminal
 export TERM="xterm-256color"
-# XDG Paths
+# XDG Related Paths
 XDG_DESKTOP_DIR="$HOME/"
 XDG_DOWNLOAD_DIR="$HOME/tmp"
 XDG_TEMPLATES_DIR="$HOME/"
@@ -24,6 +24,7 @@ XDG_DOCUMENTS_DIR="$HOME/tmp"
 XDG_MUSIC_DIR="$HOME/music"
 XDG_PICTURES_DIR="$HOME/images"
 XDG_VIDEOS_DIR="$HOME/videos"
+GRIM_DEFAULT_DIR="$HOME/tmp"
 
 # Local user bins
 export PATH="$PATH:$HOME/.local/bin"
