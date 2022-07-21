@@ -11,6 +11,7 @@ require'nvim-treesitter.configs'.setup {
       "json",
       "lua",
       "regex",
+      "php",
       "rust",
       "scss",
       "svelte",

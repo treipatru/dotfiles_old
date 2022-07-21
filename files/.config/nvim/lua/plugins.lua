@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'                               -- nvim UI utils
   --
 
+  use "williamboman/nvim-lsp-installer"                     -- LSP server manager
   use 'AndrewRadev/splitjoin.vim'                           -- easy split/join statements
   use 'RRethy/nvim-treesitter-textsubjects'                 -- treesitter objects
   use 'Shatur/neovim-session-manager'                       -- session manager
@@ -30,8 +31,8 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'                               -- config for LSP
   use 'norcalli/nvim-colorizer.lua'                         -- show colors in buffers
   use 'nvim-lualine/lualine.nvim'                           -- status line
-  use 'nvim-telescope/telescope.nvim'                       -- fuzzy finder
   use 'nvim-telescope/telescope-file-browser.nvim'          -- file browser extension
+  use 'nvim-telescope/telescope.nvim'                       -- fuzzy finder
   use 'p00f/nvim-ts-rainbow'                                -- rainboq brackets for Treesitter
   use 'pantharshit00/vim-prisma'                            -- prisma highlighting
   use 'rmehri01/onenord.nvim'                               -- color theme
