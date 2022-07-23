@@ -24,9 +24,9 @@ fi
 # Cfg third party things
 #..................................................................................................
 # ZSH
-ZSH_THEME=""
+# ZSH_THEME="pure"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git kubectl z zsh-autosuggestions colored-man-pages)
+plugins=(git kubectl z zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 # Pure Prompt
 autoload -U promptinit; promptinit
 prompt pure
@@ -50,4 +50,3 @@ batdiff() {
 }
 
 source $HOME/.config/zsh/aliases
-source /usr/share/nvm/init-nvm.sh
