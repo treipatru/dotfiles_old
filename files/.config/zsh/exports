@@ -47,4 +47,19 @@ export PATH="$PATH:$HOME/go/bin"
 # RG config
 export RIPGREP_CONFIG_PATH="$HOME/.config/rg/ripgreprc"
 
+# 1pass ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+
+if [[ "$OSTYPE" == "darwin21.0" ]]; then
+    # NVM
+    export NVM_DIR=~/.nvm
+    source $(brew --prefix nvm)/nvm.sh
+    # ZSH Pure theme
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fi
+
+# Activate BuildKit in Docker builder
+export DOCKER_BUILDKIT=1
+# Force docker-compose to use Docker-cli builder instead of Python wrapper
+export COMPOSE_DOCKER_CLI_BUILD=1
