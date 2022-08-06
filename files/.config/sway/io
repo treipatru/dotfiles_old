@@ -37,4 +37,4 @@
     workspace $ws5 output $video-out-hub
 
     # Wallpaper
-    output * bg $HOME/img/wall/t1nS6vu.jpg fill
+    output * bg $HOME/img/wall.jpg fill
