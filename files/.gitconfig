@@ -1,53 +1,49 @@
-[include]
-  path = ~/.gitconfig.local
-[core]
-  autocrlf = input
-  editor = nvim
-  pager = less
-[push]
-  default = simple
-[pull]
-  rebase = true
-[push]
-  default = current
+[add-interactive]
+    useBuiltin = false
 [alias]
-  a = add
-  cm = commit
-  co = checkout
-  p = push
-  f = pull
-  graph = log --graph --all --decorate --stat --date=iso
-  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  s = status -s
-  stats = shortlog -sn --all --no-merges
-  tags = log --no-walk --tags --decorate=full
-  wd = diff --word-diff
-[diff "sopsdiffer"]
-  textconv = sops -d
-[log]
-  date = relative
-[format]
-  pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
-[color "status"]
-  added = green
-  changed = yellow
-  untracked = red
+    a = add --verbose
+    cm = commit --verbose
+    co = checkout
+    d = diff
+    ds = diff --staged
+    f = pull
+    graph = log --graph --all --decorate --stat --date=iso
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    p = push
+    r = reset
+    s = status -s
+    stats = shortlog -sn --all --no-merges
+    tags = log --no-walk --tags --decorate=full
+[core]
+    autocrlf = input
+    editor = nvim
+    pager = delta
+[delta]
+    light = false
+    navigate = true
+    side-by-side = true
 [diff]
-  wordRegex=.
-  tool = vimdiff
+    colorMoved = default
+    tool = vimdiff
+    wordRegex=.
+[format]
+    pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+[include]
+    path = ~/.gitconfig.local
+[interactive]
+    diffFilter = delta --color-only
+[log]
+    date = relative
 [merge]
-  tool = vimdiff
-[color]
-  ui = true
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
-[color "diff"]
-  meta = 11
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+    conflictstyle = diff3
+    tool = vimdiff
+[push]
+    default = simple
+[pull]
+    rebase = true
+[push]
+    default = current
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red

@@ -8,6 +8,8 @@
 
 * [x] `bat`
 * [x] `broot`
+* [x] `delta`
+* [x] `exa`
 * [x] `fd`
 * [x] `fzf`
 * [x] `git`
