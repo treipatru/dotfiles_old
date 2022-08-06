@@ -63,3 +63,5 @@ fi
 export DOCKER_BUILDKIT=1
 # Force docker-compose to use Docker-cli builder instead of Python wrapper
 export COMPOSE_DOCKER_CLI_BUILD=1
+
+export STARSHIP_CONFIG=~/.config/starship/starship.toml

@@ -1,6 +1,4 @@
-source $HOME/.config/zsh/exports
-
-# History
+# Options
 setopt EXTENDED_HISTORY
 setopt HIST_BEEP
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -9,44 +7,18 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
+setopt nohup                       # Don't kill background jobs on close session
+setopt extendedglob                # See: http://zsh.sourceforge.net/Intro/intro_2.html
 
-# Don't kill background jobs on close session
-setopt nohup
+# Sources
+ZSH_CFG="$HOME/.config/zsh"
+source $HOME/.config/broot/launcher/bash/br
+source $ZSH_CFG/aliases
+source $ZSH_CFG/exports
+source $ZSH_CFG/plugins/fzf/completion.zsh
+source $ZSH_CFG/plugins/fzf/key-bindings.zsh
+source $ZSH_CFG/plugins/vi-mode/zsh-vi-mode.plugin.zsh
 
-# See: http://zsh.sourceforge.net/Intro/intro_2.html
-setopt extendedglob
-
-# NNN change directory on quit
-if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
-    source /usr/share/nnn/quitcd/quitcd.bash_zsh
-fi
-
-# Cfg third party things
-#..................................................................................................
-# ZSH
-# ZSH_THEME="pure"
-HIST_STAMPS="yyyy-mm-dd"
-plugins=(git kubectl z zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
-# Pure Prompt
-autoload -U promptinit; promptinit
-prompt pure
-# Load OMZSH
-source $ZSH/oh-my-zsh.sh
-# Set vi mode
-bindkey -v
-# FZF
-source $HOME/.config/zsh/fzf
-
-# X
-#..................................................................................................
-# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-#   startxfce4
-# fi
-
-# Other
-#..................................................................................................
-batdiff() {
-    git diff --name-only --diff-filter=d | xargs bat --diff
-}
-
-source $HOME/.config/zsh/aliases
+# Startup
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"

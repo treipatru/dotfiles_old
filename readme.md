@@ -7,6 +7,7 @@
 ## System deps
 
 * [x] `bat`
+* [x] `broot`
 * [x] `fd`
 * [x] `fzf`
 * [x] `git`
@@ -14,7 +15,9 @@
 * [x] `nvim`
 * [x] `ranger`
 * [x] `ripgrep`
+* [x] `starship.rs`
 * [x] `zsh`
+* [x] `zoxide`
 
 ## NPM globals
 
