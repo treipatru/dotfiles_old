@@ -1,8 +1,5 @@
-alias v="nvim"
-alias vim="nvim"
 alias cat="bat"
 alias g="git"
-
-alias dropboxctl="python ~/scripts/dropboxctl.py"
-alias luamake=$HOME/repos/lua-language-server/3rd/luamake/luamake
-alias bspwmcfg="v ~/.config/bspwm/bspwmrc"
+alias l="exa"
+alias v="nvim"
+alias vim="nvim"
