@@ -211,7 +211,6 @@ _fzf_complete() {
   if [ -n "$matches" ]; then
     LBUFFER="$lbuf$matches"
   fi
-  zle reset-prompt
   command rm -f "$fifo"
 }
 
@@ -286,12 +285,6 @@ fzf-completion() {
 
   lbuf=$LBUFFER
   tail=${LBUFFER:$(( ${#LBUFFER} - ${#trigger} ))}
-  # Kill completion (do not require trigger sequence)
-  if [ "$cmd" = kill -a ${LBUFFER[-1]} = ' ' ]; then
-    tail=$trigger
-    tokens+=$trigger
-    lbuf="$lbuf$trigger"
-  fi
 
   # Trigger sequence given
   if [ ${#tokens} -gt 1 -a "$tail" = "$trigger" ]; then
@@ -302,6 +295,7 @@ fzf-completion() {
 
     if eval "type _fzf_complete_${cmd} > /dev/null"; then
       prefix="$prefix" eval _fzf_complete_${cmd} ${(q)lbuf}
+      zle reset-prompt
     elif [ ${d_cmds[(i)$cmd]} -le ${#d_cmds} ]; then
       _fzf_dir_completion "$prefix" "$lbuf"
     else
