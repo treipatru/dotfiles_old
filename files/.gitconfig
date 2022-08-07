@@ -24,8 +24,10 @@
     side-by-side = true
 [diff]
     colorMoved = default
-    tool = vimdiff
+    tool = code
     wordRegex=.
+[difftool "code"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [format]
     pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
 [include]
@@ -36,7 +38,7 @@
     date = relative
 [merge]
     conflictstyle = diff3
-    tool = vimdiff
+    tool = code
 [push]
     default = simple
 [pull]

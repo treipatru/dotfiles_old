@@ -12,16 +12,12 @@ setopt HIST_SAVE_NO_DUPS
 setopt extendedglob                # See: http://zsh.sourceforge.net/Intro/intro_2.html
 setopt nohup                       # Don't kill background jobs on close session
 
-# Broot git diff
-function gg {
-    br --conf ~/.config/broot/git-diff-conf.toml --git-status
-}
-
 # Sources
 ZSH_CFG="$HOME/.config/zsh"
 source $HOME/.config/broot/launcher/bash/br
 source $ZSH_CFG/aliases
 source $ZSH_CFG/exports
+source $ZSH_CFG/broot
 
 source $ZSH_CFG/plugins/vi-mode/zsh-vi-mode.plugin.zsh
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT

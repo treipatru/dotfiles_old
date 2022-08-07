@@ -1,0 +1,3 @@
+function brg {
+    br --conf ~/.config/broot/git-diff-conf.toml --git-status
+}
