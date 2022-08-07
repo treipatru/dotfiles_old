@@ -45,4 +45,9 @@ if [[ "$OSTYPE" == "darwin21.0" ]]; then
     # NVM
     export NVM_DIR=~/.nvm
     source $(brew --prefix nvm)/nvm.sh
+    # Default editor
+    export EDITOR=/opt/homebrew/bin/nvim
+else
+    # Default editor
+    export EDITOR=/usr/bin/nvim
 fi
