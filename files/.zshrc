@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Options
 setopt EXTENDED_HISTORY
 setopt HIST_BEEP
@@ -8,7 +10,6 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
 setopt extendedglob                # See: http://zsh.sourceforge.net/Intro/intro_2.html
-setopt share_history               # Share history between open sessions
 setopt nohup                       # Don't kill background jobs on close session
 
 # Broot git diff
@@ -21,14 +22,20 @@ ZSH_CFG="$HOME/.config/zsh"
 source $HOME/.config/broot/launcher/bash/br
 source $ZSH_CFG/aliases
 source $ZSH_CFG/exports
-source $ZSH_CFG/plugins/fzf/fzf
 
 source $ZSH_CFG/plugins/vi-mode/zsh-vi-mode.plugin.zsh
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
-zvm_after_init_commands+=('[ -f $ZSH_CFG/plugins/fzf/fzf ] && source $ZSH_CFG/plugins/fzf/fzf')
+
+USE_FZF=false
+if $USE_FZF; then
+    source $ZSH_CFG/plugins/fzf/fzf
+    zvm_after_init_commands+=('[ -f $ZSH_CFG/plugins/fzf/fzf ] && source $ZSH_CFG/plugins/fzf/fzf')
+else
+    source $ZSH_CFG/plugins/zsh-autocomplete/autocomplete.zsh
+fi
 
 # Startup
 autoload -U compinit; compinit
