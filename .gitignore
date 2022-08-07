@@ -2,9 +2,5 @@
 .uuid
 .netrwbook
 
-files/.config/coc/*
-!files/.config/coc/ultisnips
-
-files/.config/broot/*
-!files/.config/broot/conf.hjson
+files/.config/broot/bash
 files/.config/nvim/plugin/**/*
