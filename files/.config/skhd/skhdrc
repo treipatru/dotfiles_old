@@ -3,6 +3,9 @@ lalt - j : yabai -m window --focus south
 lalt - k : yabai -m window --focus north
 lalt - l : yabai -m window --focus east
 
+cmd - h : chunkc tiling::monitor -f prev
+cmd - l : chunkc tiling::monitor -f next
+
 lalt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
 lalt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 lalt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
@@ -26,3 +29,6 @@ lalt + shift - 9 : yabai -m window --space 9
 lalt - w : yabai -m window --close
 
 lalt - f : yabai -m window --toggle zoom-fullscreen
+
+# Restart Yabai
+lalt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
