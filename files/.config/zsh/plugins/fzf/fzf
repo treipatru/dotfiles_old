@@ -3,16 +3,24 @@ source ~/.config/zsh/plugins/fzf/key-bindings.zsh
 
 # Exclude duplicates from FZF results
 # default fzf function except for uniq pipe
-__fzf_history__() (
-  local line
-  shopt -u nocaseglob nocasematch
-  line=$(
-    HISTTIMEFORMAT= history | sort -k 2 | uniq -f 1 |
-    FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS --tac -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS +m" $(__fzfcmd) |
-    command grep '^ *[0-9]') &&
-    if [[ $- =~ H ]]; then
-      sed 's/^ *\([0-9]*\)\** .*/!\1/' <<< "$line"
-    else
-      sed 's/^ *\([0-9]*\)\** *//' <<< "$line"
-    fi
-)
+# __fzf_history__() (
+#   local line
+#   shopt -u nocaseglob nocasematch
+#   line=$(
+#     HISTTIMEFORMAT= history | sort -k 2 | uniq -f 1 |
+#     FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS --tac -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS +m" $(__fzfcmd) |
+#     command grep '^ *[0-9]') &&
+#     if [[ $- =~ H ]]; then
+#       sed 's/^ *\([0-9]*\)\** .*/!\1/' <<< "$line"
+#     else
+#       sed 's/^ *\([0-9]*\)\** *//' <<< "$line"
+#     fi
+# )
+#
+
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_COMPLETION_TRIGGER=''
+
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion

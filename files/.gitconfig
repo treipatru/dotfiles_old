@@ -19,21 +19,21 @@
     editor = nvim
     pager = delta
 [delta]
+    features = decorations
     light = false
     navigate = true
-    side-by-side = true
+    side-by-side = false
+[delta "interactive"]
+    keep-plus-minus-markers = false
 [diff]
     colorMoved = default
-    tool = code
     wordRegex=.
-[difftool "code"]
-    cmd = code --wait --diff $LOCAL $REMOTE
 [format]
     pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
 [include]
     path = ~/.gitconfig.local
 [interactive]
-    diffFilter = delta --color-only
+    diffFilter = delta --color-only --features=interactive
 [log]
     date = relative
 [merge]

@@ -10,6 +10,7 @@ export BAT_CONFIG_PATH=$HOME/.config/bat/config
 export PATH=$PATH:$HOME/.config/rofi/scripts
 export RIPGREP_CONFIG_PATH="$HOME/.config/rg/ripgreprc"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export RIPGREP_CONFIG_PATH=~/.config/rg/ripgreprc
 
 # XDG paths
 GRIM_DEFAULT_DIR="$HOME/tmp"
