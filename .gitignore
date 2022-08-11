@@ -2,5 +2,4 @@
 .uuid
 .netrwbook
 
-files/.config/broot/launcher/bash/br
 files/.config/nvim/plugin/**/*
