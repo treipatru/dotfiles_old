@@ -1,7 +1,7 @@
 [add-interactive]
     useBuiltin = false
 [alias]
-    a = add --verbose
+    a = add --patch --verbose
     cm = commit --verbose
     co = checkout
     d = diff
