@@ -28,6 +28,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/kubectl"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/repos/gff/bin"
 
 # GPG
 export SOPS_GPG_EXEC=/usr/bin/gpg2
@@ -51,3 +52,5 @@ else
     # Default editor
     export EDITOR=/usr/bin/nvim
 fi
+
+export GFF_EDITOR="code"

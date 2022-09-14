@@ -1,5 +1,5 @@
 alias cat="bat"
-alias g="git"
+alias g="gff"
 alias l="exa"
 alias v="nvim"
 alias vim="nvim"

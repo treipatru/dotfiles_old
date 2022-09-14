@@ -6,10 +6,9 @@
     co = checkout
     d = diff
     ds = diff --staged
-    f = pull
-    graph = log --graph --all --decorate --stat --date=iso
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    p = push
+    pl = pull
+    ps = push
     r = reset
     s = status -s
     stats = shortlog -sn --all --no-merges
