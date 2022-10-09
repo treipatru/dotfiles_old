@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'                                -- better commenting
   use 'tpope/vim-fugitive'                                  -- git interface
   use 'tpope/vim-surround'                                  -- easy change surrounding pairs
+  use 'voldikss/vim-floaterm'                               -- floating terminal
   use 'windwp/nvim-autopairs'                               -- auto-add end symbols
   use 'windwp/nvim-ts-autotag'                              -- auto-add end tags
   use 'xiyaowong/nvim-transparent'                          -- make vim transparent

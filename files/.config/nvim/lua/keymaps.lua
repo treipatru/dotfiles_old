@@ -49,6 +49,8 @@ map('n', 'J', 'mzJ`z')
 map('n', 'o', 'o<Esc>')
 map('n', 'O', 'O<Esc>')
 
+-- Exit insert mode
+map('i', 'jj', '<Esc>')
 
 -- Harpoon mark mappings
 map('n', '<M-1>', ':lua require("harpoon.ui").nav_file(1)<CR>')
@@ -81,7 +83,7 @@ wk.register({
     name = "Find",
     b = { ':Telescope buffers<CR>', "Buffers"},
     c = { ':Telescope commands<CR>', "Commands"},
-    e = { ':Explore<CR>', "Explore"},
+    e = { ":FloatermNew --name=ranger --autoclose=2 ranger --cmd='cd vim.fn.expand('%:p')'<CR>", "Explore"},
     f = { ':lua require("plugins.telescope-custom").project_files()<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
