@@ -1,19 +1,36 @@
-require('onenord').setup({
-  borders = true, -- Split window borders
-  italics = {
-    comments = true, -- Italic comments
-    strings = false, -- Italic strings
-    keywords = true, -- Italic keywords
-    functions = true, -- Italic functions
-    variables = false, -- Italic variables
-  },
-  disable = {
-    background = false, -- Disable setting the background color
-    cursorline = false, -- Disable the cursorline
-    eob_lines = true, -- Hide the end-of-buffer lines
-  },
-  custom_highlights = {}, -- Overwrite default highlight groups
+vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+
+require('catppuccin').setup({
+    transparent_background = true,
+    term_colors = false,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    integrations = {
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        treesitter = true,
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+    color_overrides = {},
+    custom_highlights = {},
 })
 
-vim.cmd [[colorscheme onenord]]
-
+vim.cmd [[colorscheme catppuccin]]

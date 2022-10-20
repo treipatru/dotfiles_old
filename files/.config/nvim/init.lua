@@ -16,7 +16,7 @@ require'plugins.statusline'
 require'plugins.telescope'
 require'plugins.theme'
 require'plugins.todo-comments'
-require'plugins.transparency-settings'
+-- require'plugins.transparency-settings'
 require'plugins.treesitter'
 require'plugins.webdev-icons'
 

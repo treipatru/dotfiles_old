@@ -4,7 +4,6 @@ local opt = vim.opt
 
 g.netrw_special_syntax = true
 o.completeopt = 'menu,menuone,noselect'             -- completion
--- o.foldtext = [[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 o.hlsearch = true
 o.ignorecase = true
 o.incsearch = true
@@ -12,6 +11,7 @@ o.wildmenu = false
 opt.clipboard = 'unnamedplus'                       -- copy/paste to system clipboard
 opt.cursorline = true
 opt.expandtab = true                                -- use spaces instead of tabs
+-- o.foldtext = [[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 -- opt.foldexpr='nvim_treesitter#foldexpr()'
 -- opt.foldlevel = 4
 -- opt.foldlevelstart = 3
@@ -37,3 +37,6 @@ opt.updatetime = 50
 opt.wrap = false                                    -- disable line wrap
 
 vim.cmd [[set noshowmode]]                          -- hide mode from command
+vim.cmd [[set relativenumber]]                      -- hide mode from command
+vim.cmd [[set completeopt=menu,menuone,noselect]]   -- hide mode from command
+
