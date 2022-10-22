@@ -18,7 +18,7 @@ local autocmds = {
         { 'FileType', 'gitcommit', [[silent! let b:EditorConfig_disable = 1 ]] };
     };
     lua_highlight = {
-        { 'TextYankPost', '*', [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=400}]] };
+        { 'TextYankPost', '*', [[silent! lua vim.highlight.on_yank() {higroup="IncSearch", timeout=100}]] };
     };
     netrw = {
         { 'FileType', 'netrw',

@@ -22,15 +22,15 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'                                -- mark files
   use 'airblade/vim-rooter'                                 -- set cwd root
   use 'catppuccin/nvim'                                     -- theme
+  use 'dcampos/nvim-snippy'
   use 'editorconfig/editorconfig-vim'                       -- make vim respect editorconfig defs
   use 'famiu/bufdelete.nvim'                                -- better buffer delete
   use 'folke/todo-comments.nvim'                            -- highlight TODO comments
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'karb94/neoscroll.nvim'                               -- smooth scrolling
-  use 'lewis6991/gitsigns.nvim'                             -- git sidebar
+  use 'lewis6991/gitsigns.nvim'                               -- smooth scrolling
   use 'mbbill/undotree'                                     -- git-like undo tree
   use 'neovim/nvim-lspconfig'                               -- config for LSP
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
   use 'norcalli/nvim-colorizer.lua'                         -- show colors in buffers
   use 'nvim-lualine/lualine.nvim'                           -- status line
   use 'nvim-telescope/telescope-file-browser.nvim'          -- file browser extension
@@ -43,10 +43,10 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'                                  -- git interface
   use 'tpope/vim-surround'                                  -- easy change surrounding pairs
   use 'voldikss/vim-floaterm'                               -- floating terminal
+  use 'williamboman/mason-lspconfig.nvim'
   use 'williamboman/mason.nvim'                             -- LSP server manager
   use 'windwp/nvim-autopairs'                               -- auto-add end symbols
   use 'windwp/nvim-ts-autotag'                              -- auto-add end tags
-  use 'dcampos/nvim-snippy'
 
   use {
       'goolord/alpha-nvim',
@@ -85,10 +85,9 @@ return require('packer').startup(function(use)
   })
 
   use {                                        -- easymotion replacement
-      'phaazon/hop.nvim',
-      as = 'hop',
+      'ggandor/leap.nvim',
       config = function()
-          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+          require('leap').add_default_mappings()
       end
   }
 

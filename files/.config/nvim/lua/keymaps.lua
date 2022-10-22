@@ -76,6 +76,7 @@ wk.register({
     name = "Code",
     d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition of symbol" },
     f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format buffer" },
+    g = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Show diagnosic" },
     o = { "<cmd>lua vim.lsp.buf.references()<CR>", "Occurences of symbol" },
     r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename symbol in buffer" },
   },
@@ -104,12 +105,6 @@ wk.register({
   i = {
     name = "Insert",
     s = { ':lua require("plugins.telescope-custom").snippets()<CR>', "Snippet"},
-  },
-  j = {
-    name = "Jump",
-    c = { ":HopChar1 <CR>", "Character" },
-    l = { ":HopLine <CR>", "Line" },
-    w = { ":HopWord <CR>", "Word" },
   },
   q = { "<cmd>QFToggle!<CR>", "QuickFix list"},
   u = { "<cmd>UndotreeToggle<CR>", "Undotree"},
