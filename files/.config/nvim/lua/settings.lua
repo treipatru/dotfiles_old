@@ -35,6 +35,7 @@ opt.timeoutlen = 500                                -- leader key timeout
 opt.undofile = true                                 -- store undo history in files
 opt.updatetime = 50
 opt.wrap = false                                    -- disable line wrap
+opt.laststatus = 3                                    -- use single status line for all windows
 
 vim.cmd [[set noshowmode]]                          -- hide mode from command
 vim.cmd [[set relativenumber]]                      -- hide mode from command
