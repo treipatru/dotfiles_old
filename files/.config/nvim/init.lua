@@ -10,15 +10,19 @@ require'plugins.autopairs'
 require'plugins.editorconfig'
 require'plugins.gitsigns'
 require'plugins.lang-server-config'
+require'plugins.neoclip'
 require'plugins.neoscroll'
 require'plugins.qf'
 require'plugins.statusline'
 require'plugins.telescope'
 require'plugins.theme'
 require'plugins.todo-comments'
--- require'plugins.transparency-settings'
 require'plugins.treesitter'
 require'plugins.webdev-icons'
+require'plugins.snippy'
+require'plugins.session-manager'
+require('leap').add_default_mappings()
+require('which-key').setup {}
 
 require'utils'                              -- autocmds
 require'keymaps'                            -- keys

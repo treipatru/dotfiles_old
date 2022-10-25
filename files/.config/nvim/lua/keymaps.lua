@@ -87,6 +87,7 @@ wk.register({
     e = { ":FloatermNew --name=ranger --autoclose=2 ranger --cmd='cd vim.fn.expand('%:p')'<CR>", "Explore"},
     f = { ':lua require("plugins.telescope-custom").project_files()<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
+    i = { ':lua require("telescope").extensions.neoclip.default()<CR>', "Find files"},
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
     r = { ':Telescope oldfiles<CR>', "Recent files"},
   },

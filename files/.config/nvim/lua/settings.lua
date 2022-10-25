@@ -40,4 +40,3 @@ opt.laststatus = 3                                    -- use single status line 
 vim.cmd [[set noshowmode]]                          -- hide mode from command
 vim.cmd [[set relativenumber]]                      -- hide mode from command
 vim.cmd [[set completeopt=menu,menuone,noselect]]   -- hide mode from command
-
