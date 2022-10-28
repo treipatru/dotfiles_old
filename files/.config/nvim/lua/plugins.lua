@@ -48,6 +48,15 @@ return require('packer').startup(function(use)
       'tpope/vim-fugitive',
   })
 
+  -- Interface
+  use ({
+      'ThePrimeagen/harpoon',                               -- mark files
+      'famiu/bufdelete.nvim',                               -- better buffer delete
+      'folke/which-key.nvim',                               -- key shortcuts helper
+      'stevearc/qf_helper.nvim',                            -- better quickfix list
+      'voldikss/vim-floaterm',                              -- floating terminal
+  })
+
   -- Visual fluff
   use ({
       'catppuccin/nvim',                                    -- theme
@@ -58,32 +67,27 @@ return require('packer').startup(function(use)
       'szw/vim-maximizer',                                  -- maximize split
   })
 
-  -- Text objects
+  -- Text related
   use({
+      'AckslD/nvim-neoclip.lua',                            -- register management
+      'AndrewRadev/splitjoin.vim',                          -- easy split/join statements
+      'dcampos/nvim-snippy',                                -- snippets manager
       'kana/vim-textobj-user',
+      'kylechui/nvim-surround',
       'rhysd/vim-textobj-anyblock',
+      'windwp/nvim-autopairs',                              -- auto-add end symbols
+      'windwp/nvim-ts-autotag',                             -- auto-add end tags
   })
 
   -- Rest of plugins
   use ({
-      'AckslD/nvim-neoclip.lua',                            -- register management
-      'AndrewRadev/splitjoin.vim',                          -- easy split/join statements
-      'ThePrimeagen/harpoon',                               -- mark files
       'airblade/vim-rooter',                                -- set cwd root
-      'dcampos/nvim-snippy',                                -- snippets manager
       'editorconfig/editorconfig-vim',                      -- make vim respect editorconfig defs
-      'famiu/bufdelete.nvim',                               -- better buffer delete
-      'folke/which-key.nvim',                               -- key shortcuts helper
       'ggandor/leap.nvim',                                  -- easymotion like jumper
       'mbbill/undotree',                                    -- git-like undo tree
       'pantharshit00/vim-prisma',                           -- prisma highlighting
       'rmagatti/auto-session',                              -- session manager
-      'stevearc/qf_helper.nvim',                            -- better quickfix list
       'tpope/vim-commentary',                               -- better commenting
-      'tpope/vim-surround',                                 -- easy change surrounding pairs
-      'voldikss/vim-floaterm',                              -- floating terminal
-      'windwp/nvim-autopairs',                              -- auto-add end symbols
-      'windwp/nvim-ts-autotag',                             -- auto-add end tagsp
   })
 
   use { 'kkoomen/vim-doge', run = '-> doge#install()' }     -- generate doc comments

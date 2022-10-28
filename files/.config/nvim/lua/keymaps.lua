@@ -30,10 +30,6 @@ map('n', '<C-l>', '<C-w>l')
 -- Uppercase y yanks from cursor to last non-blank character of line
 map('n', 'Y', 'yg_')
 
--- Change whatever is under cursor, use repeat for next/prev occurence
-map('n', 'c*', '*``cgn')
-map('n', 'c#', '#``cgN')
-
 -- Easier jump to start/end of line
 map('n', 'H', '^')
 map('n', 'L', '$')
@@ -51,6 +47,9 @@ map('n', 'O', 'O<Esc>')
 
 -- Exit insert mode
 map('i', 'jj', '<Esc>')
+
+-- Tab switches to previous buffer
+map('n', '<Tab>', ':b#<CR>')
 
 -- Harpoon mark mappings
 map('n', '<M-1>', ':lua require("harpoon.ui").nav_file(1)<CR>')
@@ -84,10 +83,10 @@ wk.register({
     name = "Find",
     b = { ':Telescope buffers<CR>', "Buffers"},
     c = { ':Telescope commands<CR>', "Commands"},
-    e = { ":FloatermNew --name=ranger --autoclose=2 ranger --cmd='cd vim.fn.expand('%:p')'<CR>", "Explore"},
+    e = { ":FloatermNew --name=ranger --autoclose=2 --height=0.8 --width=0.8 ranger<CR>", "Explore"},
     f = { ':lua require("plugins.telescope-custom").project_files()<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
-    i = { ':lua require("telescope").extensions.neoclip.default()<CR>', "Find files"},
+    i = { ':lua require("telescope").extensions.neoclip.default()<CR>', "Find in register"},
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
     r = { ':Telescope oldfiles<CR>', "Recent files"},
   },

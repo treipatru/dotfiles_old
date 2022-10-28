@@ -13,15 +13,16 @@ require'plugins.lang-server-config'
 require'plugins.neoclip'
 require'plugins.neoscroll'
 require'plugins.qf'
+require'plugins.session-manager'
+require'plugins.snippy'
 require'plugins.statusline'
 require'plugins.telescope'
 require'plugins.theme'
 require'plugins.todo-comments'
 require'plugins.treesitter'
 require'plugins.webdev-icons'
-require'plugins.snippy'
-require'plugins.session-manager'
 require('leap').add_default_mappings()
+require('nvim-surround').setup({})
 require('which-key').setup {}
 
 require'utils'                              -- autocmds
