@@ -48,8 +48,8 @@ map('n', 'O', 'O<Esc>')
 -- Exit insert mode
 map('i', 'jj', '<Esc>')
 
--- Tab switches to previous buffer
-map('n', '<Tab>', ':b#<CR>')
+-- Search for buffers
+map('n', '<Tab>', ':Telescope buffers<CR>')
 
 -- Harpoon mark mappings
 map('n', '<M-1>', ':lua require("harpoon.ui").nav_file(1)<CR>')
@@ -62,6 +62,10 @@ map('n', '<M-7>', ':lua require("harpoon.ui").nav_file(7)<CR>')
 map('n', '<M-8>', ':lua require("harpoon.ui").nav_file(8)<CR>')
 map('n', '<M-9>', ':lua require("harpoon.ui").nav_file(9)<CR>')
 map('n', '<M-0>', ':lua require("harpoon.mark").add_file()<CR>')
+
+-- `cw` changes inside word
+map('x', 'w', 'iw')
+map('o', 'w', 'iw')
 
 -----------------------------------------------------------------------------------------
 -- Leader Keys
@@ -86,13 +90,14 @@ wk.register({
     e = { ":FloatermNew --name=ranger --autoclose=2 --height=0.8 --width=0.8 ranger<CR>", "Explore"},
     f = { ':lua require("plugins.telescope-custom").project_files()<CR>', "Find files"},
     g = { ':Telescope live_grep<CR>', "Grep" },
-    i = { ':lua require("telescope").extensions.neoclip.default()<CR>', "Find in register"},
+    i = { ':lua require("telescope").extensions.neoclip.default()<CR>', "Register"},
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Marked files" },
+    p = { ':Telescope projects<CR>', "Projects"},
     r = { ':Telescope oldfiles<CR>', "Recent files"},
   },
   g = {
     name = "Git",
-    b = { "<cmd>lua require'gitsigns'.blame_line(true)<CR>", "Blame line" },
+    b = { ":G blame<CR>", "Blame line" },
     c = { ":Telescope git_branches<CR>", "Checkout branch" },
     g = { ":0G <CR>", "Fugitive Status" },
     h = { ":0GcLog <CR>", "File history" },
@@ -102,11 +107,8 @@ wk.register({
     s = { "<cmd>lua require'gitsigns'.stage_hunk()<CR>", "Stage hunk" },
     S = { "<cmd>lua require'gitsigns'.stage_buffer()<CR>", "Stage buffer" },
   },
-  i = {
-    name = "Insert",
-    s = { ':lua require("plugins.telescope-custom").snippets()<CR>', "Snippet"},
-  },
   q = { "<cmd>QFToggle!<CR>", "QuickFix list"},
+  s = { "<cmd>w<CR>", "Write buffer"},
   u = { "<cmd>UndotreeToggle<CR>", "Undotree"},
   w = {
     name = "Window",
