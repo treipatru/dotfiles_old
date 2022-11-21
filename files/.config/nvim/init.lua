@@ -4,8 +4,7 @@ require'settings'                           -- base settings
 require'plugins'                            -- packer plugins
 vim.cmd [[packadd packer.nvim]]             -- init packer
 
--- plugin configs
-require'colorizer'.setup()
+-- plugin custom configs
 require'plugins.autopairs'
 require'plugins.editorconfig'
 require'plugins.gitsigns'
@@ -21,9 +20,14 @@ require'plugins.theme'
 require'plugins.todo-comments'
 require'plugins.treesitter'
 require'plugins.webdev-icons'
+-- plugins defaults
+require'colorizer'.setup()
+require('project_nvim').setup {}
+require('Comment').setup()
 require('leap').add_default_mappings()
+require('neogen').setup {}
 require('nvim-surround').setup({})
 require('which-key').setup {}
-
+-- other configs
 require'utils'                              -- autocmds
 require'keymaps'                            -- keys
