@@ -81,16 +81,16 @@ return require('packer').startup(function(use)
 
   -- Rest of plugins
   use ({
+      'ahmedkhalf/project.nvim',                            -- project manager
       'airblade/vim-rooter',                                -- set cwd root
+      'danymat/neogen',                                     -- generate documentation
       'editorconfig/editorconfig-vim',                      -- make vim respect editorconfig defs
       'ggandor/leap.nvim',                                  -- easymotion like jumper
       'mbbill/undotree',                                    -- git-like undo tree
+      'numToStr/Comment.nvim',                              -- better commenting
       'pantharshit00/vim-prisma',                           -- prisma highlighting
       'rmagatti/auto-session',                              -- session manager
-      'tpope/vim-commentary',                               -- better commenting
   })
-
-  use { 'kkoomen/vim-doge', run = '-> doge#install()' }     -- generate doc comments
 
   -- automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then

@@ -44,7 +44,12 @@ require('telescope').setup{
   pickers = {
       buffers = {
           previewer = false,
-          theme = "ivy",
+          theme = "cursor",
+          mappings = {
+              i = {
+                  ["<tab>"] = "close",
+              },
+        },
       },
       find_files = {
           previewer = false,
@@ -72,5 +77,6 @@ require('telescope').setup{
 }
 
 -- use fzf sorting
+require('telescope').load_extension('file_browser')
 require('telescope').load_extension('fzf')
-require('telescope').load_extension "file_browser"
+require('telescope').load_extension('projects')
