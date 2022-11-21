@@ -7,15 +7,6 @@ M.project_files = function()
     if not ok then require'telescope.builtin'.find_files(opts) end
 end
 
--- Search for snippets
-M.snippets = function()
-    local opts = {
-        cwd = "~/snippets",
-    }
-
-    require'telescope.builtin'.find_files(opts)
-end
-
 -- File browser in current buffer directory
 M.browse_buffer_folder  = function()
     local opts = {
