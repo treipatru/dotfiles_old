@@ -71,8 +71,9 @@ return require('packer').startup(function(use)
   use({
       'AckslD/nvim-neoclip.lua',                            -- register management
       'AndrewRadev/splitjoin.vim',                          -- easy split/join statements
+      'beloglazov/vim-textobj-quotes',
       'dcampos/nvim-snippy',                                -- snippets manager
-      'kana/vim-textobj-user',
+      'kana/vim-textobj-user',                              -- user defined text objects
       'kylechui/nvim-surround',
       'rhysd/vim-textobj-anyblock',
       'windwp/nvim-autopairs',                              -- auto-add end symbols

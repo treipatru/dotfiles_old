@@ -21,7 +21,7 @@ opt.history = 100                                   -- remember n lines in histo
 opt.incsearch = true
 opt.mouse = 'a'
 opt.number = true
-opt.scrolloff = 10
+opt.scrolloff = 15
 opt.shiftwidth = 4                                  -- shift 4 spaces when tabbing
 opt.showmatch = true
 opt.sidescrolloff = 8                               -- columns of context
@@ -40,3 +40,5 @@ opt.laststatus = 3                                    -- use single status line 
 vim.cmd [[set noshowmode]]                          -- hide mode from command
 vim.cmd [[set relativenumber]]                      -- hide mode from command
 vim.cmd [[set completeopt=menu,menuone,noselect]]   -- hide mode from command
+vim.cmd [[let g:textobj#anyblock#blocks=[ '(', '{', '[', '<'] ]]
+
