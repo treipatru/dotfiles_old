@@ -90,7 +90,6 @@ return require('packer').startup(function(use)
       'mbbill/undotree',                                    -- git-like undo tree
       'numToStr/Comment.nvim',                              -- better commenting
       'pantharshit00/vim-prisma',                           -- prisma highlighting
-      'rmagatti/auto-session',                              -- session manager
   })
 
   -- automatically set up configuration after cloning packer.nvim

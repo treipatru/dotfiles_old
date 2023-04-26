@@ -71,7 +71,7 @@ require('telescope').setup{
       },
       oldfiles = {
           previewer = false,
-          theme = "ivy",
+          theme = "cursor",
       },
   },
 }
