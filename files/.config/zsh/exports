@@ -30,28 +30,8 @@ export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/repos/gff/bin"
 
-# GPG
-export SOPS_GPG_EXEC=/usr/bin/gpg2
-
 # 1pass SSH agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
-
-# Activate BuildKit in Docker builder
-export DOCKER_BUILDKIT=1
-# Force docker-compose to use Docker-cli builder instead of Python wrapper
-export COMPOSE_DOCKER_CLI_BUILD=1
-
-# OS dependent configs
-if [[ "$OSTYPE" == "darwin21.0" ]]; then
-    # NVM
-    export NVM_DIR=~/.nvm
-    source $(brew --prefix nvm)/nvm.sh
-    # Default editor
-    export EDITOR=/opt/homebrew/bin/nvim
-else
-    # Default editor
-    export EDITOR=/usr/bin/nvim
-fi
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:#f8f8f2,hl:#bd93f9 \
