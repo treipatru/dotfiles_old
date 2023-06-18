@@ -19,8 +19,8 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim',                      -- fuzzy finder
   })
   use {                                                     -- telescope native fzf
-      'nvim-telescope/telescope-fzf-native.nvim',
-      run = 'make',
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
 
   -- Treesitter and completion
