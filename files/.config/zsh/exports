@@ -60,5 +60,5 @@ case ":$PATH:" in
 esac
 
 # Fly.io
-  export FLYCTL_INSTALL="/home/andrei/.fly"
-  export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export FLYCTL_INSTALL="/home/andrei/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"

@@ -19,6 +19,7 @@
 * [x] `ripgrep`
 * [x] `starship.rs`
 * [x] `zsh`
+* [x] `zplug`
 * [x] `zoxide`
 
 ## NPM globals
