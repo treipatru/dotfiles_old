@@ -26,7 +26,11 @@ ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
 
 zvm_after_init_commands+=('[ -f $ZSH_CFG/plugins/fzf/fzf ] && source $ZSH_CFG/plugins/fzf/fzf')
 
+# Node version manager
+source /usr/share/nvm/init-nvm.sh
+
 # Startup
 autoload -U compinit; compinit
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
