@@ -11,6 +11,7 @@
     ps = push
     r = reset
     s = status -s
+    sw = switch
     stats = shortlog -sn --all --no-merges
     tags = log --no-walk --tags --decorate=full
 [core]
