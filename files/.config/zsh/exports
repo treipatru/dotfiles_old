@@ -1,9 +1,11 @@
 # ZSH settings
 export EDITOR=/usr/bin/nvim
+export HISTCONTROL=ignoredups
 export HISTFILE="$HOME/.history"
 export HISTSIZE=500000
 export SAVEHIST=$HISTSIZE
 export TERM="xterm-256color"
+export HISTORY_IGNORE="(l|ls|cd|g|v|which|man|mkdir|mv|gs)*"
 
 # External config files
 export BAT_CONFIG_PATH=$HOME/.config/bat/config
@@ -33,20 +35,6 @@ export PATH="$PATH:$HOME/repos/gff/bin"
 # 1pass SSH agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-export FZF_DEFAULT_OPTS="\
-    --color=fg:#f8f8f2,hl:#bd93f9 \
-    --color=fg+:#f8f8f2,hl+:#bd93f9 \
-    --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 \
-    --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4 \
-    --bind 'ctrl-a:toggle-all' \
-    --bind 'ctrl-n:preview-half-page-down' \
-    --bind 'ctrl-p:preview-half-page-up' \
-    --no-bold \
-    --prompt='░ ' \
-    --marker='•' \
-    --pointer='▓'
-"
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -60,5 +48,5 @@ case ":$PATH:" in
 esac
 
 # Fly.io
-export FLYCTL_INSTALL="/home/andrei/.fly"
+export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"

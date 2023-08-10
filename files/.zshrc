@@ -9,6 +9,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
 setopt extendedglob                # See: http://zsh.sourceforge.net/Intro/intro_2.html
 setopt nohup                       # Don't kill background jobs on close session
 
@@ -16,6 +17,7 @@ setopt nohup                       # Don't kill background jobs on close session
 ZSH_CFG="$HOME/.config/zsh"
 source $ZSH_CFG/aliases
 source $ZSH_CFG/exports
+source $ZSH_CFG/fzf.zsh
 
 # Plugins
 source $ZSH_CFG/zplug
