@@ -5,7 +5,7 @@ export HISTFILE="$HOME/.history"
 export HISTSIZE=500000
 export SAVEHIST=$HISTSIZE
 export TERM="xterm-256color"
-export HISTORY_IGNORE="(l|ls|cd|g|v|which|man|mkdir|mv|gs)*"
+export HISTORY_IGNORE="(cd|g|gs|l|ls|man|mkdir|mv|rm|v|which)*"
 
 # External config files
 export BAT_CONFIG_PATH=$HOME/.config/bat/config

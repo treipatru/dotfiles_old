@@ -10,7 +10,7 @@
     pl = pull
     ps = push
     r = reset
-    s = status -s
+    s = status --short --untracked-files=all
     sw = switch
     stats = shortlog -sn --all --no-merges
     tags = log --no-walk --tags --decorate=full
