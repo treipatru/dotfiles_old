@@ -12,6 +12,9 @@ setopt HIST_SAVE_NO_DUPS
 setopt INC_APPEND_HISTORY
 setopt extendedglob                # See: http://zsh.sourceforge.net/Intro/intro_2.html
 setopt nohup                       # Don't kill background jobs on close session
+## Case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
 
 # Sources
 ZSH_CFG="$HOME/.config/zsh"
