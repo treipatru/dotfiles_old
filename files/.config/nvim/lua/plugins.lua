@@ -18,10 +18,7 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope-file-browser.nvim',         -- file browser extension
       'nvim-telescope/telescope.nvim',                      -- fuzzy finder
   })
-  use {                                                     -- telescope native fzf
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
-  }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Treesitter and completion
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -65,6 +62,7 @@ return require('packer').startup(function(use)
       'norcalli/nvim-colorizer.lua',                        -- show colors in buffers
       'nvim-lualine/lualine.nvim',                          -- status line
       'szw/vim-maximizer',                                  -- maximize split
+      'xiyaowong/transparent.nvim'                          -- transparent bg
   })
 
   -- Text related
