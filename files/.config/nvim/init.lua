@@ -19,6 +19,7 @@ require'plugins.theme'
 require'plugins.todo-comments'
 require'plugins.treesitter'
 require'plugins.webdev-icons'
+require'plugins.transparency-settings'
 -- plugins defaults
 require'colorizer'.setup()
 require('project_nvim').setup {}
