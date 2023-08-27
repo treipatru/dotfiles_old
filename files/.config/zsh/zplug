@@ -16,8 +16,8 @@ zplug "z-shell/zsh-navigation-tools"
 zplug "zsh-users/zsh-history-substring-search"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-bindkey '^K' history-substring-search-up
-bindkey '^J' history-substring-search-down
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
 
 zplug "zsh-users/zsh-autosuggestions"
 bindkey '^ ' autosuggest-accept

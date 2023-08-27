@@ -22,7 +22,7 @@
     features = unobtrusive-line-numbers decorations
     light = false
     navigate = true
-    side-by-side = false
+    side-by-side = true
     hunk-header-style= omit
 [delta "unobtrusive-line-numbers"]
     line-numbers = true
