@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
       'mbbill/undotree',                                    -- git-like undo tree
       'numToStr/Comment.nvim',                              -- better commenting
       'pantharshit00/vim-prisma',                           -- prisma highlighting
+      'christoomey/vim-tmux-navigator'                      -- tmux pane navigator
   })
 
   -- automatically set up configuration after cloning packer.nvim
