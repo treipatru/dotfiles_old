@@ -26,9 +26,9 @@
     hunk-header-style= omit
 [delta "unobtrusive-line-numbers"]
     line-numbers = true
-    line-numbers-minus-style = "#444444"
+    line-numbers-minus-style = "#8c0502"
     line-numbers-zero-style = "#444444"
-    line-numbers-plus-style = "#444444"
+    line-numbers-plus-style = "#2e8c02"
     line-numbers-left-format = "{nm:>4}┊"
     line-numbers-right-format = "{np:>4}│"
     line-numbers-left-style = blue
