@@ -56,7 +56,6 @@ return require('packer').startup(function(use)
 
   -- Visual fluff
   use ({
-      'catppuccin/nvim',                                    -- theme
       'folke/todo-comments.nvim',                           -- highlight TODO comments
       'karb94/neoscroll.nvim',                              -- smooth scrolling
       'norcalli/nvim-colorizer.lua',                        -- show colors in buffers
@@ -64,6 +63,10 @@ return require('packer').startup(function(use)
       'szw/vim-maximizer',                                  -- maximize split
       'xiyaowong/transparent.nvim'                          -- transparent bg
   })
+  use {
+      'uloco/bluloco.nvim',                                 -- theme
+      requires = { 'rktjmp/lush.nvim' }
+  }
 
   -- Text related
   use({
