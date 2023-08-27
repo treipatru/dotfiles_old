@@ -1,19 +1,18 @@
 [add-interactive]
     useBuiltin = false
 [alias]
-    a = add --patch --verbose
+    a  = add --patch --verbose
     cm = commit --verbose
     co = checkout
-    d = diff
+    d  = diff
     ds = diff --staged
+    f  = fetch --prune
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     pl = pull
     ps = push
-    r = reset
-    s = status --short --untracked-files=all
+    r  = reset
+    s  = status --short --untracked-files=all
     sw = switch
-    stats = shortlog -sn --all --no-merges
-    tags = log --no-walk --tags --decorate=full
 [core]
     autocrlf = input
     editor = nvim
@@ -42,7 +41,7 @@
     keep-plus-minus-markers = false
 [diff]
     colorMoved = default
-    wordRegex=.
+    wordRegex = .
 [format]
     pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
 [include]
