@@ -132,5 +132,5 @@ export FZF_DEFAULT_OPTS="\
     --marker='•' \
     --pointer='▓'
 "
-
+export FZF_TMUX_OPTS="-p"
 export FZF_CTRL_T_COMMAND="fd --type file --strip-cwd-prefix --hidden --follow --exclude .git"
