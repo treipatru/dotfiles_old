@@ -59,6 +59,7 @@
     rebase = true
 [push]
     default = current
+	autoSetupRemote = true
 [color "status"]
     added = green
     changed = yellow
