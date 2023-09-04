@@ -1,0 +1,21 @@
+[Unit]
+Description=Gdrive (rclone)
+AssertPathIsDirectory=%h/gdrive
+# Make sure we have network enabled
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/rclone mount --vfs-cache-mode full gdrive: gdrive
+
+# Perform lazy unmount
+ExecStop=/usr/bin/fusermount -zu %h/gdrive
+
+# Restart the service whenever rclone exists with non-zero exit code
+Restart=on-failure
+RestartSec=15
+
+[Install]
+# Autostart after reboot
+WantedBy=default.target
