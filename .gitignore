@@ -1,5 +1,6 @@
 .netrwhist
 .uuid
 .netrwbook
+history.txt
 
 files/.config/nvim/plugin/**/*
