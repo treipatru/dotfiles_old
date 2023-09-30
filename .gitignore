@@ -2,5 +2,6 @@
 .uuid
 .netrwbook
 history.txt
+history.sqlite*
 
 files/.config/nvim/plugin/**/*
