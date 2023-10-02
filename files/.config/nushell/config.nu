@@ -816,7 +816,9 @@ $env.config = {
 
 alias cat = bat
 alias g = git
-alias l = eza --icons --oneline
+def l [] {
+    ls | sort-by type name -i | grid -c | str trim
+}
 alias v = nvim
 alias vim = nvim
 alias t = tmux
