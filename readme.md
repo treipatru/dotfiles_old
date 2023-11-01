@@ -6,20 +6,20 @@
 
 ## System deps
 
+* [x] `carapace`
 * [x] `bat`
-* [x] `broot`
 * [x] `delta`
-* [x] `exa`
+* [x] `eza`
 * [x] `fd`
+* [x] `fnm`
 * [x] `fzf`
 * [x] `git`
-* [x] `node`, `npm`
+* [x] `nushell`
 * [x] `nvim`
+* [x] `pueue`
 * [x] `ranger`
 * [x] `ripgrep`
 * [x] `starship.rs`
-* [x] `zsh`
-* [x] `zplug`
 * [x] `zoxide`
 
 ## NPM globals

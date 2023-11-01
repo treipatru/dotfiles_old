@@ -238,7 +238,7 @@ $env.config = {
     use_grid_icons: true
     footer_mode: "25" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
-    buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
+    buffer_editor: "nvim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
     edit_mode: vi # emacs, vi
@@ -786,19 +786,19 @@ $env.config = {
           ]
         }
         {
-          name: fuzzy_history
-          modifier: control
-          keycode: char_t
-          mode: [emacs, vi_normal, vi_insert]
-          event: [
-            {
-              send: ExecuteHostCommand
-              cmd: "commandline (
-                  fd --hidden --exclude .git
-                  | fzf --layout=reverse --height=40% -q (commandline) --bind=ctrl-n:down,ctrl-p:up --query=
-              )"
+            name: fuzzy_file
+            modifier: control
+            keycode: char_t
+            mode: [emacs, vi_normal, vi_insert]
+            event: {
+                send: executehostcommand
+                cmd: "commandline -a (
+                    ^fd --type f
+                    | lines
+                    | input list --fuzzy
+                        $'Choose a (ansi magenta)file(ansi reset) to (ansi cyan_underline)insert(ansi reset):'
+                )"
             }
-          ]
         }
         {
             name: take_history_hind
@@ -815,18 +815,58 @@ $env.config = {
 }
 
 alias cat = bat
+alias pn = pnpm
 alias g = git
-def l [] {
-    ls | sort-by type name -i | grid -c | str trim
-}
 alias v = nvim
 alias vim = nvim
 alias t = tmux
 alias ta = tmux attach
+alias r = ranger
+
+def l [] {
+    ls | sort-by type name -i | grid -c | str trim
+}
+
+def la [] {
+    ls -a | sort-by type name -i | grid -c | str trim
+}
+
+def tswitch [] {
+    let sessions = ^tmux list-sessions -F "#{session_name}"
+        | lines
+
+    # let windows
+
+    # $sessions
+    #     | each {|it| ^tmux list-windows -t $it -F "#{session_name}" }
+    #     | print
+
+    # print $windows
+
+    #tmux switch-client -t p34rev:main
+}
 
 use ~/.cache/starship/init.nu
 
-source ~/.cache/carapace/init.nu
+# source ~/.cache/carapace/init.nu
 source ~/.zoxide.nu
 source ~/.config/nushell/scripts/starship.nu
+
+
+load-env (fnm env --shell bash
+    | lines
+    | str replace 'export ' ''
+    | str replace -a '"' ''
+    | split column =
+    | rename name value
+    | where name != "FNM_ARCH" and name != "PATH"
+    | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value }
+)
+
+$env.PATH = ($env.PATH
+    | split row (char esep)
+    | prepend $"($env.FNM_MULTISHELL_PATH)/bin"
+)
+
+
 

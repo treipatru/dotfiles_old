@@ -81,6 +81,15 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
+$env.PATH = ($env.PATH
+    | split row (char esep)
+    | append '~/.local/share/pnpm'
+    | append '~/.local/share/fnm'
+)
+
+$env.EDITOR = '/usr/bin/nvim'
+$env.VISUAL = '/usr/bin/nvim'
+
 # starship
 # https://starship.rs
 mkdir ~/.cache/starship

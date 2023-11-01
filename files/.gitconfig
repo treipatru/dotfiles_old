@@ -13,6 +13,10 @@
     r  = reset
     s  = status --short --untracked-files=all
     sw = switch
+[blame]
+    ignore-revs-file = .git-blame-ignore-revs
+    mark-ignored-lines = true
+    mark-unblamable-lines = true
 [core]
     autocrlf = input
     editor = nvim
